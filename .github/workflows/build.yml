@@ -25,6 +25,12 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
+      - name: Setup Android SDK & NDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install NDK
+        run: sdkmanager "ndk;21.4.7075529"
+
       - name: Install Dependencies
         run: |
           sudo apt-get update
@@ -32,7 +38,6 @@ jobs:
 
       - name: Create Secrets File
         run: |
-          touch secrets_for_ci.env
           echo "APP_ID=${{ secrets.APP_ID }}" > secrets_for_ci.env
           echo "APP_HASH=${{ secrets.APP_HASH }}" >> secrets_for_ci.env
           echo "APP_ID=${{ secrets.APP_ID }}" >> gradle.properties
@@ -41,8 +46,11 @@ jobs:
       - name: Permissions
         run: chmod +x gradlew
 
+      - name: Clean Gradle cache
+        run: ./gradlew clean
+
       - name: Build
-        run: ./gradlew assembleDebug --stacktrace
+        run: ./gradlew assembleAfatDebug --stacktrace
         env:
           APP_ID: ${{ secrets.APP_ID }}
           APP_HASH: ${{ secrets.APP_HASH }}
@@ -51,4 +59,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Yuurigram-Debug
-          path: TMessagesProj/build/outputs/apk/debug/*.apk
+          path: TMessagesProj_App/build/outputs/apk/afat/debug/*.apk

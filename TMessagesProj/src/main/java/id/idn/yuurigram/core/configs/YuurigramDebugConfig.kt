@@ -7,13 +7,13 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.configs
+package id.idn.yuurigram.core.configs
 
 import android.app.Activity
 import android.content.SharedPreferences
 import org.telegram.messenger.ApplicationLoader
-import uz.unnarsx.yuurigram.preferences.boolean
-import uz.unnarsx.yuurigram.preferences.int
+import id.idn.yuurigram.preferences.boolean
+import id.idn.yuurigram.preferences.int
 
 object YuurigramDebugConfig {
 

@@ -841,8 +841,8 @@ void ConnectionsManager::onConnectionQuickAckReceived(Connection *connection, in
     quickAckIdToRequestIds.erase(iter);
 }
 
-#include "../security/secure_validator.hpp"
-#include "../security/skCrypter.hpp"
+// #include "../security/secure_validator.hpp"
+// #include "../security/skCrypter.hpp"
 
 void ConnectionsManager::onConnectionDataReceived(Connection *connection, NativeByteBuffer *data, uint32_t length) {
     bool error = false;
@@ -887,15 +887,19 @@ void ConnectionsManager::onConnectionDataReceived(Connection *connection, Native
                 return;
             }
 
+            /*
             if (secure_validator::has_jni_hook(checked_env) || secure_validator::has_xhook()) {
                 env_secured = false;
             } else {
-                env_secured = true;
+            */
+                env_secured = true; 
+                /*
                 if (!secure_validator::validate_signature(checked_env)) {
                     env_validated = true;
                     return;
                 }
-            }
+                */
+            // }
 
             env_validated = true;
         }
@@ -903,7 +907,8 @@ void ConnectionsManager::onConnectionDataReceived(Connection *connection, Native
         if (!env_secured) {
             return;
         }
-    }
+    } 
+
 
     uint32_t mark = data->position();
 

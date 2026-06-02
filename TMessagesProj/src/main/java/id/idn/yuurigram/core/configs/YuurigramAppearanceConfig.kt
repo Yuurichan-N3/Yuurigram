@@ -7,18 +7,18 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.configs
+package id.idn.yuurigram.core.configs
 
 import android.app.Activity
 import android.content.SharedPreferences
 import org.telegram.messenger.ApplicationLoader
 import org.telegram.messenger.SharedConfig
-import uz.unnarsx.yuurigram.core.icons.icon_replaces.BaseIconReplace
-import uz.unnarsx.yuurigram.core.icons.icon_replaces.NoIconReplace
-import uz.unnarsx.yuurigram.core.icons.icon_replaces.SolarIconReplace
-import uz.unnarsx.yuurigram.preferences.boolean
-import uz.unnarsx.yuurigram.preferences.int
-import uz.unnarsx.yuurigram.preferences.string
+import id.idn.yuurigram.core.icons.icon_replaces.BaseIconReplace
+import id.idn.yuurigram.core.icons.icon_replaces.NoIconReplace
+import id.idn.yuurigram.core.icons.icon_replaces.SolarIconReplace
+import id.idn.yuurigram.preferences.boolean
+import id.idn.yuurigram.preferences.int
+import id.idn.yuurigram.preferences.string
 
 object YuurigramAppearanceConfig {
 

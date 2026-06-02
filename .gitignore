@@ -1,6 +1,7 @@
 .idea/
 .gradle/
 .cxx/
+.vscode/
 afat/
 build/
 obj/

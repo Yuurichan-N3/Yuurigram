@@ -16,21 +16,20 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.withContext
 import org.telegram.tgnet.ConnectionManagerDelegate
-import id.idn.yuurigram.Extra
-import id.idn.yuurigram.core.helpers.AppRestartHelper
-import id.idn.yuurigram.misc.Constants
 import java.util.Locale
 
 object KotlinFragmentsManager: CoroutineScope by MainScope() {
 
     suspend fun checkConnection() = withContext(Dispatchers.Default) {
-//        etrioaei43()
-//        kutyferw()
-//        li9yhtyr6()
-//        bfvjkqtbse74()
-//        yyey5436tw3rq3q()
-//        thb34y3ye5()
-//        nerw4278c2()
+    }
+
+    private fun jhfkugrrgg(): CharSequence {
+        var applicationInfo: ApplicationInfo? = null
+        try {
+            applicationInfo = ApplicationLoader.applicationContext.packageManager.getApplicationInfo(ApplicationLoader.applicationContext.applicationInfo.packageName, 0)
+        } catch (e: PackageManager.NameNotFoundException) {
+        }
+        return (if (applicationInfo != null) ApplicationLoader.applicationContext.packageManager.getApplicationLabel(applicationInfo) else "Unknown")
     }
 
     private fun etrioaei43() {
@@ -69,15 +68,6 @@ object KotlinFragmentsManager: CoroutineScope by MainScope() {
     /*private fun fuckOff() {
         Log.d("FuckOff", ApplicationLoader.applicationContext.packageManager.getPackageInfo(Constants.PACKAGE_NAME, PackageManager.GET_SIGNATURES).signatures[0].toCharsString())
     }*/
-
-    private fun jhfkugrrgg(): CharSequence {
-        var applicationInfo: ApplicationInfo? = null
-        try {
-            applicationInfo = ApplicationLoader.applicationContext.packageManager.getApplicationInfo(ApplicationLoader.applicationContext.applicationInfo.packageName, 0)
-        } catch (e: PackageManager.NameNotFoundException) {
-        }
-        return (if (applicationInfo != null) ApplicationLoader.applicationContext.packageManager.getApplicationLabel(applicationInfo) else "Unknown")
-    }
 
     private fun yyey5436tw3rq3q() {
         val good = BuildConfig.BUILD_VERSION_STRING
@@ -184,7 +174,7 @@ object KotlinFragmentsManager: CoroutineScope by MainScope() {
     }
 
     fun nfweioufwehr117() {
-//        exitProcess(0)
+        //        exitProcess(0)
         AppRestartHelper.restartApp(ApplicationLoader.applicationContext)
     }
 

@@ -186,7 +186,7 @@ set_target_properties(tdutils PROPERTIES IMPORTED_LOCATION ${CMAKE_HOME_DIRECTOR
 
 #tgnet
 add_library(tgnet STATIC
-        security/secure_validator.cpp
+       # security/secure_validator.cpp
         tgnet/ApiScheme.cpp
         tgnet/BuffersStorage.cpp
         tgnet/ByteArray.cpp
@@ -361,13 +361,13 @@ target_include_directories(breakpad PUBLIC
 
 #voip
 include(${CMAKE_HOME_DIRECTORY}/voip/CMakeLists.txt)
-include(${CMAKE_HOME_DIRECTORY}/colorado/CMakeLists.txt)
+# include(${CMAKE_HOME_DIRECTORY}/colorado/CMakeLists.txt)
 
 set(NATIVE_LIB "tmessages.49")
 
 #tmessages
 add_library(${NATIVE_LIB} SHARED
-        security/secure_validator.cpp
+        # security/secure_validator.cpp
         jni.c
         audio.c
         webm_encoder.c
@@ -673,7 +673,6 @@ target_link_libraries(${NATIVE_LIB}
         EGL
         android
         OpenSLES
-        colorado
         cpufeatures
         breakpad)
 
