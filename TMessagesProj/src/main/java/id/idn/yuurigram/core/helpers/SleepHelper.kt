@@ -7,13 +7,13 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.helpers
+package uz.unnarsx.yuurigram.core.helpers
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import org.telegram.messenger.MediaController
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
 
 class SleepHelper : BroadcastReceiver() {
 

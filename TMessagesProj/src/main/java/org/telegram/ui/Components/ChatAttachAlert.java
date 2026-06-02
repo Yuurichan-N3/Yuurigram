@@ -177,10 +177,10 @@ import me.vkryl.android.animator.FactorAnimator;
 import me.vkryl.android.animator.ListAnimator;
 import me.vkryl.android.animator.ReplaceAnimator;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.PermissionsUtils;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCameraConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.PermissionsUtils;
+import id.idn.yuurigram.core.configs.YuurigramCameraConfig;
 
 public class ChatAttachAlert extends BottomSheet implements NotificationCenter.NotificationCenterDelegate, BottomSheet.BottomSheetDelegateInterface, FactorAnimator.Target {
 

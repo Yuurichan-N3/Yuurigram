@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.helpers;
+package uz.unnarsx.yuurigram.helpers;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.AndroidUtilities.lerp;
@@ -64,11 +64,11 @@ import org.telegram.ui.Stories.recorder.HintView2;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.donates.BadgeHelper;
-import uz.unnarsx.cherrygram.donates.DonatesManager;
-import uz.unnarsx.cherrygram.misc.Constants;
-import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator;
+import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.yuurigram.donates.BadgeHelper;
+import uz.unnarsx.yuurigram.donates.DonatesManager;
+import uz.unnarsx.yuurigram.misc.Constants;
+import uz.unnarsx.yuurigram.preferences.YuurigramPreferencesNavigator;
 
 public class ProfileActivityHelper extends BaseController {
 

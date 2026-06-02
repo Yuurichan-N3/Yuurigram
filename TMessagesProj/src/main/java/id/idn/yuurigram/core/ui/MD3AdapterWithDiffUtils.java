@@ -5,7 +5,7 @@
  *
  * Copyright OctoGram, 2023-2025.
  */
-package uz.unnarsx.cherrygram.core.ui;
+package uz.unnarsx.yuurigram.core.ui;
 
 import androidx.recyclerview.widget.DiffUtil;
 

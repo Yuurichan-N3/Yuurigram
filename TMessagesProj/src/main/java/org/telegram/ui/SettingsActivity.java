@@ -141,15 +141,15 @@ import java.util.Set;
 
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator;
-import uz.unnarsx.cherrygram.donates.BadgeHelper;
-import uz.unnarsx.cherrygram.donates.DonatesManager;
-import uz.unnarsx.cherrygram.donates.StarsBadgeDrawable;
-import uz.unnarsx.cherrygram.helpers.ui.MonetHelper;
-import uz.unnarsx.cherrygram.misc.Constants;
-import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator;
-import uz.unnarsx.cherrygram.preferences.helpers.TelegramSettingsHelper;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.ui.CGBulletinCreator;
+import id.idn.yuurigram.donates.BadgeHelper;
+import id.idn.yuurigram.donates.DonatesManager;
+import id.idn.yuurigram.donates.StarsBadgeDrawable;
+import id.idn.yuurigram.helpers.ui.MonetHelper;
+import id.idn.yuurigram.misc.Constants;
+import id.idn.yuurigram.preferences.YuurigramPreferencesNavigator;
+import id.idn.yuurigram.preferences.helpers.TelegramSettingsHelper;
 
 public class SettingsActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, ImageUpdater.ImageUpdaterDelegate, MainTabsActivity.TabFragmentDelegate, FactorAnimator.Target {
 
@@ -1001,7 +1001,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
 
         private final AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable botDrawable;
         private final AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable emojiStatusDrawable;
-        private final AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable cherrygramStatusDrawable;
+        private final AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable yuurigramStatusDrawable;
 
         public AccountCell(Context context, Theme.ResourcesProvider resourcesProvider) {
             super(context);
@@ -1020,21 +1020,21 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
 
             botDrawable = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(textView, dp(24), AnimatedEmojiDrawable.CACHE_TYPE_EMOJI_STATUS);
             emojiStatusDrawable = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(textView, dp(24), AnimatedEmojiDrawable.CACHE_TYPE_EMOJI_STATUS);
-            cherrygramStatusDrawable = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(textView, dp(22), AnimatedEmojiDrawable.CACHE_TYPE_EMOJI_STATUS);
+            yuurigramStatusDrawable = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(textView, dp(22), AnimatedEmojiDrawable.CACHE_TYPE_EMOJI_STATUS);
 
             textView.addOnAttachStateChangeListener(new OnAttachStateChangeListener() {
                 @Override
                 public void onViewAttachedToWindow(@NonNull View v) {
                     botDrawable.attach();
                     emojiStatusDrawable.attach();
-                    cherrygramStatusDrawable.attach();
+                    yuurigramStatusDrawable.attach();
                 }
 
                 @Override
                 public void onViewDetachedFromWindow(@NonNull View v) {
                     botDrawable.detach();
                     emojiStatusDrawable.detach();
-                    cherrygramStatusDrawable.detach();
+                    yuurigramStatusDrawable.detach();
                 }
             });
 
@@ -1087,7 +1087,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
 
             botDrawable.setCurrentAccount(account);
             emojiStatusDrawable.setCurrentAccount(account);
-            cherrygramStatusDrawable.setCurrentAccount(account);
+            yuurigramStatusDrawable.setCurrentAccount(account);
 
             botDrawable.setColor(Theme.getColor(Theme.key_profile_verifiedBackground, resourcesProvider));
             if (user != null && user.bot_verification_icon != 0) {
@@ -1172,13 +1172,13 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
             }
 
             if (emojiDocumentId != 0) {
-                cherrygramStatusDrawable.set(emojiDocumentId, false);
+                yuurigramStatusDrawable.set(emojiDocumentId, false);
 
                 int color = Theme.getColor(Theme.key_chats_verifiedBackground, resourcesProvider);
-                cherrygramStatusDrawable.setColor(BadgeHelper.Companion.getEmojiStatusColor(user.id, color, false));
-                cherrygramStatusDrawable.setParticles(showParticles, showParticles);
+                yuurigramStatusDrawable.setColor(BadgeHelper.Companion.getEmojiStatusColor(user.id, color, false));
+                yuurigramStatusDrawable.setParticles(showParticles, showParticles);
 
-                textView.setRightDrawable2(cherrygramStatusDrawable);
+                textView.setRightDrawable2(yuurigramStatusDrawable);
                 textView.setRightDrawableInside(true);
             }
         }

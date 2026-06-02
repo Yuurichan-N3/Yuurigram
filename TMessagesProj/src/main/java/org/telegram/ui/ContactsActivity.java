@@ -115,7 +115,7 @@ import java.util.ArrayList;
 
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
-import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
+import id.idn.yuurigram.core.CGBiometricPrompt;
 
 public class ContactsActivity extends BaseFragment implements FactorAnimator.Target, NotificationCenter.NotificationCenterDelegate, MainTabsActivity.TabFragmentDelegate, WindowAnimatedInsetsProvider.Listener {
     private final int ADDITIONAL_LIST_HEIGHT_DP = Build.VERSION.SDK_INT >= 31 ? 48 : 0;

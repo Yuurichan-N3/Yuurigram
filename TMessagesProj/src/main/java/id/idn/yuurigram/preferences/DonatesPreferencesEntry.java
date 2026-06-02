@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences;
+package uz.unnarsx.yuurigram.preferences;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.LocaleController.formatPluralString;
@@ -58,13 +58,13 @@ import java.util.HashSet;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator;
-import uz.unnarsx.cherrygram.core.ui.MD3ListAdapter;
-import uz.unnarsx.cherrygram.donates.DonatesManager;
-import uz.unnarsx.cherrygram.misc.YuurigramExtras;
-import uz.unnarsx.cherrygram.misc.Constants;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
+import uz.unnarsx.yuurigram.core.ui.MD3ListAdapter;
+import uz.unnarsx.yuurigram.donates.DonatesManager;
+import uz.unnarsx.yuurigram.misc.YuurigramExtras;
+import uz.unnarsx.yuurigram.misc.Constants;
 
 public class DonatesPreferencesEntry extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

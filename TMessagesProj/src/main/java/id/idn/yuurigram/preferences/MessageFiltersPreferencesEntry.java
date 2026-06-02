@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences;
+package uz.unnarsx.yuurigram.preferences;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.LocaleController.getString;
@@ -50,13 +50,13 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-import uz.unnarsx.cherrygram.chats.filters.MessagesFilterHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.cherrygram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator;
-import uz.unnarsx.cherrygram.core.ui.MD3ListAdapter;
-import uz.unnarsx.cherrygram.donates.DonatesManager;
+import uz.unnarsx.yuurigram.chats.filters.MessagesFilterHelper;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
+import uz.unnarsx.yuurigram.core.ui.MD3ListAdapter;
+import uz.unnarsx.yuurigram.donates.DonatesManager;
 
 public class MessageFiltersPreferencesEntry extends BaseFragment {
 

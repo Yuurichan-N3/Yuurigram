@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences;
+package uz.unnarsx.yuurigram.preferences;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -21,7 +21,7 @@ import org.telegram.ui.Components.UniversalFragment;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.crashlytics.FirebaseAnalyticsHelper;
+import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
 
 public class ExperimentalPreferencesEntry extends UniversalFragment {
 

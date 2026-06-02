@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.configs
+package uz.unnarsx.yuurigram.core.configs
 
 import android.app.Activity
 import android.content.SharedPreferences
@@ -17,10 +17,10 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import org.telegram.messenger.ApplicationLoader
 import org.telegram.messenger.SharedConfig
-import uz.unnarsx.cherrygram.helpers.network.StickersManager
-import uz.unnarsx.cherrygram.preferences.boolean
-import uz.unnarsx.cherrygram.preferences.int
-import uz.unnarsx.cherrygram.preferences.long
+import uz.unnarsx.yuurigram.helpers.network.StickersManager
+import uz.unnarsx.yuurigram.preferences.boolean
+import uz.unnarsx.yuurigram.preferences.int
+import uz.unnarsx.yuurigram.preferences.long
 
 object YuurigramChatsConfig: CoroutineScope by CoroutineScope(
     context = SupervisorJob() + Dispatchers.Default

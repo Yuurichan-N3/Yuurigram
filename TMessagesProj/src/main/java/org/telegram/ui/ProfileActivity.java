@@ -333,18 +333,18 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
-import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.Extra;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.helpers.AppRestartHelper;
-import uz.unnarsx.cherrygram.core.ui.mainTabs.MainTabsManager;
-import uz.unnarsx.cherrygram.helpers.ProfileActivityHelper;
-import uz.unnarsx.cherrygram.donates.BadgeHelper;
-import uz.unnarsx.cherrygram.misc.Constants;
-import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator;
+import id.idn.yuurigram.chats.helpers.ChatsHelper2;
+import id.idn.yuurigram.core.CGBiometricPrompt;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.Extra;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.helpers.AppRestartHelper;
+import id.idn.yuurigram.core.ui.mainTabs.MainTabsManager;
+import id.idn.yuurigram.helpers.ProfileActivityHelper;
+import id.idn.yuurigram.donates.BadgeHelper;
+import id.idn.yuurigram.misc.Constants;
+import id.idn.yuurigram.preferences.YuurigramPreferencesNavigator;
 
 import me.vkryl.android.animator.BoolAnimator;
 
@@ -3453,8 +3453,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         botVerificationDrawable[i].attach();
                     }
                 }
-                if (cherrygramStatusDrawable != null) {
-                    cherrygramStatusDrawable.attach();
+                if (yuurigramStatusDrawable != null) {
+                    yuurigramStatusDrawable.attach();
                 }
             }
 
@@ -3472,8 +3472,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         botVerificationDrawable[i].detach();
                     }
                 }
-                if (cherrygramStatusDrawable != null) {
-                    cherrygramStatusDrawable.detach();
+                if (yuurigramStatusDrawable != null) {
+                    yuurigramStatusDrawable.detach();
                 }
             }
         };
@@ -11096,8 +11096,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
             if (botVerificationDrawable[a] != null) {
                 botVerificationDrawable[a].setColor(ColorUtils.blendARGB(ColorUtils.blendARGB(fromColor, 0x99ffffff, progress), getThemedColor(Theme.key_player_actionBarTitle), mediaHeaderAnimationProgress));
             }
-            if (cherrygramStatusDrawable != null) {
-                cherrygramStatusDrawable.setColor(BadgeHelper.Companion.getEmojiStatusColor(userId, color, false));
+            if (yuurigramStatusDrawable != null) {
+                yuurigramStatusDrawable.setColor(BadgeHelper.Companion.getEmojiStatusColor(userId, color, false));
             }
             if (a == 1) {
                 animatedStatusView.setColor(color);
@@ -16957,22 +16957,22 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
     private int cgSettingsRow;
     private int cgShadowRow;
 
-    public AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable cherrygramStatusDrawable;
+    public AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable yuurigramStatusDrawable;
     public Drawable getEmojiStatusDrawable(long document_id, boolean animated, boolean showParticles, int size, int a) {
-        if (cherrygramStatusDrawable == null) {
-            cherrygramStatusDrawable = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(nameTextView[a], AndroidUtilities.dp(size), AnimatedEmojiDrawable.CACHE_TYPE_EMOJI_STATUS);
+        if (yuurigramStatusDrawable == null) {
+            yuurigramStatusDrawable = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(nameTextView[a], AndroidUtilities.dp(size), AnimatedEmojiDrawable.CACHE_TYPE_EMOJI_STATUS);
             if (fragmentViewAttached) {
-                cherrygramStatusDrawable.attach();
+                yuurigramStatusDrawable.attach();
             }
         }
         if (a == 1) {
             emojiStatusGiftId = null;
         }
-        cherrygramStatusDrawable.set(document_id, animated);
-        cherrygramStatusDrawable.setParticles(showParticles, animated);
+        yuurigramStatusDrawable.set(document_id, animated);
+        yuurigramStatusDrawable.setParticles(showParticles, animated);
 
         updateEmojiStatusDrawableColor();
-        return cherrygramStatusDrawable;
+        return yuurigramStatusDrawable;
     }
     /** Yuurigram finish */
 

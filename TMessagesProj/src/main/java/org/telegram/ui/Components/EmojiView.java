@@ -162,7 +162,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 import me.vkryl.android.animator.BoolAnimator;
 

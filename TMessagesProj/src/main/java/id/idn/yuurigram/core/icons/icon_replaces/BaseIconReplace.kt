@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.icons.icon_replaces
+package uz.unnarsx.yuurigram.core.icons.icon_replaces
 
 abstract class BaseIconReplace {
     abstract val replaces: HashMap<Int, Int>

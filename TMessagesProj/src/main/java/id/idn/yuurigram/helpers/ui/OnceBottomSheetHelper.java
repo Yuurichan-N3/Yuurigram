@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.helpers.ui;
+package uz.unnarsx.yuurigram.helpers.ui;
 
 import android.content.Context;
 

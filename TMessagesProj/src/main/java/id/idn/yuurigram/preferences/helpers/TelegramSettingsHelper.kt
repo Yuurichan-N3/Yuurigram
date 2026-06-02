@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences.helpers
+package uz.unnarsx.yuurigram.preferences.helpers
 
 import android.os.Build
 import android.view.View
@@ -39,19 +39,19 @@ import org.telegram.ui.LoginActivity
 import org.telegram.ui.LogoutActivity
 import org.telegram.ui.PhotoViewer
 import org.telegram.ui.SettingsActivity
-import uz.unnarsx.cherrygram.chats.CGChatMenuInjector
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig
-import uz.unnarsx.cherrygram.core.helpers.AppRestartHelper
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper
-import uz.unnarsx.cherrygram.core.helpers.DeeplinkHelper
-import uz.unnarsx.cherrygram.core.ui.mainTabs.MainTabsManager
-import uz.unnarsx.cherrygram.donates.DonatesManager
-import uz.unnarsx.cherrygram.misc.YuurigramExtras
-import uz.unnarsx.cherrygram.misc.Constants
-import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator
+import uz.unnarsx.yuurigram.chats.CGChatMenuInjector
+import uz.unnarsx.yuurigram.chats.helpers.ChatsHelper2
+import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramPrivacyConfig
+import uz.unnarsx.yuurigram.core.helpers.AppRestartHelper
+import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper
+import uz.unnarsx.yuurigram.core.helpers.DeeplinkHelper
+import uz.unnarsx.yuurigram.core.ui.mainTabs.MainTabsManager
+import uz.unnarsx.yuurigram.donates.DonatesManager
+import uz.unnarsx.yuurigram.misc.YuurigramExtras
+import uz.unnarsx.yuurigram.misc.Constants
+import uz.unnarsx.yuurigram.preferences.YuurigramPreferencesNavigator
 
 class TelegramSettingsHelper(
     private var fragment: BaseFragment

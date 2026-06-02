@@ -71,14 +71,14 @@ import java.util.List;
 
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
-import uz.unnarsx.cherrygram.chats.CGChatMenuInjector;
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
-import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator;
-import uz.unnarsx.cherrygram.core.ui.mainTabs.MainTabsManager;
-import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator;
+import id.idn.yuurigram.chats.CGChatMenuInjector;
+import id.idn.yuurigram.chats.helpers.ChatsHelper2;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.core.ui.CGBulletinCreator;
+import id.idn.yuurigram.core.ui.mainTabs.MainTabsManager;
+import id.idn.yuurigram.preferences.YuurigramPreferencesNavigator;
 
 public class MainTabsActivity extends ViewPagerActivity implements NotificationCenter.NotificationCenterDelegate, FactorAnimator.Target {
     public static final int TABS_COUNT = 4;

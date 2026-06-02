@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats.helpers
+package uz.unnarsx.yuurigram.chats.helpers
 
 import android.os.Build
 import android.text.TextUtils
@@ -32,14 +32,14 @@ import org.telegram.ui.Components.ItemOptions
 import org.telegram.ui.Components.ShareAlert
 import org.telegram.ui.Components.TranslateAlert2
 import org.telegram.ui.Components.UndoView
-import uz.unnarsx.cherrygram.chats.JsonBottomSheet
-import uz.unnarsx.cherrygram.chats.gemini.GeminiResultsBottomSheet
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper
+import uz.unnarsx.yuurigram.chats.JsonBottomSheet
+import uz.unnarsx.yuurigram.chats.gemini.GeminiResultsBottomSheet
+import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper
 import androidx.core.view.isVisible
 import org.telegram.messenger.AndroidUtilities.dp
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig
-import uz.unnarsx.cherrygram.helpers.ProfileActivityHelper
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig
+import uz.unnarsx.yuurigram.helpers.ProfileActivityHelper
 
 object ChatsHelper2 {
 

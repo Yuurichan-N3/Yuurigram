@@ -44,7 +44,7 @@ import org.telegram.ui.Components.StaticLayoutEx;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class ChatPullingDownDrawable implements NotificationCenter.NotificationCenterDelegate {
 

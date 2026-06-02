@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.camera;
+package id.idn.yuurigram.camera;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

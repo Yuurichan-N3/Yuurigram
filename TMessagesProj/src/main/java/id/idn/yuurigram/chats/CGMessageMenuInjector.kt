@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats
+package uz.unnarsx.yuurigram.chats
 
 import android.text.TextUtils
 import android.view.View
@@ -27,13 +27,13 @@ import org.telegram.ui.ActionBar.BaseFragment
 import org.telegram.ui.ActionBar.Theme
 import org.telegram.ui.ChatActivity
 import org.telegram.ui.Components.LayoutHelper
-import uz.unnarsx.cherrygram.chats.gemini.GeminiResultsBottomSheet
-import uz.unnarsx.cherrygram.chats.gemini.GeminiSDKImplementation
-import uz.unnarsx.cherrygram.chats.helpers.ChatActivityHelper
-import uz.unnarsx.cherrygram.chats.ui.MessageMenuCompactView
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig
-import uz.unnarsx.cherrygram.helpers.ui.PopupHelper
-import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator
+import uz.unnarsx.yuurigram.chats.gemini.GeminiResultsBottomSheet
+import uz.unnarsx.yuurigram.chats.gemini.GeminiSDKImplementation
+import uz.unnarsx.yuurigram.chats.helpers.ChatActivityHelper
+import uz.unnarsx.yuurigram.chats.ui.MessageMenuCompactView
+import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig
+import uz.unnarsx.yuurigram.helpers.ui.PopupHelper
+import uz.unnarsx.yuurigram.preferences.YuurigramPreferencesNavigator
 
 // I've created this so CG features can be injected in a source file with 1 line only (maybe)
 // Because manual editing of drklo's sources harms your mental health.

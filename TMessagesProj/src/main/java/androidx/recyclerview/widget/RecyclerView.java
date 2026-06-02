@@ -97,8 +97,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.VibrateUtil;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.VibrateUtil;
 
 /**
  * A flexible view for providing a limited window into a large data set.

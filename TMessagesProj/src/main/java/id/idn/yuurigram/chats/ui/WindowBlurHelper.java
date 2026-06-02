@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats.ui;
+package uz.unnarsx.yuurigram.chats.ui;
 
 import android.app.Activity;
 import android.graphics.RenderEffect;

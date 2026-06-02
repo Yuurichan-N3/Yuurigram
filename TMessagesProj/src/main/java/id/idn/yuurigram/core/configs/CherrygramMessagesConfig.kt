@@ -7,17 +7,17 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.configs
+package uz.unnarsx.yuurigram.core.configs
 
 import android.app.Activity
 import android.content.SharedPreferences
 import android.os.Build
 import org.telegram.messenger.ApplicationLoader
 import org.telegram.messenger.LocaleController
-import uz.unnarsx.cherrygram.chats.gemini.GeminiButtonsLayout
-import uz.unnarsx.cherrygram.preferences.boolean
-import uz.unnarsx.cherrygram.preferences.int
-import uz.unnarsx.cherrygram.preferences.string
+import uz.unnarsx.yuurigram.chats.gemini.GeminiButtonsLayout
+import uz.unnarsx.yuurigram.preferences.boolean
+import uz.unnarsx.yuurigram.preferences.int
+import uz.unnarsx.yuurigram.preferences.string
 
 object YuurigramMessagesConfig {
 

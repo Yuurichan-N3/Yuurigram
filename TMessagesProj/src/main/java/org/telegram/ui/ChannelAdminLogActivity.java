@@ -154,10 +154,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import uz.unnarsx.cherrygram.chats.CGMessageMenuInjector;
-import uz.unnarsx.cherrygram.chats.JsonBottomSheet;
-import uz.unnarsx.cherrygram.chats.helpers.ChatActivityHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.chats.CGMessageMenuInjector;
+import id.idn.yuurigram.chats.JsonBottomSheet;
+import id.idn.yuurigram.chats.helpers.ChatActivityHelper;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class ChannelAdminLogActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

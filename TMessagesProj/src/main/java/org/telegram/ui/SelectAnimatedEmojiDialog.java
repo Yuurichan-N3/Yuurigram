@@ -142,7 +142,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class SelectAnimatedEmojiDialog extends FrameLayout implements NotificationCenter.NotificationCenterDelegate {
 

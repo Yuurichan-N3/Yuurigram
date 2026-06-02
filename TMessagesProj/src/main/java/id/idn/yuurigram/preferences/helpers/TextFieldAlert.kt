@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences.helpers
+package uz.unnarsx.yuurigram.preferences.helpers
 
 object TextFieldAlert {
 

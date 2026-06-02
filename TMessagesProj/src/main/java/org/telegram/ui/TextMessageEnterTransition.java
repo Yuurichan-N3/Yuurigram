@@ -55,7 +55,7 @@ import org.telegram.ui.Components.ReplyMessageLine;
 import org.telegram.ui.Components.chat.ViewPositionWatcher;
 import org.telegram.ui.Components.spoilers.SpoilerEffect;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
 
 public class TextMessageEnterTransition implements MessageEnterTransitionContainer.Transition {
     float fromRadius;

@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.helpers.backup;
+package uz.unnarsx.yuurigram.core.helpers.backup;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -93,7 +93,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class BackupFileImportActivity extends BaseFragment {
 

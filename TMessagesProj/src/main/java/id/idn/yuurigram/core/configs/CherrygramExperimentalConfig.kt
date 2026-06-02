@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.configs
+package id.idn.yuurigram.core.configs
 
 import android.app.Activity
 import android.content.SharedPreferences

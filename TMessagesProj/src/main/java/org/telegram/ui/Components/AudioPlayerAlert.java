@@ -126,8 +126,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import uz.unnarsx.cherrygram.core.helpers.SleepHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.helpers.SleepHelper;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
 
 public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.NotificationCenterDelegate, DownloadController.FileDownloadProgressListener {
 

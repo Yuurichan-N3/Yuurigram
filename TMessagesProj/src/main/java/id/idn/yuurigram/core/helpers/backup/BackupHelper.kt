@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.helpers.backup
+package uz.unnarsx.yuurigram.core.helpers.backup
 
 import android.app.Activity
 import android.content.Context
@@ -32,8 +32,8 @@ import org.telegram.ui.ActionBar.AlertDialog
 import org.telegram.ui.ActionBar.BaseFragment
 import org.telegram.ui.ActionBar.Theme
 import org.telegram.ui.LaunchActivity
-import uz.unnarsx.cherrygram.core.PermissionsUtils
-import uz.unnarsx.cherrygram.core.helpers.AppRestartHelper
+import uz.unnarsx.yuurigram.core.PermissionsUtils
+import uz.unnarsx.yuurigram.core.helpers.AppRestartHelper
 import java.io.File
 import java.io.InputStreamReader
 import java.text.SimpleDateFormat

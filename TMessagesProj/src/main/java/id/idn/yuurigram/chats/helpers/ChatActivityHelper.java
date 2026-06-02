@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats.helpers;
+package id.idn.yuurigram.chats.helpers;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.LocaleController.getString;
@@ -80,17 +80,17 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-import uz.unnarsx.cherrygram.chats.JsonBottomSheet;
-import uz.unnarsx.cherrygram.chats.gemini.GeminiResultsBottomSheet;
-import uz.unnarsx.cherrygram.chats.gemini.GeminiSDKImplementation;
-import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
-import uz.unnarsx.cherrygram.core.CGFeatureHooks;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.helpers.backup.BackupHelper;
-import uz.unnarsx.cherrygram.helpers.network.StickersManager;
-import uz.unnarsx.cherrygram.preferences.helpers.TextFieldAlert;
+import id.idn.yuurigram.chats.JsonBottomSheet;
+import id.idn.yuurigram.chats.gemini.GeminiResultsBottomSheet;
+import id.idn.yuurigram.chats.gemini.GeminiSDKImplementation;
+import id.idn.yuurigram.core.CGBiometricPrompt;
+import id.idn.yuurigram.core.CGFeatureHooks;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.helpers.backup.BackupHelper;
+import id.idn.yuurigram.helpers.network.StickersManager;
+import id.idn.yuurigram.preferences.helpers.TextFieldAlert;
 
 public class ChatActivityHelper extends BaseController {
 

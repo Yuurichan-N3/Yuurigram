@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.icons
+package uz.unnarsx.yuurigram.core.icons
 
 import android.util.SparseIntArray
 

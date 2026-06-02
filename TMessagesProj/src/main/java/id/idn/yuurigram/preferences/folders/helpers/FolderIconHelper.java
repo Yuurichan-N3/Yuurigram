@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences.folders.helpers;
+package uz.unnarsx.yuurigram.preferences.folders.helpers;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -17,7 +17,7 @@ import org.telegram.messenger.R;
 
 import java.util.LinkedHashMap;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
 
 public class FolderIconHelper {
 

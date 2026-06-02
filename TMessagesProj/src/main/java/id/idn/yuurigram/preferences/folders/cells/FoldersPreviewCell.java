@@ -9,7 +9,7 @@
 
 */
 
-package uz.unnarsx.cherrygram.preferences.folders.cells;
+package uz.unnarsx.yuurigram.preferences.folders.cells;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.AndroidUtilities.dpf2;
@@ -46,8 +46,8 @@ import org.telegram.ui.Components.LayoutHelper;
 
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.preferences.folders.helpers.FolderIconHelper;
+import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.yuurigram.preferences.folders.helpers.FolderIconHelper;
 
 @SuppressLint("ViewConstructor")
 public class FoldersPreviewCell extends FrameLayout {

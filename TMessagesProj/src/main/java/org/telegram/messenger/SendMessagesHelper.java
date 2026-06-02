@@ -106,10 +106,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.chats.helpers.ChatsHelper;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
 
 public class SendMessagesHelper extends BaseController implements NotificationCenter.NotificationCenterDelegate {
 

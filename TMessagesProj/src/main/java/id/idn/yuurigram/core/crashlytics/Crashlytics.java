@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.crashlytics;
+package uz.unnarsx.yuurigram.core.crashlytics;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -36,9 +36,9 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Writer;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramCameraConfig;
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
-import uz.unnarsx.cherrygram.preferences.CameraPreferencesEntry;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCameraConfig;
+import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper;
+import uz.unnarsx.yuurigram.preferences.CameraPreferencesEntry;
 
 public class Crashlytics implements Thread.UncaughtExceptionHandler {
 

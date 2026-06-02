@@ -66,13 +66,13 @@ import org.telegram.ui.ProfileActivity;
 import org.telegram.ui.Stories.StoriesListPlaceProvider;
 import org.telegram.ui.Stories.StoriesUtilities;
 
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
-import uz.unnarsx.cherrygram.donates.DonatesManager;
-import uz.unnarsx.cherrygram.donates.BadgeHelper;
-import uz.unnarsx.cherrygram.misc.Constants;
+import id.idn.yuurigram.chats.helpers.ChatsHelper2;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig;
+import id.idn.yuurigram.core.helpers.CGResourcesHelper;
+import id.idn.yuurigram.donates.DonatesManager;
+import id.idn.yuurigram.donates.BadgeHelper;
+import id.idn.yuurigram.misc.Constants;
 
 public class UserCell extends FrameLayout implements NotificationCenter.NotificationCenterDelegate {
 
@@ -233,7 +233,7 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
 
         botVerification = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(nameTextView, dp(20));
         emojiStatus = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(nameTextView, dp(20));
-        cherrygramStatusDrawable = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(nameTextView, dp(20));
+        yuurigramStatusDrawable = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(nameTextView, dp(20));
 
         statusTextView = new SimpleTextView(context);
         statusTextView.setTextSize(15);
@@ -824,7 +824,7 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
         NotificationCenter.getGlobalInstance().addObserver(this, NotificationCenter.emojiLoaded);
         emojiStatus.attach();
         botVerification.attach();
-        cherrygramStatusDrawable.attach();
+        yuurigramStatusDrawable.attach();
     }
 
     @Override
@@ -833,7 +833,7 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
         NotificationCenter.getGlobalInstance().removeObserver(this, NotificationCenter.emojiLoaded);
         emojiStatus.detach();
         botVerification.detach();
-        cherrygramStatusDrawable.detach();
+        yuurigramStatusDrawable.detach();
         storyParams.onDetachFromWindow();
     }
 
@@ -913,7 +913,7 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
 
     private final boolean addEditButton;
 
-    private AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable cherrygramStatusDrawable;
+    private AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable yuurigramStatusDrawable;
 
     private void checkYuurigramBadges(SimpleTextView nameTextView, TLRPC.User user) {
         if (user == null) return;
@@ -934,13 +934,13 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
         }
 
         if (emojiDocumentId != 0 && !addEditButton) {
-            cherrygramStatusDrawable.set(emojiDocumentId, false);
+            yuurigramStatusDrawable.set(emojiDocumentId, false);
 
             int color = Theme.getColor(Theme.key_chats_verifiedBackground, resourcesProvider);
-            cherrygramStatusDrawable.setColor(BadgeHelper.Companion.getEmojiStatusColor(user.id, color, false));
-            cherrygramStatusDrawable.setParticles(showParticles, showParticles);
+            yuurigramStatusDrawable.setColor(BadgeHelper.Companion.getEmojiStatusColor(user.id, color, false));
+            yuurigramStatusDrawable.setParticles(showParticles, showParticles);
 
-            nameTextView.setRightDrawable2(cherrygramStatusDrawable);
+            nameTextView.setRightDrawable2(yuurigramStatusDrawable);
             nameTextView.setRightDrawableInside(true);
         }
     }

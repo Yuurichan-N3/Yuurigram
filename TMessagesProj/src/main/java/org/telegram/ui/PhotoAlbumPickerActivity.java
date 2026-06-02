@@ -73,7 +73,7 @@ import org.telegram.ui.Components.SizeNotifierFrameLayout;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class PhotoAlbumPickerActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

@@ -67,9 +67,9 @@ import org.telegram.ui.ProfileActivity2;
 import org.telegram.ui.Stories.StoriesUtilities;
 import org.telegram.ui.TopicsFragment;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -921,12 +921,12 @@ public class ChatAvatarContainer extends FrameLayout implements NotificationCent
         return getBotVerificationDrawable(icon, animated, false);
     }
 
-    public AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable getBotVerificationDrawable(long icon, boolean animated, boolean cherrygram) {
+    public AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable getBotVerificationDrawable(long icon, boolean animated, boolean yuurigram) {
         if (icon == 0) {
             return null;
         }
         botVerificationDrawable.set(icon, animated);
-        botVerificationDrawable.setColor(getThemedColor(cherrygram ? Theme.key_cgGradient2 : Theme.key_profile_verifiedBackground));
+        botVerificationDrawable.setColor(getThemedColor(yuurigram ? Theme.key_cgGradient2 : Theme.key_profile_verifiedBackground));
         botVerificationDrawable.offset(0, dp(1));
         return botVerificationDrawable;
     }

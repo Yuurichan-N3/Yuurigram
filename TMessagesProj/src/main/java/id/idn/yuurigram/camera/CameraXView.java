@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.camera;
+package uz.unnarsx.yuurigram.camera;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

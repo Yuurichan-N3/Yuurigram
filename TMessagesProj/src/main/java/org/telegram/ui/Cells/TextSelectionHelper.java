@@ -70,7 +70,7 @@ import org.telegram.ui.Components.TranslateAlert2;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public abstract class TextSelectionHelper<Cell extends TextSelectionHelper.SelectableView> {
 

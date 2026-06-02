@@ -12,9 +12,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.Extra;
-import uz.unnarsx.cherrygram.misc.Constants;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.Extra;
+import id.idn.yuurigram.misc.Constants;
 
 import com.android.billingclient.api.ProductDetails;
 

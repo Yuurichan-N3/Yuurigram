@@ -5,7 +5,7 @@
  *
  * Copyright OctoGram, 2023-2025.
  */
-package uz.unnarsx.cherrygram.core.ui;
+package uz.unnarsx.yuurigram.core.ui;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 
@@ -42,7 +42,7 @@ import org.telegram.ui.ProfileActivity;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
 
 public abstract class MD3ListAdapter extends RecyclerListView.SelectionAdapter {
 

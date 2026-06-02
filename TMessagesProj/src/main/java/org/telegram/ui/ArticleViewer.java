@@ -223,8 +223,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.chats.helpers.ChatsHelper2;
 
 public class ArticleViewer implements NotificationCenter.NotificationCenterDelegate {
 

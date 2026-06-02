@@ -104,7 +104,7 @@ import java.util.Collections;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
+import id.idn.yuurigram.core.helpers.CGResourcesHelper;
 
 public class ChatUsersActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

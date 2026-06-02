@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences;
+package uz.unnarsx.yuurigram.preferences;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.LocaleController.formatString;
@@ -73,9 +73,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.cherrygram.misc.Constants;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import uz.unnarsx.yuurigram.misc.Constants;
 
 public class StarsIntroActivityCG extends GradientHeaderActivity implements NotificationCenter.NotificationCenterDelegate {
 

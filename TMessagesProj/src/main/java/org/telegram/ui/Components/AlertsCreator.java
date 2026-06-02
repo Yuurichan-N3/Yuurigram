@@ -168,8 +168,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
-import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.CGBiometricPrompt;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
 
 import me.vkryl.core.BitwiseUtils;
 

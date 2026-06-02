@@ -92,9 +92,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.VibrateUtil;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.VibrateUtil;
+import id.idn.yuurigram.configs.YuurigramCoreConfig;
 
 public class ActionBarLayout extends FrameLayout implements INavigationLayout, FloatingDebugProvider {
 

@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.crashlytics
+package uz.unnarsx.yuurigram.core.crashlytics
 
 import android.content.Context
 import android.os.Bundle
@@ -17,11 +17,11 @@ import org.telegram.messenger.AndroidUtilities
 import org.telegram.messenger.ApplicationLoader
 import org.telegram.messenger.FileLog
 import org.telegram.tgnet.TLRPC
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper
+import uz.unnarsx.yuurigram.chats.helpers.ChatsHelper2
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramDebugConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramPrivacyConfig
+import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper
 
 object FirebaseAnalyticsHelper {
 

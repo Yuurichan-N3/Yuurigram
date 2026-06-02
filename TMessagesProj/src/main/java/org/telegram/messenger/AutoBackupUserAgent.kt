@@ -12,7 +12,7 @@ package org.telegram.messenger
 import android.app.ActivityManager
 import android.content.Context
 import kotlinx.coroutines.delay
-import uz.unnarsx.cherrygram.donates.DonatesManager
+import id.idn.yuurigram.donates.DonatesManager
 
 object AutoBackupUserAgent {
 

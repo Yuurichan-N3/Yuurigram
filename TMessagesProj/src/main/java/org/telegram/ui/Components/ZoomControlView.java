@@ -15,7 +15,7 @@ import android.view.View;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.R;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class ZoomControlView extends View {
 

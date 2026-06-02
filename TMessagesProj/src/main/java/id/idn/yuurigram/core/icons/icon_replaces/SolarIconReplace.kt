@@ -7,10 +7,10 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.icons.icon_replaces
+package uz.unnarsx.yuurigram.core.icons.icon_replaces
 
 import org.telegram.messenger.R
-import uz.unnarsx.cherrygram.core.icons.newHashMap
+import uz.unnarsx.yuurigram.core.icons.newHashMap
 
 class SolarIconReplace : BaseIconReplace() {
     override val replaces: HashMap<Int, Int> = newHashMap(

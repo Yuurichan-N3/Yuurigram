@@ -77,7 +77,7 @@ import org.telegram.ui.ViewPagerActivity;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.camera.CameraXView;
+import id.idn.yuurigramra.CameraXView;
 
 public class BottomSheet extends Dialog implements BaseFragment.AttachedSheet {
     private final static boolean AVOID_SYSTEM_CUTOUT_FULLSCREEN = false;

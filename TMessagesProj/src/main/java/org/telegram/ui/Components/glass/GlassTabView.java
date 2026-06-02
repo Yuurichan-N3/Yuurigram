@@ -52,8 +52,8 @@ import org.telegram.ui.MainTabsLayout;
 import me.vkryl.android.AnimatorUtils;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.ui.folders.FoldersHelper;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.ui.folders.FoldersHelper;
 
 public class GlassTabView extends FrameLayout implements MainTabsLayout.Tab, FactorAnimator.Target {
     private final TextView textView;

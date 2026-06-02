@@ -11,7 +11,7 @@ import static org.telegram.ui.Stars.StarsController.findAttribute;
 import static org.telegram.ui.Stars.StarsIntroActivity.StarsTransactionView.getPlatformDrawable;
 import static org.telegram.ui.bots.AffiliateProgramFragment.percents;
 
-import static uz.unnarsx.cherrygram.preferences.StarsIntroActivityCG.allowSafeStars;
+import static id.idn.yuurigram.preferences.StarsIntroActivityCG.allowSafeStars;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -166,7 +166,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
-import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator;
+import id.idn.yuurigram.preferences.YuurigramPreferencesNavigator;
 
 public class StarsIntroActivity extends GradientHeaderActivity implements NotificationCenter.NotificationCenterDelegate {
 

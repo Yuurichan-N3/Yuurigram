@@ -249,16 +249,16 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
-import uz.unnarsx.cherrygram.core.helpers.DeeplinkHelper;
-import uz.unnarsx.cherrygram.misc.YuurigramExtras;
-import uz.unnarsx.cherrygram.misc.LogoOverlayView;
-import uz.unnarsx.cherrygram.helpers.ui.MonetHelper;
-import uz.unnarsx.cherrygram.core.icons.CGUIResources;
-import uz.unnarsx.cherrygram.core.crashlytics.Crashlytics;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.CGBiometricPrompt;
+import id.idn.yuurigram.core.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.core.helpers.DeeplinkHelper;
+import id.idn.yuurigram.misc.YuurigramExtras;
+import id.idn.yuurigram.misc.LogoOverlayView;
+import id.idn.yuurigram.helpers.ui.MonetHelper;
+import id.idn.yuurigram.core.icons.CGUIResources;
+import id.idn.yuurigram.core.crashlytics.Crashlytics;
 
 public class LaunchActivity extends BasePermissionsActivity implements INavigationLayout.INavigationLayoutDelegate, NotificationCenter.NotificationCenterDelegate, DialogsActivity.DialogsActivityDelegate, IPipActivity {
     public final static String EXTRA_FORCE_NOT_INTERNAL_APPS = "force_not_internal_apps";
@@ -2865,9 +2865,9 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
                                             NotificationCenter.getInstance(intentAccount[0]).postNotificationName(NotificationCenter.closeChats);
                                             push_user_id = userId;
                                             String mimeType = cursor.getString(cursor.getColumnIndex(ContactsContract.Data.MIMETYPE));
-                                            if (TextUtils.equals(mimeType, "vnd.android.cursor.item/vnd.uz.unnarsx.cherrygram.android.call")) {
+                                            if (TextUtils.equals(mimeType, "vnd.android.cursor.item/vnd.id.idn.yuurigram.android.call")) {
                                                 audioCallUser = true;
-                                            } else if (TextUtils.equals(mimeType, "vnd.android.cursor.item/vnd.uz.unnarsx.cherrygram.android.call.video")) {
+                                            } else if (TextUtils.equals(mimeType, "vnd.android.cursor.item/vnd.id.idn.yuurigram.android.call.video")) {
                                                 videoCallUser = true;
                                             }
                                         }

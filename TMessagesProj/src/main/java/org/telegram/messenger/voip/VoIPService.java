@@ -165,7 +165,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
+import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper;
 
 @SuppressLint("NewApi")
 public class VoIPService extends Service implements SensorEventListener, AudioManager.OnAudioFocusChangeListener, VoIPController.ConnectionStateListener, NotificationCenter.NotificationCenterDelegate, VoIPServiceState {

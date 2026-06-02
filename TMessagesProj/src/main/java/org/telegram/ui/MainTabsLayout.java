@@ -10,7 +10,7 @@ import org.telegram.ui.Components.AnimatedLinearLayout;
 import org.telegram.ui.Components.glass.GlassTabView;
 
 import me.vkryl.android.animator.ListAnimator;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
 
 public class MainTabsLayout extends AnimatedLinearLayout {
 

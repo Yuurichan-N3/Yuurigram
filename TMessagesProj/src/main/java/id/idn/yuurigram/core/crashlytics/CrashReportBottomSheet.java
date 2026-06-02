@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.crashlytics;
+package uz.unnarsx.yuurigram.core.crashlytics;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -27,7 +27,7 @@ import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.StickerImageView;
 import org.telegram.ui.Stories.recorder.ButtonWithCounterView;
 
-import uz.unnarsx.cherrygram.helpers.ui.OnceBottomSheetHelper;
+import uz.unnarsx.yuurigram.helpers.ui.OnceBottomSheetHelper;
 
 public class CrashReportBottomSheet extends OnceBottomSheetHelper {
 

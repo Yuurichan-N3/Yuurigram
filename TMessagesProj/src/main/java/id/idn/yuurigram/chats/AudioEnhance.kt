@@ -7,10 +7,10 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats
+package id.idn.yuurigram.chats
 
 import android.media.MediaRecorder
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig
 
 object AudioEnhance {
 

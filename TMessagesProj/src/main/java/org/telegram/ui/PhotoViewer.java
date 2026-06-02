@@ -328,14 +328,14 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.chats.gemini.GeminiButtonsLayout;
-import uz.unnarsx.cherrygram.chats.gemini.GeminiResultsBottomSheet;
-import uz.unnarsx.cherrygram.chats.gemini.GeminiSDKImplementation;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.cherrygram.helpers.PhotoViewerHelper;
+import id.idn.yuurigram.chats.gemini.GeminiButtonsLayout;
+import id.idn.yuurigram.chats.gemini.GeminiResultsBottomSheet;
+import id.idn.yuurigram.chats.gemini.GeminiSDKImplementation;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.helpers.PhotoViewerHelper;
 
 import me.vkryl.core.reference.ReferenceList;
 

@@ -16,9 +16,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.withContext
 import org.telegram.tgnet.ConnectionManagerDelegate
-import uz.unnarsx.cherrygram.Extra
-import uz.unnarsx.cherrygram.core.helpers.AppRestartHelper
-import uz.unnarsx.cherrygram.misc.Constants
+import id.idn.yuurigram.Extra
+import id.idn.yuurigram.core.helpers.AppRestartHelper
+import id.idn.yuurigram.misc.Constants
 import java.util.Locale
 
 object KotlinFragmentsManager: CoroutineScope by MainScope() {

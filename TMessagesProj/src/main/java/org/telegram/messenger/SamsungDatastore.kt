@@ -12,9 +12,9 @@ package org.telegram.messenger
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.telegram.tgnet.ConnectionManagerDelegate
-import uz.unnarsx.cherrygram.Extra
-import uz.unnarsx.cherrygram.core.crashlytics.FirebaseAnalyticsHelper
-import uz.unnarsx.cherrygram.core.helpers.AppRestartHelper
+import uz.unnarsx.yuurigram.Extra
+import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper
+import uz.unnarsx.yuurigram.core.helpers.AppRestartHelper
 import java.io.File
 
 object SamsungDatastore {

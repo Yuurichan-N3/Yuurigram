@@ -3,7 +3,7 @@ package org.telegram.ui;
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.LocaleController.getString;
 
-import static uz.unnarsx.cherrygram.preferences.StarsIntroActivityCG.allowSafeStars;
+import static id.idn.yuurigram.preferences.StarsIntroActivityCG.allowSafeStars;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -145,10 +145,10 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.misc.Constants;
-import uz.unnarsx.cherrygram.preferences.StarsIntroActivityCG;
+import id.idn.yuurigram.chats.helpers.ChatsHelper2;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.misc.Constants;
+import id.idn.yuurigram.preferences.StarsIntroActivityCG;
 
 public class PremiumPreviewFragment extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
     public final static String TRANSACTION_PATTERN = "^(.*?)(?:\\.\\.\\d*|)$";

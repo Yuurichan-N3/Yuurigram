@@ -151,9 +151,9 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
 
-import uz.unnarsx.cherrygram.chats.ui.MessageMenuHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.helpers.ui.MonetHelper;
+import id.idn.yuurigrams.ui.MessageMenuHelper;
+import id.idn.yuurigram.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigramers.ui.MonetHelper;
 
 public class Theme {
 

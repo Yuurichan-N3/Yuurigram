@@ -7,9 +7,9 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.misc
+package uz.unnarsx.yuurigram.misc
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
 
 object Constants {
 
@@ -18,9 +18,9 @@ object Constants {
 
     /** CG Links start**/
     @JvmField
-    var CG_CHANNEL_USERNAME = "cherrygram"
+    var CG_CHANNEL_USERNAME = "yuurigram"
     @JvmField
-    var CG_CHANNEL_URL = "https://t.me/cherrygram"
+    var CG_CHANNEL_URL = "https://t.me/yuurigram"
 
     @JvmField
     var CG_APKS_CHANNEL_USERNAME = "YuurigramAPKs"
@@ -33,25 +33,25 @@ object Constants {
     var CG_CHAT_URL = "https://t.me/YuurigramSupport"
 
     @JvmField
-    var UPDATE_APP_URL = if (YuurigramCoreConfig.isPlayStoreBuild()) "https://play.google.com/store/apps/details?id=uz.unnarsx.cherrygram" else CG_CHANNEL_URL
+    var UPDATE_APP_URL = if (YuurigramCoreConfig.isPlayStoreBuild()) "https://play.google.com/store/apps/details?id=uz.unnarsx.yuurigram" else CG_CHANNEL_URL
 
     @JvmField
-    var CG_PRIVACY_URL = "https://arslan4k1390.github.io/cherrygram/privacy"
+    var CG_PRIVACY_URL = "https://arslan4k1390.github.io/yuurigram/privacy"
     @JvmField
-    var CG_DONATIONS_AND_TERMS_URL = "https://arslan4k1390.github.io/cherrygram/donation-terms"
+    var CG_DONATIONS_AND_TERMS_URL = "https://arslan4k1390.github.io/yuurigram/donation-terms"
 
     @JvmField
-    var CG_CROWDIN_URL = "https://crowdin.com/project/cherrygram"
+    var CG_CROWDIN_URL = "https://crowdin.com/project/yuurigram"
     @JvmField
     var CG_GITHUB_URL = "https://github.com/arsLan4k1390/Yuurigram"
 
     @JvmField
-    var CG_SAFESTARS = "https://safestars.pro/?partner=cherrygram"
+    var CG_SAFESTARS = "https://safestars.pro/?partner=yuurigram"
     @JvmField
-    var CG_SAFESTARS_RU = "https://safestars.pro/ru/?partner=cherrygram"
+    var CG_SAFESTARS_RU = "https://safestars.pro/ru/?partner=yuurigram"
     /** CG Links finish**/
 
-    const val PACKAGE_NAME = "uz.unnarsx.cherrygram"
+    const val PACKAGE_NAME = "uz.unnarsx.yuurigram"
 
     /** CG Chats IDs start**/
     const val Yuurigram_Owner = 282287840L // Yuurigram Owner (Arslan)

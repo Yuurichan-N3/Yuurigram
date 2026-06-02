@@ -126,16 +126,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import uz.unnarsx.cherrygram.camera.BaseCameraView;
-import uz.unnarsx.cherrygram.camera.CameraXController;
-import uz.unnarsx.cherrygram.camera.CameraXUtils;
-import uz.unnarsx.cherrygram.camera.CameraXView;
-import uz.unnarsx.cherrygram.camera.EffectSelectorView;
-import uz.unnarsx.cherrygram.camera.LockAnimationView;
-import uz.unnarsx.cherrygram.camera.SlideControlView;
-import uz.unnarsx.cherrygram.core.PermissionsUtils;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCameraConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.camera.BaseCameraView;
+import id.idn.yuurigram.camera.CameraXController;
+import id.idn.yuurigram.camera.CameraXUtils;
+import id.idn.yuurigram.camera.CameraXView;
+import id.idn.yuurigram.camera.EffectSelectorView;
+import id.idn.yuurigram.camera.LockAnimationView;
+import id.idn.yuurigram.camera.SlideControlView;
+import id.idn.yuurigram.core.PermissionsUtils;
+import id.idn.yuurigram.core.configs.YuurigramCameraConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
 
 @SuppressLint("ViewConstructor")
 public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayout implements NotificationCenter.NotificationCenterDelegate {

@@ -18,7 +18,7 @@ import org.telegram.ui.Charts.view_data.LineViewData;
 import org.telegram.ui.Charts.view_data.PieLegendView;
 import org.telegram.ui.Charts.view_data.TransitionParams;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class PieChartView extends StackLinearChartView<PieChartViewData> {
 

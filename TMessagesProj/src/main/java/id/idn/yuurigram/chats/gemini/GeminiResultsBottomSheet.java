@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats.gemini;
+package uz.unnarsx.yuurigram.chats.gemini;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.AndroidUtilities.dpf2;
@@ -79,8 +79,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
+import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper;
 
 public class GeminiResultsBottomSheet extends BottomSheet implements NotificationCenter.NotificationCenterDelegate {
 

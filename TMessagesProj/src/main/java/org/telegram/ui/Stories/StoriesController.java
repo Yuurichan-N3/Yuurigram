@@ -91,8 +91,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.configs.YuurigramPrivacyConfig;
 
 public class StoriesController {
 

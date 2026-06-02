@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats.gemini;
+package uz.unnarsx.yuurigram.chats.gemini;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.LocaleController.getString;
@@ -26,7 +26,7 @@ import org.telegram.ui.ActionBar.ActionBarPopupWindow;
 import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.PopupSwipeBackLayout;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
 
 public class GeminiButtonsLayout {
 

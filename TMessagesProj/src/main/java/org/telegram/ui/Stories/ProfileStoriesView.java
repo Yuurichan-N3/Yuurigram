@@ -56,7 +56,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
 
 public class ProfileStoriesView extends View implements NotificationCenter.NotificationCenterDelegate {
 

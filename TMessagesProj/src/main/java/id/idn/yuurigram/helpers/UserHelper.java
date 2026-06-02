@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.helpers;
+package uz.unnarsx.yuurigram.helpers;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -36,8 +36,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-import uz.unnarsx.cherrygram.Extra;
-import uz.unnarsx.cherrygram.helpers.network.NetworkHelper;
+import uz.unnarsx.yuurigram.Extra;
+import uz.unnarsx.yuurigram.helpers.network.NetworkHelper;
 
 public class UserHelper extends BaseController {
 

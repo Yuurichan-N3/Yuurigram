@@ -59,8 +59,8 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
 
 public class LocaleController {
 

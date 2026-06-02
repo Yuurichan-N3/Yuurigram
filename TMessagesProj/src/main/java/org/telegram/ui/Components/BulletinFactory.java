@@ -59,7 +59,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper;
+import id.idn.yuurigram.chats.helpers.ChatsHelper;
 
 public final class BulletinFactory {
 

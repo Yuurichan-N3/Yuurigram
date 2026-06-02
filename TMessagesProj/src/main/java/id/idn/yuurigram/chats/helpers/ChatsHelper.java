@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats.helpers;
+package uz.unnarsx.yuurigram.chats.helpers;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -88,14 +88,14 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import uz.unnarsx.cherrygram.core.CGFeatureHooks;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.cherrygram.core.helpers.AppRestartHelper;
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
-import uz.unnarsx.cherrygram.helpers.ui.PopupHelper;
-import uz.unnarsx.cherrygram.misc.Constants;
+import uz.unnarsx.yuurigram.core.CGFeatureHooks;
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.yuurigram.core.helpers.AppRestartHelper;
+import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper;
+import uz.unnarsx.yuurigram.helpers.ui.PopupHelper;
+import uz.unnarsx.yuurigram.misc.Constants;
 
 // I've created this so CG features can be injected in a source file with 1 line only (maybe)
 // Because manual editing of drklo's sources harms your mental health.

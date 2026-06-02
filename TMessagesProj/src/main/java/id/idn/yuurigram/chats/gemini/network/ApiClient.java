@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats.gemini.network;
+package uz.unnarsx.yuurigram.chats.gemini.network;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import uz.unnarsx.cherrygram.chats.gemini.GeminiErrorDTO;
+import uz.unnarsx.yuurigram.chats.gemini.GeminiErrorDTO;
 
 public class ApiClient {
     private static final ExecutorService executor = Executors.newSingleThreadExecutor();

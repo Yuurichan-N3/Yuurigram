@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.helpers
+package uz.unnarsx.yuurigram.core.helpers
 
 import android.os.Build
 import android.text.Spannable
@@ -21,9 +21,9 @@ import org.telegram.messenger.LocaleController.getString
 import org.telegram.messenger.R
 import org.telegram.ui.Components.URLSpanNoUnderline
 import org.telegram.ui.LauncherIconController
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig
-import uz.unnarsx.cherrygram.misc.Constants
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig
+import uz.unnarsx.yuurigram.misc.Constants
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale

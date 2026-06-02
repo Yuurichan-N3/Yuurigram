@@ -97,9 +97,9 @@ import org.telegram.ui.Stories.DarkThemeResourceProvider;
 import java.util.ArrayList;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.chats.helpers.ChatsHelper;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
 
 public class ContentPreviewViewer {
 

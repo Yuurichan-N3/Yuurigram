@@ -24,7 +24,7 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.configs.YuurigramChatsConfig;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

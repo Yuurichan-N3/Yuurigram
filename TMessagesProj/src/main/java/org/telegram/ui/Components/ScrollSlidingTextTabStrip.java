@@ -50,7 +50,7 @@ import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.blur3.drawable.BlurredBackgroundDrawable;
 import org.telegram.ui.Stories.recorder.HintView2;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
 
 import java.util.ArrayList;
 

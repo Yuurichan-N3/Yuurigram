@@ -67,9 +67,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
-import uz.unnarsx.cherrygram.core.helpers.ErrorDatabaseHelper;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig;
+import id.idn.yuurigram.core.helpers.ErrorDatabaseHelper;
 
 import javax.net.ssl.SSLException;
 

@@ -43,7 +43,7 @@ import org.telegram.ui.SelectAnimatedEmojiDialog;
 import java.util.ArrayList;
 import java.util.Random;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
 
 public class ReactionsEffectOverlay {
 

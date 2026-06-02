@@ -75,8 +75,8 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.yuurigram.core.CGBiometricPrompt;
 
 public class PasscodeView extends FrameLayout implements NotificationCenter.NotificationCenterDelegate {
     private final static float BACKGROUND_SPRING_STIFFNESS = 300f;

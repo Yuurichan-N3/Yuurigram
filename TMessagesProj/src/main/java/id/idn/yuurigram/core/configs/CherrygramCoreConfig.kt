@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core.configs
+package uz.unnarsx.yuurigram.core.configs
 
 import android.app.Activity
 import android.content.SharedPreferences
@@ -23,14 +23,14 @@ import org.telegram.messenger.LocaleController.getString
 import org.telegram.messenger.MessagesController
 import org.telegram.messenger.R
 import org.telegram.messenger.UserConfig
-import uz.unnarsx.cherrygram.core.helpers.FirebaseRemoteConfigHelper
-import uz.unnarsx.cherrygram.donates.DonatesManager
-import uz.unnarsx.cherrygram.misc.Constants
-import uz.unnarsx.cherrygram.preferences.boolean
-import uz.unnarsx.cherrygram.preferences.float
-import uz.unnarsx.cherrygram.preferences.int
-import uz.unnarsx.cherrygram.preferences.long
-import uz.unnarsx.cherrygram.preferences.string
+import uz.unnarsx.yuurigram.core.helpers.FirebaseRemoteConfigHelper
+import uz.unnarsx.yuurigram.donates.DonatesManager
+import uz.unnarsx.yuurigram.misc.Constants
+import uz.unnarsx.yuurigram.preferences.boolean
+import uz.unnarsx.yuurigram.preferences.float
+import uz.unnarsx.yuurigram.preferences.int
+import uz.unnarsx.yuurigram.preferences.long
+import uz.unnarsx.yuurigram.preferences.string
 import androidx.core.content.edit
 import org.telegram.ui.web.RestrictedDomainsList
 

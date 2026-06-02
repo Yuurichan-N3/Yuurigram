@@ -103,7 +103,7 @@ import org.telegram.ui.Components.StickerEmptyView;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class PhotoPickerActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

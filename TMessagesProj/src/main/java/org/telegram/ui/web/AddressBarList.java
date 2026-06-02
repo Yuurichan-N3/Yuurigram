@@ -74,7 +74,7 @@ import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
+import id.idn.yuurigram.chats.helpers.ChatsHelper2;
 
 public class AddressBarList extends FrameLayout {
 

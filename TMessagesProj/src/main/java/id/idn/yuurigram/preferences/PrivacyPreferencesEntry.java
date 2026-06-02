@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences;
+package uz.unnarsx.yuurigram.preferences;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -37,14 +37,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Supplier;
 
-import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
-import uz.unnarsx.cherrygram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.cherrygram.core.helpers.AppRestartHelper;
-import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator;
-import uz.unnarsx.cherrygram.helpers.ui.PopupHelper;
-import uz.unnarsx.cherrygram.preferences.helpers.SettingsHelper;
+import uz.unnarsx.yuurigram.core.CGBiometricPrompt;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramPrivacyConfig;
+import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import uz.unnarsx.yuurigram.core.helpers.AppRestartHelper;
+import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
+import uz.unnarsx.yuurigram.helpers.ui.PopupHelper;
+import uz.unnarsx.yuurigram.preferences.helpers.SettingsHelper;
 
 public class PrivacyPreferencesEntry extends UniversalFragment {
 

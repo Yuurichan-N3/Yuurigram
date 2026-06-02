@@ -44,7 +44,7 @@ import org.telegram.messenger.AndroidUtilities;
 import java.util.ArrayList;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 /**
  * This is a utility class to add swipe to dismiss and drag & drop support to RecyclerView.

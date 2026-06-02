@@ -40,7 +40,7 @@ import org.telegram.ui.GroupCallActivity;
 
 import static android.view.WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class GroupCallPip implements NotificationCenter.NotificationCenterDelegate {
 

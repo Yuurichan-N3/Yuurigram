@@ -23,9 +23,9 @@ import org.telegram.ui.DialogsActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.CGBiometricPrompt;
+import id.idn.yuurigram.configs.YuurigramPrivacyConfig;
 
 public interface INavigationLayout {
     int REBUILD_FLAG_REBUILD_LAST = 1, REBUILD_FLAG_REBUILD_ONLY_LAST = 2;

@@ -238,16 +238,16 @@ import java.util.Stack;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
-import uz.unnarsx.cherrygram.chats.filters.MessagesFilterHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper;
-import uz.unnarsx.cherrygram.donates.BadgeHelper;
-import uz.unnarsx.cherrygram.donates.DonatesManager;
-import uz.unnarsx.cherrygram.misc.Constants;
+import id.idn.yuurigrams.filters.MessagesFilterHelper;
+import id.idn.yuurigram.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.configs.YuurigramDebugConfig;
+import id.idn.yuurigram.helpers.CGResourcesHelper;
+import id.idn.yuurigrams.helpers.ChatsHelper;
+import id.idn.yuurigramtes.BadgeHelper;
+import id.idn.yuurigramtes.DonatesManager;
+import id.idn.yuurigram.Constants;
 
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;

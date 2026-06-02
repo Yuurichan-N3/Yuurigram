@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences;
+package uz.unnarsx.yuurigram.preferences;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -25,13 +25,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.cherrygram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.cherrygram.core.helpers.DeeplinkHelper;
-import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator;
-import uz.unnarsx.cherrygram.helpers.ui.PopupHelper;
-import uz.unnarsx.cherrygram.preferences.helpers.AlertDialogSwitchers;
-import uz.unnarsx.cherrygram.preferences.helpers.SettingsHelper;
+import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import uz.unnarsx.yuurigram.core.helpers.DeeplinkHelper;
+import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
+import uz.unnarsx.yuurigram.helpers.ui.PopupHelper;
+import uz.unnarsx.yuurigram.preferences.helpers.AlertDialogSwitchers;
+import uz.unnarsx.yuurigram.preferences.helpers.SettingsHelper;
 
 public class MessagesPreferencesEntry extends UniversalFragment {
 

@@ -68,7 +68,7 @@ import org.telegram.ui.FilterCreateActivity;
 import org.telegram.ui.NotificationsSettingsActivity;
 import org.telegram.ui.Stories.StoriesUtilities;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.configs.YuurigramAppearanceConfig;
 
 import java.util.Locale;
 

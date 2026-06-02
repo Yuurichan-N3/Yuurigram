@@ -10,7 +10,7 @@ import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.Premium.PremiumGradient;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
 
 public class StatusBadgeComponent {
 

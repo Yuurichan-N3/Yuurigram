@@ -140,11 +140,11 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Stack;
 
-import uz.unnarsx.cherrygram.chats.filters.MessagesFilterHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
-import uz.unnarsx.cherrygram.misc.Constants;
+import id.idn.yuurigrams.filters.MessagesFilterHelper;
+import id.idn.yuurigram.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.Constants;
 
 public class DialogCell extends BaseCell implements StoriesListPlaceProvider.AvatarOverlaysView {
 

@@ -131,10 +131,10 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCameraConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.configs.YuurigramCameraConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramPrivacyConfig;
 
 public class MessagesController extends BaseController implements NotificationCenter.NotificationCenterDelegate {
 

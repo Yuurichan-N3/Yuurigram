@@ -75,7 +75,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
 
 public class VideoAds {
 

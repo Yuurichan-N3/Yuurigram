@@ -117,11 +117,11 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import uz.unnarsx.cherrygram.chats.helpers.ChatsPasswordHelper;
-import uz.unnarsx.cherrygram.chats.filters.MessagesFilterHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.chats.helpers.ChatsPasswordHelper;
+import id.idn.yuurigram.chats.filters.MessagesFilterHelper;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.configs.YuurigramPrivacyConfig;
 
 import me.vkryl.core.BitwiseUtils;
 

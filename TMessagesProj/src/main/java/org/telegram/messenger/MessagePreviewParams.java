@@ -19,8 +19,8 @@ import org.telegram.ui.Components.MessagePreviewView;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
 
 public class MessagePreviewParams {
 

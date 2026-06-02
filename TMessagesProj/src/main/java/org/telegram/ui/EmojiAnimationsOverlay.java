@@ -46,7 +46,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Random;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
 
 public class EmojiAnimationsOverlay implements NotificationCenter.NotificationCenterDelegate {
 

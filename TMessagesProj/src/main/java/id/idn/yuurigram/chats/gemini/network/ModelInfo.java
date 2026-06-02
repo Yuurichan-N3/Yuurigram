@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats.gemini.network;
+package id.idn.yuurigram.chats.gemini.network;
 
 public class ModelInfo {
     public String name;

@@ -233,12 +233,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.GZIPOutputStream;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
-import uz.unnarsx.cherrygram.helpers.ui.FontHelper;
-import uz.unnarsx.cherrygram.core.PermissionsUtils;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.helpers.CGResourcesHelper;
+import id.idn.yuurigram.helpers.ui.FontHelper;
+import id.idn.yuurigram.core.PermissionsUtils;
 
 import me.vkryl.core.BitwiseUtils;
 

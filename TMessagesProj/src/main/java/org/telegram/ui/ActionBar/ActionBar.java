@@ -71,11 +71,11 @@ import org.telegram.ui.Stars.StarsIntroActivity;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.configs.YuurigramChatsConfig;
 
 import me.vkryl.android.animator.ReplaceAnimator;
-import uz.unnarsx.cherrygram.helpers.ui.FontHelper;
+import id.idn.yuurigramers.ui.FontHelper;
 
 public class ActionBar extends FrameLayout implements Theme.Colorable {
 

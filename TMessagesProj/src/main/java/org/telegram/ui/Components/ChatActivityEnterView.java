@@ -211,11 +211,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
-import uz.unnarsx.cherrygram.chats.gemini.GeminiSDKImplementation;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.chats.translator.BaseTranslator;
-import uz.unnarsx.cherrygram.chats.translator.Translator;
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
+import id.idn.yuurigram.chats.gemini.GeminiSDKImplementation;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.chats.translator.BaseTranslator;
+import id.idn.yuurigram.chats.translator.Translator;
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig;
 
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;

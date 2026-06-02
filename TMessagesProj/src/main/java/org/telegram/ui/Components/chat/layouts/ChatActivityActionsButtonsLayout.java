@@ -32,8 +32,8 @@ import org.telegram.ui.Components.chat.buttons.ChatActivityBlurredRoundButton;
 import me.vkryl.android.AnimatorUtils;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.helpers.CGResourcesHelper;
 
 @SuppressLint("ViewConstructor")
 public class ChatActivityActionsButtonsLayout extends LinearLayout {

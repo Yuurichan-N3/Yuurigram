@@ -104,10 +104,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import uz.unnarsx.cherrygram.chats.helpers.ChatsPasswordHelper;
-import uz.unnarsx.cherrygram.chats.filters.MessagesFilterHelper;
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
+import id.idn.yuurigram.chats.helpers.ChatsPasswordHelper;
+import id.idn.yuurigram.chats.filters.MessagesFilterHelper;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.chats.helpers.ChatsHelper2;
 
 @SuppressWarnings("unchecked")
 public class MediaDataController extends BaseController {
@@ -128,7 +128,7 @@ public class MediaDataController extends BaseController {
             SPOILER_PATTERN = Pattern.compile("\\|\\|(.+?)\\|\\|"),
             STRIKE_PATTERN = Pattern.compile("~~(.+?)~~");
 
-    public static String SHORTCUT_CATEGORY = "uz.unnarsx.cherrygram.SHORTCUT_SHARE";
+    public static String SHORTCUT_CATEGORY = "id.idn.yuurigram.SHORTCUT_SHARE";
 
     private static volatile MediaDataController[] Instance = new MediaDataController[UserConfig.MAX_ACCOUNT_COUNT];
     private static final Object[] lockObjects = new Object[UserConfig.MAX_ACCOUNT_COUNT];

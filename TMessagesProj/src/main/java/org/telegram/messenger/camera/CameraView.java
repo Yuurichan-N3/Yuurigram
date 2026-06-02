@@ -95,9 +95,9 @@ import javax.microedition.khronos.egl.EGLContext;
 import javax.microedition.khronos.egl.EGLDisplay;
 import javax.microedition.khronos.egl.EGLSurface;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.camera.BaseCameraView;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCameraConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.yuurigram.camera.BaseCameraView;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCameraConfig;
 
 @SuppressLint("NewApi")
 public class CameraView extends BaseCameraView implements TextureView.SurfaceTextureListener, CameraController.ICameraView, CameraController.ErrorCallback  {

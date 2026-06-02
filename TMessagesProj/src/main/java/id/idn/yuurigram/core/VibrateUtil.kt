@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core
+package uz.unnarsx.yuurigram.core
 
 import android.content.Context
 import android.os.Build
@@ -19,7 +19,7 @@ import android.view.ViewGroup
 import androidx.core.view.children
 import org.telegram.messenger.AndroidUtilities
 import org.telegram.messenger.ApplicationLoader
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig
 
 object VibrateUtil {
 

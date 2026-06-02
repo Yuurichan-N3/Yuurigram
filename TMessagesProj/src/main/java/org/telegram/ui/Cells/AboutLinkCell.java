@@ -65,7 +65,7 @@ import org.telegram.ui.Components.URLSpanNoUnderline;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-import uz.unnarsx.cherrygram.core.ui.MD3ListAdapter;
+import id.idn.yuurigram.ui.MD3ListAdapter;
 
 public class AboutLinkCell extends FrameLayout {
 

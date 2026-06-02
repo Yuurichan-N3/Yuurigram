@@ -47,7 +47,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import uz.unnarsx.cherrygram.helpers.network.StickersManager;
+import id.idn.yuurigram.helpers.network.StickersManager;
 
 public class AnimatedFileDrawable extends BitmapDrawable implements Animatable, BitmapsCache.Cacheable {
 
@@ -552,7 +552,7 @@ public class AnimatedFileDrawable extends BitmapDrawable implements Animatable, 
             if (document != null) {
                 if (StickersManager.INSTANCE.isStickerSetToBlock(document)) {
                     StickersManager.INSTANCE.copyStickerFromAssets();
-                    path = new File(ApplicationLoader.applicationContext.getExternalFilesDir(null), "stickers/cherrygram.webm");
+                    path = new File(ApplicationLoader.applicationContext.getExternalFilesDir(null), "stickers/yuurigram.webm");
                 }
             }
         }

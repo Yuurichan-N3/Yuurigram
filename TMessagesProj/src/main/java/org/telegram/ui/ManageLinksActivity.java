@@ -88,7 +88,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class ManageLinksActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats
+package uz.unnarsx.yuurigram.chats
 
 import android.Manifest
 import android.content.Context
@@ -37,11 +37,11 @@ import org.telegram.ui.Components.ItemOptions
 import org.telegram.ui.DialogsActivity
 import org.telegram.ui.Gifts.GiftSheet
 import org.telegram.ui.LaunchActivity
-import uz.unnarsx.cherrygram.chats.helpers.ChatActivityHelper
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig
-import uz.unnarsx.cherrygram.donates.DonatesManager
-import uz.unnarsx.cherrygram.misc.Constants
+import uz.unnarsx.yuurigram.chats.helpers.ChatActivityHelper
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramPrivacyConfig
+import uz.unnarsx.yuurigram.donates.DonatesManager
+import uz.unnarsx.yuurigram.misc.Constants
 import kotlin.math.abs
 import androidx.core.content.edit
 import org.telegram.messenger.AccountInstance
@@ -52,9 +52,9 @@ import org.telegram.ui.CallLogActivity
 import org.telegram.ui.Components.ChatActivityEnterView
 import org.telegram.ui.Components.ChatAttachAlert
 import org.telegram.ui.ProxyListActivity
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig
-import uz.unnarsx.cherrygram.core.ui.mainTabs.MainTabsManager
+import uz.unnarsx.yuurigram.chats.helpers.ChatsHelper2
+import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig
+import uz.unnarsx.yuurigram.core.ui.mainTabs.MainTabsManager
 
 // I've created this so CG features can be injected in a source file with 1 line only (maybe)
 // Because manual editing of drklo's sources harms your mental health.

@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences;
+package uz.unnarsx.yuurigram.preferences;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -32,16 +32,16 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import uz.unnarsx.cherrygram.camera.CameraTypeSelector;
-import uz.unnarsx.cherrygram.camera.CameraXUtils;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCameraConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
-import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator;
-import uz.unnarsx.cherrygram.donates.DonatesManager;
-import uz.unnarsx.cherrygram.helpers.ui.PopupHelper;
-import uz.unnarsx.cherrygram.preferences.helpers.SettingsHelper;
+import uz.unnarsx.yuurigram.camera.CameraTypeSelector;
+import uz.unnarsx.yuurigram.camera.CameraXUtils;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCameraConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper;
+import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
+import uz.unnarsx.yuurigram.donates.DonatesManager;
+import uz.unnarsx.yuurigram.helpers.ui.PopupHelper;
+import uz.unnarsx.yuurigram.preferences.helpers.SettingsHelper;
 
 public class CameraPreferencesEntry extends UniversalFragment {
 

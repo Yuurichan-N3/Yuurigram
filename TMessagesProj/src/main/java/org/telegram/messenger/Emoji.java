@@ -43,9 +43,9 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.cherrygram.helpers.ui.FontHelper;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.helpers.ui.FontHelper;
 
 public class Emoji {
 

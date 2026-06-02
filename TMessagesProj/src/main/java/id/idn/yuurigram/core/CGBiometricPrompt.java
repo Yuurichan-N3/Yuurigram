@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.core;
+package id.idn.yuurigram.core;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -31,8 +31,8 @@ import org.telegram.messenger.support.fingerprint.FingerprintManagerCompat;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
-import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig;
+import id.idn.yuurigram.core.configs.YuurigramPrivacyConfig;
 
 public class CGBiometricPrompt {
 

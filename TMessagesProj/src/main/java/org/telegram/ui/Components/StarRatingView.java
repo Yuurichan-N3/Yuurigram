@@ -16,7 +16,7 @@ import org.telegram.messenger.MessagesController;
 import org.telegram.tgnet.tl.TL_stars;
 import org.telegram.ui.ActionBar.Theme;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
 
 public class StarRatingView extends View {
     private final BadgeLevelDrawable drawable;

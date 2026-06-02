@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.helpers
+package uz.unnarsx.yuurigram.helpers
 
 import org.telegram.messenger.AndroidUtilities
 import org.telegram.messenger.FileLoader
@@ -20,7 +20,7 @@ import org.telegram.ui.Components.AnimatedEmojiDrawable
 import org.telegram.ui.Components.EmojiPacksAlert
 import org.telegram.ui.Components.StickersAlert
 import org.telegram.ui.PhotoViewer.PhotoViewerActionBarContainer
-import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper
+import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper
 
 class PhotoViewerHelper(
     private val avatarsArr: ArrayList<TLRPC.Photo>,

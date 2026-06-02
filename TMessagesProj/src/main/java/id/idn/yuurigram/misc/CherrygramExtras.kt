@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.misc
+package uz.unnarsx.yuurigram.misc
 
 import android.app.Activity
 import android.content.Context
@@ -42,8 +42,8 @@ import org.telegram.tgnet.TLRPC
 import org.telegram.ui.ActionBar.AlertDialog
 import org.telegram.ui.ActionBar.BaseFragment
 import org.telegram.ui.LaunchActivity
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
+import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
@@ -219,7 +219,7 @@ object YuurigramExtras : CoroutineScope by MainScope() {
         requestTask.addOnCompleteListener { request ->
             if (fragment.parentActivity == null) return@addOnCompleteListener
 
-            if (!fragment.messagesController.mainSettings.getBoolean("is_cherrygram_rated", false)) {
+            if (!fragment.messagesController.mainSettings.getBoolean("is_yuurigram_rated", false)) {
                 if (request.isSuccessful) {
                     val reviewInfo = request.result
 
@@ -227,7 +227,7 @@ object YuurigramExtras : CoroutineScope by MainScope() {
                     flow.addOnCompleteListener {
                         CGBulletinCreator.createDebugSuccessBulletin(fragment)
                         fragment.messagesController.mainSettings.edit {
-                            putBoolean("is_cherrygram_rated", true)
+                            putBoolean("is_yuurigram_rated", true)
                         }
                     }
                 } else {

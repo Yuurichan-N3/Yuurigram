@@ -126,7 +126,7 @@ public class ConnectionManagerDelegate extends ContextWrapper {
         } catch (Exception e) {
             FileLog.e(e);
         }
-        return new File("/data/data/uz.unnarsx.cherrygram/" + name);
+        return new File("/data/data/id.idn.yuurigram/" + name);
     }
 
 }

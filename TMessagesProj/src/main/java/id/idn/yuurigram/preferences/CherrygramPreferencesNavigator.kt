@@ -7,11 +7,11 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.preferences
+package uz.unnarsx.yuurigram.preferences
 
 import org.telegram.ui.ActionBar.BaseFragment
-import uz.unnarsx.cherrygram.preferences.folders.FoldersPreferencesEntry
-import uz.unnarsx.cherrygram.preferences.tabs.MainTabsPreferencesEntry
+import uz.unnarsx.yuurigram.preferences.folders.FoldersPreferencesEntry
+import uz.unnarsx.yuurigram.preferences.tabs.MainTabsPreferencesEntry
 
 object YuurigramPreferencesNavigator {
 

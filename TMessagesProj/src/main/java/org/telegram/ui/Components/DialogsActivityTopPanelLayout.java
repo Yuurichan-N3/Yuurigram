@@ -18,7 +18,7 @@ import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.blur3.drawable.BlurredBackgroundDrawable;
 
 import me.vkryl.android.animator.ListAnimator;
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
 
 public class DialogsActivityTopPanelLayout extends AnimatedLinearLayout {
     private final GradientDrawable fadeDrawable;

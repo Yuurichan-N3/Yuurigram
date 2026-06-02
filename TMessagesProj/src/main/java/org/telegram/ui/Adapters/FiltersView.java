@@ -52,7 +52,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.configs.YuurigramAppearanceConfig;
 
 public class FiltersView extends RecyclerListView {
 

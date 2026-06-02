@@ -37,7 +37,7 @@ import org.telegram.ui.ActionBar.Theme;
 
 import java.util.Locale;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class ProximitySheet extends FrameLayout {
 

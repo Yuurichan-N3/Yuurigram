@@ -54,8 +54,8 @@ import java.util.Locale;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
-import uz.unnarsx.cherrygram.camera.CameraXUtils;
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.camera.CameraXUtils;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
 
 public class ApplicationLoader extends Application {
 
@@ -181,7 +181,7 @@ public class ApplicationLoader extends Application {
         } catch (Exception e) {
             FileLog.e(e);
         }
-        return new File("/data/data/uz.unnarsx.cherrygram/files");
+        return new File("/data/data/id.idn.yuurigram/files");
     }
 
     public static File getFilesDirFixed(String child) {

@@ -78,8 +78,8 @@ import org.telegram.ui.Stories.recorder.HintView2;
 import java.util.HashSet;
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.chats.ui.WindowBlurHelper;
-import uz.unnarsx.cherrygram.donates.BadgeHelper;
+import uz.unnarsx.yuurigram.chats.ui.WindowBlurHelper;
+import uz.unnarsx.yuurigram.donates.BadgeHelper;
 
 public class ItemOptions {
 

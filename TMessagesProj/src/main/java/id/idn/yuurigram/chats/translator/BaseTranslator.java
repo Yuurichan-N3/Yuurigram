@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.chats.translator;
+package id.idn.yuurigram.chats.translator;
 
 import android.os.SystemClock;
 import android.util.LruCache;
@@ -32,7 +32,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
 
 abstract public class BaseTranslator {
 

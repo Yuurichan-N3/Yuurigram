@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.cherrygram.helpers.network
+package uz.unnarsx.yuurigram.helpers.network
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -23,9 +23,9 @@ import org.telegram.messenger.ApplicationLoader
 import org.telegram.messenger.FileLog
 import org.telegram.messenger.MessageObject
 import org.telegram.tgnet.TLRPC
-import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig
-import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
+import uz.unnarsx.yuurigram.core.configs.YuurigramDebugConfig
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -36,7 +36,7 @@ import java.net.URL
 import kotlin.math.roundToInt
 import androidx.core.graphics.scale
 import org.telegram.messenger.UserConfig
-import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper
+import uz.unnarsx.yuurigram.chats.helpers.ChatsHelper
 
 object StickersManager {
 
@@ -160,11 +160,11 @@ object StickersManager {
     //Get sticker from assets
     fun copyStickerFromAssets() {
         try {
-            val outFile = File(ApplicationLoader.applicationContext.getExternalFilesDir(null), "stickers/cherrygram.webm")
+            val outFile = File(ApplicationLoader.applicationContext.getExternalFilesDir(null), "stickers/yuurigram.webm")
             if (outFile.exists()) return
             outFile.parentFile?.mkdirs()
 
-            ApplicationLoader.applicationContext.assets.open("cherrygram.webm").use { input ->
+            ApplicationLoader.applicationContext.assets.open("yuurigram.webm").use { input ->
                 FileOutputStream(outFile).use { output ->
                     input.copyTo(output)
                 }
