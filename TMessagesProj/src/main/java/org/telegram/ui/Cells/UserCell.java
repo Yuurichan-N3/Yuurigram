@@ -67,8 +67,8 @@ import org.telegram.ui.Stories.StoriesListPlaceProvider;
 import org.telegram.ui.Stories.StoriesUtilities;
 
 import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramDebugConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
 import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
 import uz.unnarsx.cherrygram.donates.DonatesManager;
 import uz.unnarsx.cherrygram.donates.BadgeHelper;
@@ -707,7 +707,7 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
             botVerification.setColor(Theme.getColor(Theme.key_chats_verifiedBackground, resourcesProvider));
             nameTextView.setLeftDrawable(botVerification);
         }
-        if (currentUser != null && MessagesController.getInstance(currentAccount).isPremiumUser(currentUser) && !MessagesController.getInstance(currentAccount).premiumFeaturesBlocked() && !CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses() && !addEditButton) {
+        if (currentUser != null && MessagesController.getInstance(currentAccount).isPremiumUser(currentUser) && !MessagesController.getInstance(currentAccount).premiumFeaturesBlocked() && !YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses() && !addEditButton) {
             if (DialogObject.getEmojiStatusDocumentId(currentUser.emoji_status) != 0) {
                 emojiStatus.set(DialogObject.getEmojiStatusDocumentId(currentUser.emoji_status), false);
                 emojiStatus.setColor(Theme.getColor(Theme.key_chats_verifiedBackground, resourcesProvider));
@@ -733,7 +733,7 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
             nameTextView.setRightDrawable(null);
             nameTextView.setRightDrawableTopPadding(0);
         }
-        checkCherrygramBadges(nameTextView, currentUser);
+        checkYuurigramBadges(nameTextView, currentUser);
         if (currentStatus != null) {
             statusTextView.setTextColor(statusColor);
             statusTextView.setText(currentStatus);
@@ -751,7 +751,7 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
                     statusTextView.setText(getString(R.string.Online));
                 } else {
                     statusTextView.setTextColor(statusColor);
-                    statusTextView.setText(CherrygramDebugConfig.INSTANCE.getOldTimeStyle() ? LocaleController.formatUserStatus(currentAccount, currentUser) : LocaleController.formatUserStatusIOS(currentAccount, currentUser));                }
+                    statusTextView.setText(YuurigramDebugConfig.INSTANCE.getOldTimeStyle() ? LocaleController.formatUserStatus(currentAccount, currentUser) : LocaleController.formatUserStatusIOS(currentAccount, currentUser));                }
             }
         }
 
@@ -908,20 +908,20 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private ImageView mutualView;
 
     private final boolean addEditButton;
 
     private AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable cherrygramStatusDrawable;
 
-    private void checkCherrygramBadges(SimpleTextView nameTextView, TLRPC.User user) {
+    private void checkYuurigramBadges(SimpleTextView nameTextView, TLRPC.User user) {
         if (user == null) return;
 
         long emojiDocumentId;
         boolean isPremium = false; // cgPremium
         boolean isDonated = DonatesManager.INSTANCE.didUserDonate(user.id);
-        boolean forceBra = user.id == Constants.Cherrygram_Owner;
+        boolean forceBra = user.id == Constants.Yuurigram_Owner;
         boolean showParticles = isPremium || forceBra || DonatesManager.INSTANCE.didUserDonateForMarketplace(user.id);
 
         if (isPremium && isDonated) {
@@ -999,6 +999,6 @@ public class UserCell extends FrameLayout implements NotificationCenter.Notifica
                 .setBlur(true)
                 .show();
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

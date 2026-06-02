@@ -138,10 +138,10 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramMessagesConfig;
-import uz.unnarsx.cherrygram.misc.CherrygramExtras;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.cherrygram.misc.YuurigramExtras;
 
 public class ShareAlert extends BottomSheet implements NotificationCenter.NotificationCenterDelegate {
 
@@ -444,7 +444,7 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
 
 
         this.resourcesProvider = theme;
-        this.includeStory = CherrygramMessagesConfig.INSTANCE.getShareDrawStoryButton() && includeStory;
+        this.includeStory = YuurigramMessagesConfig.INSTANCE.getShareDrawStoryButton() && includeStory;
 
         parentActivity = AndroidUtilities.findActivity(context);
 
@@ -2651,7 +2651,7 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
                     if (foldersView.filterTabsView.currentTabIsDefault()) {
                         listAdapter.fetchDialogs();
                     } else {
-                        if (!CherrygramAppearanceConfig.INSTANCE.getTabsHideAllChats()) foldersView.applyFilter(foldersView.filterTabsView.getFirstTabId());
+                        if (!YuurigramAppearanceConfig.INSTANCE.getTabsHideAllChats()) foldersView.applyFilter(foldersView.filterTabsView.getFirstTabId());
                     }
                 } else {
                     listAdapter.fetchDialogs();
@@ -2992,7 +2992,7 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
         public void setDialogs(List<TLRPC.Dialog> newDialogs) {
             dialogs.clear();
             dialogsMap.clear();
-            if (CherrygramAppearanceConfig.INSTANCE.getTabsHideAllChats() && foldersView.filterTabsView != null && hasFolders() && includeStory) {
+            if (YuurigramAppearanceConfig.INSTANCE.getTabsHideAllChats() && foldersView.filterTabsView != null && hasFolders() && includeStory) {
                 MyStoryDialog d = new MyStoryDialog();
                 dialogs.add(d);
                 dialogsMap.put(d.id, d);
@@ -3962,14 +3962,14 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
                     }
                     int result;
                     if (frameLayout2.getTag() != null && commentTextView.length() > 0) {
-                        SendMessagesHelper.SendMessageParams params = SendMessagesHelper.SendMessageParams.of(text[0] == null ? null : text[0].toString(), key, replyTopMsg, replyTopMsg, null, true, entities, null, null, CherrygramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
+                        SendMessagesHelper.SendMessageParams params = SendMessagesHelper.SendMessageParams.of(text[0] == null ? null : text[0].toString(), key, replyTopMsg, replyTopMsg, null, true, entities, null, null, YuurigramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
                         params.payStars = price == null ? 0 : price;
                         SendMessagesHelper.getInstance(currentAccount).sendMessage(params);
                     }
-                    if (!CherrygramChatsConfig.INSTANCE.getForwardAuthorship() || !CherrygramChatsConfig.INSTANCE.getForwardCaptions()) {
-                        result = SendMessagesHelper.getInstance(currentAccount).sendMessage(sendingMessageObjects, key, true, !CherrygramChatsConfig.INSTANCE.getForwardCaptions(), CherrygramChatsConfig.INSTANCE.getForwardNotify(), 0, replyTopMsg, video_timestamp, price == null ? 0 : price);
+                    if (!YuurigramChatsConfig.INSTANCE.getForwardAuthorship() || !YuurigramChatsConfig.INSTANCE.getForwardCaptions()) {
+                        result = SendMessagesHelper.getInstance(currentAccount).sendMessage(sendingMessageObjects, key, true, !YuurigramChatsConfig.INSTANCE.getForwardCaptions(), YuurigramChatsConfig.INSTANCE.getForwardNotify(), 0, replyTopMsg, video_timestamp, price == null ? 0 : price);
                     } else {
-                        result = SendMessagesHelper.getInstance(currentAccount).sendMessage(sendingMessageObjects, key, false, false, CherrygramChatsConfig.INSTANCE.getForwardNotify(), 0, replyTopMsg, video_timestamp, price == null ? 0 : price);
+                        result = SendMessagesHelper.getInstance(currentAccount).sendMessage(sendingMessageObjects, key, false, false, YuurigramChatsConfig.INSTANCE.getForwardNotify(), 0, replyTopMsg, video_timestamp, price == null ? 0 : price);
                     }
                     if (result != 0) {
                         removeKeys.add(key);
@@ -4010,15 +4010,15 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
                         SendMessagesHelper.SendMessageParams params;
                         if (storyItem == null) {
                             if (frameLayout2.getTag() != null && commentTextView.length() > 0) {
-                                params = SendMessagesHelper.SendMessageParams.of(text[0] == null ? null : text[0].toString(), key, replyTopMsg, replyTopMsg, null, true, entities, null, null, CherrygramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
+                                params = SendMessagesHelper.SendMessageParams.of(text[0] == null ? null : text[0].toString(), key, replyTopMsg, replyTopMsg, null, true, entities, null, null, YuurigramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
                             } else {
-                                params = SendMessagesHelper.SendMessageParams.of(sendingText[num], key, replyTopMsg, replyTopMsg, null, true, null, null, null, CherrygramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
+                                params = SendMessagesHelper.SendMessageParams.of(sendingText[num], key, replyTopMsg, replyTopMsg, null, true, null, null, null, YuurigramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
                             }
                         } else {
                             if (frameLayout2.getTag() != null && commentTextView.length() > 0 && text[0] != null) {
-                                SendMessagesHelper.getInstance(currentAccount).sendMessage(SendMessagesHelper.SendMessageParams.of(text[0].toString(), key, null, replyTopMsg, null, true, null, null, null, CherrygramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false));
+                                SendMessagesHelper.getInstance(currentAccount).sendMessage(SendMessagesHelper.SendMessageParams.of(text[0].toString(), key, null, replyTopMsg, null, true, null, null, null, YuurigramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false));
                             }
-                            params = SendMessagesHelper.SendMessageParams.of(null, key, replyTopMsg, replyTopMsg, null, true, null, null, null, CherrygramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
+                            params = SendMessagesHelper.SendMessageParams.of(null, key, replyTopMsg, replyTopMsg, null, true, null, null, null, YuurigramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
                             params.sendingStory = storyItem;
                         }
                         params.payStars = price == null ? 0 : price;
@@ -4033,11 +4033,11 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
                         MessageObject replyTopMsg = topic != null ? new MessageObject(currentAccount, topic.topicStartMessage, false, false) : null;
 
                         if (frameLayout2.getTag() != null && commentTextView.length() > 0) {
-                            SendMessagesHelper.SendMessageParams params = SendMessagesHelper.SendMessageParams.of(text[0] == null ? null : text[0].toString(), key, replyTopMsg, replyTopMsg, null, true, entities, null, null, CherrygramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
+                            SendMessagesHelper.SendMessageParams params = SendMessagesHelper.SendMessageParams.of(text[0] == null ? null : text[0].toString(), key, replyTopMsg, replyTopMsg, null, true, entities, null, null, YuurigramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
                             params.payStars = price == null ? 0 : price;
                             SendMessagesHelper.getInstance(currentAccount).sendMessage(params);
                         }
-                        SendMessagesHelper.SendMessageParams params2 = SendMessagesHelper.SendMessageParams.of(sendingText[num], key, replyTopMsg, replyTopMsg, null, true, null, null, null, CherrygramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
+                        SendMessagesHelper.SendMessageParams params2 = SendMessagesHelper.SendMessageParams.of(sendingText[num], key, replyTopMsg, replyTopMsg, null, true, null, null, null, YuurigramChatsConfig.INSTANCE.getForwardNotify(), 0, 0, null, false);
                         params2.payStars = price == null ? 0 : price;
                         SendMessagesHelper.getInstance(currentAccount).sendMessage(params2);
                     }
@@ -4223,7 +4223,7 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
         scrollableViewNoiseSuppressor.invalidateResultRenderNodes(iBlur3Capture, containerView.getMeasuredWidth(), containerView.getMeasuredHeight());
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private final FoldersView foldersView;
 
     @SuppressWarnings("FieldCanBeLocal")
@@ -4345,7 +4345,7 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
 
             updateFilterTabs(true, true);
 
-            if (CherrygramExtras.INSTANCE.isWhiteOrNearWhite(Theme.getColor(Theme.key_dialogBackground)) && !CherrygramExtras.INSTANCE.isWhiteOrNearWhite(Theme.getColor(Theme.key_actionBarDefault))) {
+            if (YuurigramExtras.INSTANCE.isWhiteOrNearWhite(Theme.getColor(Theme.key_dialogBackground)) && !YuurigramExtras.INSTANCE.isWhiteOrNearWhite(Theme.getColor(Theme.key_actionBarDefault))) {
                 filterTabsView.setColors(
                         Theme.key_actionBarDefault,
                         Theme.key_actionBarDefault,
@@ -4393,13 +4393,13 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
                     filterTabsView.removeTabs();
                     for (int a = 0, N = filters.size(); a < N; a++) {
                         if (filters.get(a).isDefault()) {
-                            if (!CherrygramAppearanceConfig.INSTANCE.getTabsHideAllChats()) filterTabsView.addTab(a, 0, LocaleController.getString(R.string.FilterAllChats), null, false, true, filters.get(a).locked, filters.get(a).emoticon);
+                            if (!YuurigramAppearanceConfig.INSTANCE.getTabsHideAllChats()) filterTabsView.addTab(a, 0, LocaleController.getString(R.string.FilterAllChats), null, false, true, filters.get(a).locked, filters.get(a).emoticon);
                         } else {
                             final MessagesController.DialogFilter filter = filters.get(a);
                             filterTabsView.addTab(a, filter.localId, filter.name, filter.entities, filter.title_noanimate, false, filters.get(a).locked, filter.emoticon);
                         }
                     }
-                    if (CherrygramAppearanceConfig.INSTANCE.getTabsHideAllChats() && stableId <= 0) {
+                    if (YuurigramAppearanceConfig.INSTANCE.getTabsHideAllChats() && stableId <= 0) {
                         id = filterTabsView.getFirstTabId();
                         filterTabsView.selectTabWithStableId(filterTabsView.getStableId(0));
                     } else if (stableId >= 0) {
@@ -4495,6 +4495,6 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
     private boolean checkSearchVisible() {
         return !TextUtils.isEmpty(searchView.editText.getText()) || (keyboardVisible && searchView.editText.hasFocus()) || searchWasVisibleBeforeTopics;
     }
-    /** Cherrygram finishi */
+    /** Yuurigram finishi */
 
 }

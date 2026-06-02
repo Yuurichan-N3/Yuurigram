@@ -12,7 +12,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 import uz.unnarsx.cherrygram.Extra;
 import uz.unnarsx.cherrygram.misc.Constants;
 
@@ -42,7 +42,7 @@ public class BuildVars {
     public static String HUAWEI_APP_ID = "106911607";
 
     // You can use this flag to disable Google Play Billing (If you're making fork and want it to be in Google Play)
-    public static boolean IS_BILLING_UNAVAILABLE = CherrygramCoreConfig.isPlayStoreBuild();
+    public static boolean IS_BILLING_UNAVAILABLE = YuurigramCoreConfig.isPlayStoreBuild();
 
     // works only on official app ids, disable on your forks
     public static boolean SUPPORTS_PASSKEYS = Build.VERSION.SDK_INT >= 34;
@@ -94,7 +94,7 @@ public class BuildVars {
             betaApp = ApplicationLoader.applicationContext != null && "org.telegram.messenger.beta".equals(ApplicationLoader.applicationContext.getPackageName());
         }
         return betaApp;*/
-        return CherrygramCoreConfig.isStandaloneBetaBuild();
+        return YuurigramCoreConfig.isStandaloneBetaBuild();
     }
 
 

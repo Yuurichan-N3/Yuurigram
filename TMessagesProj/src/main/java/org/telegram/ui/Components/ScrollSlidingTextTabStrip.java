@@ -50,7 +50,7 @@ import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.blur3.drawable.BlurredBackgroundDrawable;
 import org.telegram.ui.Stories.recorder.HintView2;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 
 import java.util.ArrayList;
 
@@ -763,7 +763,7 @@ public class ScrollSlidingTextTabStrip extends HorizontalScrollView implements T
                 getPaddingLeft() + (int) r - dp(4),
                 height - getPaddingBottom() - dp(4)
             );
-            if (CherrygramAppearanceConfig.INSTANCE.getTabStyleStroke()) {
+            if (YuurigramAppearanceConfig.INSTANCE.getTabStyleStroke()) {
 //                selectorDrawable.setColor(ColorUtils.setAlphaComponent(processColor(Theme.getColor(tabLineColorKey, resourcesProvider)), 0x2F));
                 selectorDrawable.setStroke(AndroidUtilities.dp(1), processColor(Theme.getColor(activeTextColorKey, resourcesProvider)));
             }

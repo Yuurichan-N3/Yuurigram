@@ -67,8 +67,8 @@ import org.telegram.ui.LaunchActivity;
 import java.io.File;
 import java.util.Collections;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 
 public class StoriesUtilities {
 
@@ -192,7 +192,7 @@ public class StoriesUtilities {
             params.inc = false;
         }
         params.showProgress = showProgress;
-        if (CherrygramCoreConfig.INSTANCE.getHideStories() || params.currentState == STATE_EMPTY && params.progressToSate == 1f) {
+        if (YuurigramCoreConfig.INSTANCE.getHideStories() || params.currentState == STATE_EMPTY && params.progressToSate == 1f) {
             avatarImage.setImageCoords(params.originalAvatarRect);
             avatarImage.draw(canvas);
             return;
@@ -1282,7 +1282,7 @@ public class StoriesUtilities {
         public View child;
 
         public boolean checkOnTouchEvent(MotionEvent event, View view) {
-            if (CherrygramCoreConfig.INSTANCE.getHideStories()) return false;
+            if (YuurigramCoreConfig.INSTANCE.getHideStories()) return false;
             child = view;
             StoriesController storiesController = MessagesController.getInstance(UserConfig.selectedAccount).getStoriesController();
             if (event.getAction() == MotionEvent.ACTION_DOWN && originalAvatarRect.contains(event.getX(), event.getY())) {
@@ -1563,7 +1563,7 @@ public class StoriesUtilities {
         }
 
         public void setColor(MessagesController.PeerColor peerColor, boolean animated) {
-            if (peerColor != null && CherrygramAppearanceConfig.INSTANCE.getProfileBackgroundColor()) {
+            if (peerColor != null && YuurigramAppearanceConfig.INSTANCE.getProfileBackgroundColor()) {
                 setColors(
                     peerColor.getStoryColor1(Theme.isCurrentThemeDark()),
                     peerColor.getStoryColor2(Theme.isCurrentThemeDark()),

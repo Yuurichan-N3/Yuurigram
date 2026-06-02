@@ -233,9 +233,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.GZIPOutputStream;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
 import uz.unnarsx.cherrygram.helpers.ui.FontHelper;
 import uz.unnarsx.cherrygram.core.PermissionsUtils;
@@ -2405,7 +2405,7 @@ public class AndroidUtilities {
     public static Typeface getTypeface(String assetPath) {
         return typefaceCache.computeIfAbsent(assetPath, path -> {
             try {
-                if (CherrygramCoreConfig.INSTANCE.getSystemFonts()) {
+                if (YuurigramCoreConfig.INSTANCE.getSystemFonts()) {
                     return FontHelper.createTypeface(path);
                 }
                 return FontHelper.createTypefaceFromAsset(path);
@@ -2444,7 +2444,7 @@ public class AndroidUtilities {
     }
 
     public static int getShadowHeight() {
-        if (CherrygramAppearanceConfig.INSTANCE.getDisableDividers()) {
+        if (YuurigramAppearanceConfig.INSTANCE.getDisableDividers()) {
             return 0;
         } else if (density >= 4.0f) {
             return 3;
@@ -2942,8 +2942,8 @@ public class AndroidUtilities {
     }
 
     public static boolean isTabletForce() {
-        if (CherrygramCoreConfig.INSTANCE.getTabletMode() != CherrygramCoreConfig.TABLET_MODE_AUTO) {
-            return CherrygramCoreConfig.INSTANCE.getTabletMode() == CherrygramCoreConfig.TABLET_MODE_ENABLE;
+        if (YuurigramCoreConfig.INSTANCE.getTabletMode() != YuurigramCoreConfig.TABLET_MODE_AUTO) {
+            return YuurigramCoreConfig.INSTANCE.getTabletMode() == YuurigramCoreConfig.TABLET_MODE_ENABLE;
         }
         return ApplicationLoader.applicationContext != null && ApplicationLoader.applicationContext.getResources().getBoolean(R.bool.isTablet);
     }
@@ -3011,7 +3011,7 @@ public class AndroidUtilities {
     }
 
     public static int getPhotoSize(boolean highQuality) {
-        if (CherrygramChatsConfig.INSTANCE.getLargePhotos() || highQuality) {
+        if (YuurigramChatsConfig.INSTANCE.getLargePhotos() || highQuality) {
             if (highQualityPhotoSize == null) {
                 highQualityPhotoSize = 2560;
             }

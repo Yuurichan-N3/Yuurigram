@@ -1868,7 +1868,7 @@ public class ItemOptions {
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private boolean fullyRounded = false;
 
     public static ItemOptions makeOptions(@NonNull ViewGroup container, @Nullable Theme.ResourcesProvider resourcesProvider, @NonNull View scrimView, boolean swipeback, boolean shownFromBottom, boolean useScrollView, boolean fullyRounded) {
@@ -2031,6 +2031,6 @@ public class ItemOptions {
 
         return this;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

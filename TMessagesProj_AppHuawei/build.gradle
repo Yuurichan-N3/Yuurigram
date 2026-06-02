@@ -140,7 +140,7 @@ android {
         variant.outputs.configureEach { output ->
             def abi = output.getFilter('ABI')
             if (abi == null) abi = 'universal'
-            outputFileName = "Cherrygram-Huawei-${APP_VERSION_NAME_CHERRY}-TG-${defaultConfig.versionName}-${abi}.apk"
+            outputFileName = "Yuurigram-Huawei-${APP_VERSION_NAME_CHERRY}-TG-${defaultConfig.versionName}-${abi}.apk"
             output.versionCodeOverride = defaultConfig.versionCode * 10
         }
     }
@@ -264,10 +264,10 @@ tasks.register('copyFiles', Copy) {
     into desktopPath
 }
 
-def fileName = "Cherrygram-Huawei-${APP_VERSION_NAME_CHERRY}-TG-${APP_VERSION_NAME}-arm64-v8a.apk"
+def fileName = "Yuurigram-Huawei-${APP_VERSION_NAME_CHERRY}-TG-${APP_VERSION_NAME}-arm64-v8a.apk"
 def apkFilePath = "${projectDir}/afat/release/${fileName}"
 
-def fileName2 = "Cherrygram-Huawei-${APP_VERSION_NAME_CHERRY}-TG-${APP_VERSION_NAME}-armeabi-v7a.apk"
+def fileName2 = "Yuurigram-Huawei-${APP_VERSION_NAME_CHERRY}-TG-${APP_VERSION_NAME}-armeabi-v7a.apk"
 def apkFilePath2 = "${projectDir}/afat/release/${fileName2}"
 
 tasks.register('sendApk') {
@@ -281,7 +281,7 @@ tasks.register('sendApk') {
             return
         }
 
-        println "Sending APK to Cherrygram Support..."
+        println "Sending APK to Yuurigram Support..."
 
         try {
             sendApkToTelegram(file)
@@ -341,7 +341,7 @@ void sendApkToTelegram(File file) {
 
     client.newCall(request).execute().withCloseable { response ->
         if (response.isSuccessful()) {
-            println "APK successfully sent to Cherrygram Support!"
+            println "APK successfully sent to Yuurigram Support!"
         } else {
             throw new RuntimeException("HTTP ${response.code()} - ${response.message()}")
         }

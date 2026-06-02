@@ -67,8 +67,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramDebugConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
 import uz.unnarsx.cherrygram.core.helpers.ErrorDatabaseHelper;
 
 import javax.net.ssl.SSLException;
@@ -406,7 +406,7 @@ public class ConnectionsManager extends BaseController {
                         if (BuildVars.LOGS_ENABLED && error.code != -2000) {
                             FileLog.e(object + " got error " + error.code + " " + error.text);
                         }
-                        if (CherrygramDebugConfig.INSTANCE.getShowRPCErrors() && !CherrygramCoreConfig.isStandaloneStableBuild() && !CherrygramCoreConfig.isPlayStoreBuild()) {
+                        if (YuurigramDebugConfig.INSTANCE.getShowRPCErrors() && !YuurigramCoreConfig.isStandaloneStableBuild() && !YuurigramCoreConfig.isPlayStoreBuild()) {
                             ErrorDatabaseHelper.INSTANCE.showErrorToast(object, errorText);
                         }
                     }
@@ -600,7 +600,7 @@ public class ConnectionsManager extends BaseController {
             FileLog.d("selected ip strategy " + selectedStrategy);
         }
         native_setIpStrategy(currentAccount, selectedStrategy);
-        native_setNetworkAvailable(currentAccount, ApplicationLoader.isNetworkOnline(), ApplicationLoader.getCurrentNetworkType(), CherrygramCoreConfig.INSTANCE.getSlowNetworkMode());
+        native_setNetworkAvailable(currentAccount, ApplicationLoader.isNetworkOnline(), ApplicationLoader.getCurrentNetworkType(), YuurigramCoreConfig.INSTANCE.getSlowNetworkMode());
     }
 
     public void setPushConnectionEnabled(boolean value) {

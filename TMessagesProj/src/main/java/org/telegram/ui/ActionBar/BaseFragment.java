@@ -72,8 +72,8 @@ import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper;
 import uz.unnarsx.cherrygram.chats.helpers.ChatsPasswordHelper;
 import uz.unnarsx.cherrygram.chats.helpers.MessageHelper;
 import uz.unnarsx.cherrygram.core.VibrateUtil;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 import uz.unnarsx.cherrygram.helpers.ProfileActivityHelper;
 
 public abstract class BaseFragment {
@@ -288,7 +288,7 @@ public abstract class BaseFragment {
     }
 
     public boolean isActionBarCrossfadeEnabled() {
-        if (CherrygramCoreConfig.INSTANCE.getSpringAnimation() == CherrygramCoreConfig.ANIMATION_SPRING) {
+        if (YuurigramCoreConfig.INSTANCE.getSpringAnimation() == YuurigramCoreConfig.ANIMATION_SPRING) {
             if (getLastStoryViewer() != null && getLastStoryViewer().attachedToParent()) {
                 return false;
             }
@@ -356,7 +356,7 @@ public abstract class BaseFragment {
     public void setParentFragment(BaseFragment fragment) {
         setParentLayout(fragment.parentLayout);
         fragmentView = createView(parentLayout.getView().getContext());
-        if (fragmentView != null && CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+        if (fragmentView != null && YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
             VibrateUtil.INSTANCE.disableHapticFeedback(fragmentView);
         }
     }
@@ -1396,7 +1396,7 @@ public abstract class BaseFragment {
         public boolean occupyNavigationBar;
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public MessageHelper getMessageHelper() {
         return MessageHelper.getInstance(currentAccount);
     }
@@ -1420,11 +1420,11 @@ public abstract class BaseFragment {
     public ProfileActivityHelper getProfileActivityHelper() {
         return ProfileActivityHelper.getInstance(currentAccount);
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
     public boolean isSupportEdgeToEdge() {
         // warn: overridden method must return a constant
-        return false; // CherrygramExtras.isEdgeToEdgeSupported()
+        return false; // YuurigramExtras.isEdgeToEdgeSupported()
     }
 
     public boolean drawEdgeNavigationBar() {

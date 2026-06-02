@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "119732785963",
-    "project_id": "cherrygram-7b846",
-    "storage_bucket": "cherrygram-7b846.appspot.com"
+    "project_id": "yuurigram-7b846",
+    "storage_bucket": "yuurigram-7b846.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:119732785963:android:3d2936d504329fd9dc2b6e",
         "android_client_info": {
-          "package_name": "uz.unnarsx.cherrygram"
+          "package_name": "id.idn.yuurigram"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "119732785963-ib5iv9u5f5j44sga1ho72uja56420d4j.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "uz.unnarsx.cherrygram",
+            "package_name": "id.idn.yuurigram",
             "certificate_hash": "60a372c127926ac8fdce293006ae46a4ee68660a"
           }
         },

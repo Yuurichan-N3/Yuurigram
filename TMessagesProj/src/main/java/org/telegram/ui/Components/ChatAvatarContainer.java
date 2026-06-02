@@ -67,9 +67,9 @@ import org.telegram.ui.ProfileActivity2;
 import org.telegram.ui.Stories.StoriesUtilities;
 import org.telegram.ui.TopicsFragment;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramDebugConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +78,7 @@ import me.vkryl.android.animator.FactorAnimator;
 
 public class ChatAvatarContainer extends FrameLayout implements NotificationCenter.NotificationCenterDelegate {
 
-    private boolean centerChatTitle = CherrygramChatsConfig.INSTANCE.getCenterChatTitle();
+    private boolean centerChatTitle = YuurigramChatsConfig.INSTANCE.getCenterChatTitle();
     public boolean allowDrawStories;
     private Integer storiesForceState;
     public BackupImageView avatarImageView;
@@ -281,7 +281,7 @@ public class ChatAvatarContainer extends FrameLayout implements NotificationCent
         titleTextView.setLeftDrawableTopPadding(-dp(1.3f));
         titleTextView.setCanHideRightDrawable(false);
         titleTextView.setRightDrawableOutside(!centerChatTitle);
-        boolean hasEmoji = !CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses() && parentFragment != null &&
+        boolean hasEmoji = !YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses() && parentFragment != null &&
                 (
                         parentFragment.getCurrentUser() != null && parentFragment.getCurrentUser().premium || parentFragment.getCurrentUser() != null && DialogObject.getEmojiStatusDocumentId(parentFragment.getCurrentUser().emoji_status) != 0
                         || parentFragment.getCurrentChat() != null && DialogObject.getEmojiStatusDocumentId(parentFragment.getCurrentChat().emoji_status) != 0
@@ -388,12 +388,12 @@ public class ChatAvatarContainer extends FrameLayout implements NotificationCent
         pressed = false;
         bounce.setPressed(false);
         if (canSearch()) {
-            if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+            if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                 try {
                     performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                 } catch (Exception ignore) {}
             }
-            CherrygramChatsConfig.INSTANCE.setMessagesSearchFilter(CherrygramChatsConfig.FILTER_NONE);
+            YuurigramChatsConfig.INSTANCE.setMessagesSearchFilter(YuurigramChatsConfig.FILTER_NONE);
             openSearch();
         }
     };
@@ -964,7 +964,7 @@ public class ChatAvatarContainer extends FrameLayout implements NotificationCent
             rightDrawableIsScamOrVerified = false;
             rightDrawable2ContentDescription = null;
         }
-        if ((premium || DialogObject.getEmojiStatusDocumentId(emojiStatus) != 0) && !CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) {
+        if ((premium || DialogObject.getEmojiStatusDocumentId(emojiStatus) != 0) && !YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) {
             if (titleTextView.getRightDrawable() instanceof AnimatedEmojiDrawable.WrapSizeDrawable &&
                     ((AnimatedEmojiDrawable.WrapSizeDrawable) titleTextView.getRightDrawable()).getDrawable() instanceof AnimatedEmojiDrawable) {
                 ((AnimatedEmojiDrawable) ((AnimatedEmojiDrawable.WrapSizeDrawable) titleTextView.getRightDrawable()).getDrawable()).removeView(titleTextView);
@@ -1213,7 +1213,7 @@ public class ChatAvatarContainer extends FrameLayout implements NotificationCent
                     newStatus = LocaleController.getString(R.string.Bot);
                 } else {
                     isOnline[0] = false;
-                    newStatus = CherrygramDebugConfig.INSTANCE.getOldTimeStyle() ? LocaleController.formatUserStatus(currentAccount, user, isOnline, allowShorterStatus ? statusMadeShorter : null) : LocaleController.formatUserStatusIOS(currentAccount, user, isOnline, allowShorterStatus ? statusMadeShorter : null);
+                    newStatus = YuurigramDebugConfig.INSTANCE.getOldTimeStyle() ? LocaleController.formatUserStatus(currentAccount, user, isOnline, allowShorterStatus ? statusMadeShorter : null) : LocaleController.formatUserStatusIOS(currentAccount, user, isOnline, allowShorterStatus ? statusMadeShorter : null);
                     useOnlineColor = isOnline[0];
                 }
                 newSubtitle = newStatus;

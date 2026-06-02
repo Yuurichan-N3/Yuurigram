@@ -691,7 +691,7 @@ public class ButtonWithCounterView extends FrameLayout implements Loadable {
         return super.onInterceptTouchEvent(ev);
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public boolean useStroke;
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 }

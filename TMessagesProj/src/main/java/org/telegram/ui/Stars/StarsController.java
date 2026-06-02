@@ -85,7 +85,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 
 public class StarsController {
 
@@ -1296,7 +1296,7 @@ public class StarsController {
                     return;
                 }
                 final boolean[] purchased = new boolean[] { false };
-                if (whenDone != null && CherrygramCoreConfig.INSTANCE.getAllowSafeStars()) {
+                if (whenDone != null && YuurigramCoreConfig.INSTANCE.getAllowSafeStars()) {
                     whenDone.run(true);
                 }
                 StarsIntroActivity.StarsNeededSheet sheet = new StarsIntroActivity.StarsNeededSheet(context, resourcesProvider, stars, isBiz ? StarsIntroActivity.StarsNeededSheet.TYPE_BIZ : StarsIntroActivity.StarsNeededSheet.TYPE_BOT, bot, () -> {

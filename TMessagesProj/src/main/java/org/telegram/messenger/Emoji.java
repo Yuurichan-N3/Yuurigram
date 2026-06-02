@@ -43,8 +43,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 import uz.unnarsx.cherrygram.helpers.ui.FontHelper;
 
 public class Emoji {
@@ -404,7 +404,7 @@ public class Emoji {
                 b = getBounds();
             }
 
-            if (CherrygramCoreConfig.INSTANCE.getSystemEmoji()) {
+            if (YuurigramCoreConfig.INSTANCE.getSystemEmoji()) {
                 String emoji = fixEmoji(EmojiData.data[info.page][info.emojiIndex]);
                 textPaint.setTypeface(FontHelper.getSystemEmojiTypeface());
                 textPaint.setTextSize(b.height() * 0.8f);
@@ -923,7 +923,7 @@ public class Emoji {
         if (count == null) {
             count = 0;
         }
-        if (count == 0 && emojiUseHistory.size() >= CherrygramChatsConfig.INSTANCE.getSlider_RecentEmojisAmplifier()) {
+        if (count == 0 && emojiUseHistory.size() >= YuurigramChatsConfig.INSTANCE.getSlider_RecentEmojisAmplifier()) {
             String emoji = recentEmoji.get(recentEmoji.size() - 1);
             emojiUseHistory.remove(emoji);
             recentEmoji.set(recentEmoji.size() - 1, code);
@@ -960,7 +960,7 @@ public class Emoji {
             }
             return 0;
         });
-        while (recentEmoji.size() > CherrygramChatsConfig.INSTANCE.getSlider_RecentEmojisAmplifier()) {
+        while (recentEmoji.size() > YuurigramChatsConfig.INSTANCE.getSlider_RecentEmojisAmplifier()) {
             recentEmoji.remove(recentEmoji.size() - 1);
         }
     }

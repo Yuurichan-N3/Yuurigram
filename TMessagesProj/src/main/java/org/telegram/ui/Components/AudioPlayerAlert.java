@@ -127,7 +127,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import uz.unnarsx.cherrygram.core.helpers.SleepHelper;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 
 public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.NotificationCenterDelegate, DownloadController.FileDownloadProgressListener {
 
@@ -3454,7 +3454,7 @@ public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.
         rightPaddingAnimator.start();
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private ButtonWithCounterView sleepTimerButton;
 
     private void setSleepTimer() {
@@ -3560,7 +3560,7 @@ public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.
                 );
             }
 
-            CherrygramCoreConfig.INSTANCE.setSleepTimer(true);
+            YuurigramCoreConfig.INSTANCE.setSleepTimer(true);
 
             String formattedTime;
             if (seconds < 3600) {
@@ -3575,14 +3575,14 @@ public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.
                     .createSimpleBulletin(R.raw.done, AndroidUtilities.replaceTags(LocaleController.formatString(R.string.CG_Sleep_Timer, formattedTime)))
                     .show();
         } else {
-            if (CherrygramCoreConfig.INSTANCE.getSleepTimer()) {
+            if (YuurigramCoreConfig.INSTANCE.getSleepTimer()) {
                 BulletinFactory.of((FrameLayout) containerView, resourcesProvider)
                         .createSimpleBulletin(R.raw.done, getString(R.string.CG_Sleep_Disabled))
                         .show();
             }
-            CherrygramCoreConfig.INSTANCE.setSleepTimer(false);
+            YuurigramCoreConfig.INSTANCE.setSleepTimer(false);
         }
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

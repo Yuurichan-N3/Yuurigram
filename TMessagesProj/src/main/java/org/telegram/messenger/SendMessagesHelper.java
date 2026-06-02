@@ -107,9 +107,9 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramDebugConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramMessagesConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
 
 public class SendMessagesHelper extends BaseController implements NotificationCenter.NotificationCenterDelegate {
 
@@ -1621,7 +1621,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
             } else if (scheduled) {
                 mode = ChatActivity.MODE_SCHEDULED;
             }
-            getMessagesController().deleteMessages(messageIds, null, null, dialogId, topicId, false, mode);
+            // getMessagesController().deleteMessages(messageIds, null, null, dialogId, topicId, false, mode);
         }
     }
 
@@ -1648,7 +1648,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
             if (messageObject.messageOwner.action.encryptedAction instanceof TLRPC.TL_decryptedMessageActionSetMessageTTL) {
                 getSecretChatHelper().sendTTLMessage(encryptedChat, messageObject.messageOwner);
             } else if (messageObject.messageOwner.action.encryptedAction instanceof TLRPC.TL_decryptedMessageActionDeleteMessages) {
-                getSecretChatHelper().sendMessagesDeleteMessage(encryptedChat, null, messageObject.messageOwner);
+               //  getSecretChatHelper().sendMessagesDeleteMessage(encryptedChat, null, messageObject.messageOwner);
             } else if (messageObject.messageOwner.action.encryptedAction instanceof TLRPC.TL_decryptedMessageActionFlushHistory) {
                 getSecretChatHelper().sendClearHistoryMessage(encryptedChat, messageObject.messageOwner);
             } else if (messageObject.messageOwner.action.encryptedAction instanceof TLRPC.TL_decryptedMessageActionNotifyLayer) {
@@ -1946,7 +1946,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                     }
                     SendMessageParams sendMessageParams = SendMessageParams.of((TLRPC.TL_document) finalDocument, videoEditedInfo, null, peer, replyToMsg, replyToTopMsg, null, null, null, null, notify, scheduleDate, scheduleRepeatPeriod, 0, parentObject, sendAnimationData, false);
                     sendMessageParams.replyToStoryItem = storyItem;
-                    sendMessageParams.hasMediaSpoilers = CherrygramMessagesConfig.INSTANCE.getGifSpoilers();
+                    sendMessageParams.hasMediaSpoilers = YuurigramMessagesConfig.INSTANCE.getGifSpoilers();
                     sendMessageParams.replyQuote = quote;
                     sendMessageParams.quick_reply_shortcut = quick_reply_shortcut;
                     sendMessageParams.quick_reply_shortcut_id = quick_reply_shortcut_id;
@@ -1956,7 +1956,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                     sendMessageParams.caption = caption != null ? caption.toString() : null;
                     sendMessageParams.invert_media = invertMedia;
                     sendMessage(sendMessageParams);
-                    CherrygramMessagesConfig.INSTANCE.setGifSpoilers(false);
+                    YuurigramMessagesConfig.INSTANCE.setGifSpoilers(false);
                 });
             });
         } else {
@@ -2196,7 +2196,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                                 newMsg.fwd_from.flags |= 8;
                             }
                         }
-                        if (CherrygramMessagesConfig.INSTANCE.getMsgForwardDate() && !msgObj.isForwarded()) {
+                        if (YuurigramMessagesConfig.INSTANCE.getMsgForwardDate() && !msgObj.isForwarded()) {
                             newMsg.fwd_from.date = msgObj.messageOwner.date;
                         }
                         newMsg.date = msgObj.messageOwner.date;
@@ -2571,7 +2571,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                                                         AndroidUtilities.runOnUIThread(() -> {
                                                             ArrayList<Integer> messageIds = new ArrayList<>();
                                                             messageIds.add(oldId);
-                                                            getMessagesController().deleteMessages(messageIds, null, null, newMsgObj1.dialog_id, false, fromMode, false, 0, null, 0, toMode == ChatActivity.MODE_SCHEDULED, message.id);
+                                                           // getMessagesController().deleteMessages(messageIds, null, null, newMsgObj1.dialog_id, false, fromMode, false, 0, null, 0, toMode == ChatActivity.MODE_SCHEDULED, message.id);
                                                             ArrayList<MessageObject> messageObjects = new ArrayList<>();
                                                             messageObjects.add(new MessageObject(msgObj.currentAccount, msgObj.messageOwner, true, true));
                                                             getMessagesController().updateInterfaceWithMessages(newMsgObj1.dialog_id, messageObjects, toMode);
@@ -3883,7 +3883,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
             caption = "";
         }
 
-        if (CherrygramChatsConfig.INSTANCE.getAutoQuoteReplies() && replyToMsg != null) {
+        if (YuurigramChatsConfig.INSTANCE.getAutoQuoteReplies() && replyToMsg != null) {
             boolean isComments = replyToMsg.messageOwner.fwd_from != null && replyToMsg.messageOwner.fwd_from.channel_post != 0;
             boolean isTopic = ChatsHelper.getInstance(currentAccount).isTopic(replyToMsg);
 
@@ -6909,7 +6909,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                                     if (done[0] == totalSent[0] && scheduled != finalCurrentSchedule) {
                                         long dialogId = msgObj.getDialogId();
                                         final int scheduledMessageId = finalCurrentSchedule && newMessages.size() > 1 ? newMessages.keyAt(0) : 0;
-                                        getMessagesController().deleteMessages(oldIds, null, null, dialogId, false, scheduled ? ChatActivity.MODE_SCHEDULED : 0, false, 0, null, 0, finalCurrentSchedule && !scheduled, scheduledMessageId);
+                                       // getMessagesController().deleteMessages(oldIds, null, null, dialogId, false, scheduled ? ChatActivity.MODE_SCHEDULED : 0, false, 0, null, 0, finalCurrentSchedule && !scheduled, scheduledMessageId);
                                     }
                                     getMediaDataController().increasePeerRaiting(newMsgObj.dialog_id);
                                     getNotificationCenter().postNotificationName(NotificationCenter.messageReceivedByServer, oldId, newMsgObj.id, newMsgObj, newMsgObj.dialog_id, grouped_id, existFlags, finalCurrentSchedule);
@@ -7313,7 +7313,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                                     getMessagesStorage().putMessages(sentMessages, true, false, false, 0, false, !scheduled ? ChatActivity.MODE_SCHEDULED : ChatActivity.MODE_DEFAULT, 0);
                                     AndroidUtilities.runOnUIThread(() -> {
                                         final int scheduledMessageId = finalCurrentSchedule && newMsgObj != null ? newMsgObj.id : 0;
-                                        getMessagesController().deleteMessages(messageIds, null, null, newMsgObj.dialog_id, false, scheduled ? ChatActivity.MODE_SCHEDULED : ChatActivity.MODE_DEFAULT, false, 0, null, 0, !scheduled && finalCurrentSchedule, scheduledMessageId);
+                                        // getMessagesController().deleteMessages(messageIds, null, null, newMsgObj.dialog_id, false, scheduled ? ChatActivity.MODE_SCHEDULED : ChatActivity.MODE_DEFAULT, false, 0, null, 0, !scheduled && finalCurrentSchedule, scheduledMessageId);
                                         getMessagesController().updateInterfaceWithMessages(newMsgObj.dialog_id, messageObjects, finalCurrentSchedule ? ChatActivity.MODE_SCHEDULED : ChatActivity.MODE_DEFAULT);
                                         getMediaDataController().increasePeerRaiting(newMsgObj.dialog_id);
                                         processSentMessage(oldId);
@@ -7582,7 +7582,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                     if (!found) {
                         String fileName = size2.location.volume_id + "_" + size2.location.local_id;
                         File cacheFile = new File(FileLoader.getDirectory(FileLoader.MEDIA_DIR_CACHE), fileName + ".jpg");
-                        cacheFile.delete();
+                       // cacheFile.delete();
                         if ("s".equals(size2.type) && strippedNew != null) {
                             newMedia.photo.sizes.set(b, strippedNew);
                             ImageLocation location = ImageLocation.getForPhoto(strippedNew, sentMedia.photo);
@@ -7668,7 +7668,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                         if (!found) {
                             String fileName = coverSize2.location.volume_id + "_" + coverSize2.location.local_id;
                             File cacheFile = new File(FileLoader.getDirectory(FileLoader.MEDIA_DIR_CACHE), fileName + ".jpg");
-                            cacheFile.delete();
+                           // cacheFile.delete();
                             if ("s".equals(coverSize2.type) && coverStrippedNew != null) {
                                 newPhoto.sizes.set(b, coverStrippedNew);
                                 ImageLocation location = ImageLocation.getForPhoto(coverStrippedNew, sentPhoto);
@@ -7964,7 +7964,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                         FileLog.e(e2);
                     }
                     try {
-                        zipfile.delete();
+                       // zipfile.delete();
                     } catch (Exception e) {
                         FileLog.e(e);
                     }
@@ -7986,7 +7986,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                 importingHistory.totalSize += size;
                 if (a == 0) {
                     if (size > 32 * 1024 * 1024) {
-                        f.delete();
+                       //  f.delete();
                         AndroidUtilities.runOnUIThread(() -> {
                             Toast.makeText(ApplicationLoader.applicationContext, LocaleController.getString(R.string.ImportFileTooLarge), Toast.LENGTH_SHORT).show();
                             onStartImport.run(0);
@@ -8068,7 +8068,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
     }
 
     public TLRPC.TL_photo generatePhotoSizes(String path, Uri imageUri) {
-        return generatePhotoSizes(null, path, imageUri, CherrygramChatsConfig.INSTANCE.getLargePhotos());
+        return generatePhotoSizes(null, path, imageUri, YuurigramChatsConfig.INSTANCE.getLargePhotos());
     }
 
     public TLRPC.TL_photo generatePhotoSizes(TLRPC.TL_photo photo, String path, Uri imageUri, boolean highQuality) {
@@ -9258,7 +9258,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
         } catch (Exception e) {
             FileLog.e(e);
         }
-        return CherrygramMessagesConfig.INSTANCE.getPhotoAsSticker() || bmOptions.outWidth < 800 && bmOptions.outHeight < 800;
+        return YuurigramMessagesConfig.INSTANCE.getPhotoAsSticker() || bmOptions.outWidth < 800 && bmOptions.outHeight < 800;
     }
 
     @UiThread
@@ -9283,7 +9283,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                 workers = new HashMap<>();
                 for (int a = 0; a < count; a++) {
                     final SendingMediaInfo info = media.get(a);
-                    info.highQuality = CherrygramChatsConfig.INSTANCE.getLargePhotos() && !CherrygramMessagesConfig.INSTANCE.getPhotoAsSticker();
+                    info.highQuality = YuurigramChatsConfig.INSTANCE.getLargePhotos() && !YuurigramMessagesConfig.INSTANCE.getPhotoAsSticker();
                     if (info.searchImage == null && !info.isVideo && info.videoEditedInfo == null) {
                         if (info.originalPhotoEntry != null && info.highQuality) {
                             info.originalPhotoEntry.rebuildPhoto(true);
@@ -9352,7 +9352,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                             mediaSendThreadPool.execute(() -> {
                                 worker.photo = accountInstance.getSendMessagesHelper().generatePhotoSizes(null, info.path, info.uri, info.highQuality);
                                 if (isEncrypted && info.canDeleteAfter) {
-                                    new File(info.path).delete();
+                                  //  new File(info.path).delete();
                                 }
                                 worker.sync.countDown();
                             });
@@ -9948,7 +9948,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                                 if (photo == null) {
                                     photo = accountInstance.getSendMessagesHelper().generatePhotoSizes(info.path, info.uri);
                                     if (isEncrypted && info.canDeleteAfter) {
-                                        new File(info.path).delete();
+                                      //  new File(info.path).delete();
                                     }
                                 }
                             }
@@ -10056,7 +10056,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
             if (BuildVars.LOGS_ENABLED) {
                 FileLog.d("total send time = " + (System.currentTimeMillis() - beginTime));
             }
-            CherrygramMessagesConfig.INSTANCE.setPhotoAsSticker(false);
+            YuurigramMessagesConfig.INSTANCE.setPhotoAsSticker(false);
         });
     }
 
@@ -10214,7 +10214,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
         int compressionsCount;
 
         float maxSize = Math.max(videoEditedInfo.originalWidth, videoEditedInfo.originalHeight);
-        if (CherrygramDebugConfig.INSTANCE.getSendVideosAtMaxQuality()) {
+        if (YuurigramDebugConfig.INSTANCE.getSendVideosAtMaxQuality()) {
             if (maxSize > 3840) {
                 compressionsCount = 7;
             } else if (maxSize > 2560) {
@@ -10249,9 +10249,9 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
         }
         boolean needCompress = false;
         if (new File(videoPath).length() < 1024L * 1024L * 1000L) {
-            if (selectedCompression != compressionsCount || Math.max(videoEditedInfo.originalWidth, videoEditedInfo.originalHeight) > (CherrygramDebugConfig.INSTANCE.getSendVideosAtMaxQuality() ? 3840 : 1280)) {
+            if (selectedCompression != compressionsCount || Math.max(videoEditedInfo.originalWidth, videoEditedInfo.originalHeight) > (YuurigramDebugConfig.INSTANCE.getSendVideosAtMaxQuality() ? 3840 : 1280)) {
                 needCompress = true;
-                if (CherrygramDebugConfig.INSTANCE.getSendVideosAtMaxQuality()) {
+                if (YuurigramDebugConfig.INSTANCE.getSendVideosAtMaxQuality()) {
                     maxSize = switch (selectedCompression) {
                         case 1 -> 480.0f;
                         case 2 -> 854.0f;

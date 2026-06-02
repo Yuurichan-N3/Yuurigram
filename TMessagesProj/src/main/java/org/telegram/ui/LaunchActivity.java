@@ -249,12 +249,12 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
-import uz.unnarsx.cherrygram.core.configs.CherrygramPrivacyConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
 import uz.unnarsx.cherrygram.core.helpers.DeeplinkHelper;
-import uz.unnarsx.cherrygram.misc.CherrygramExtras;
+import uz.unnarsx.cherrygram.misc.YuurigramExtras;
 import uz.unnarsx.cherrygram.misc.LogoOverlayView;
 import uz.unnarsx.cherrygram.helpers.ui.MonetHelper;
 import uz.unnarsx.cherrygram.core.icons.CGUIResources;
@@ -462,7 +462,7 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
         setContentView(frameLayout);
         rootAnimatedInsetsListener = new WindowAnimatedInsetsProvider(frameLayout);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && CherrygramCoreConfig.INSTANCE.getCgBrandedScreenshots()) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && YuurigramCoreConfig.INSTANCE.getCgBrandedScreenshots()) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
             getWindow().getAttributes().layoutInDisplayCutoutMode = android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
             ((ViewGroup) (getWindow().getDecorView())).addView(new LogoOverlayView(this));
@@ -734,7 +734,7 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
         BackupAgent.requestBackup(this);
 
         RestrictedLanguagesSelectActivity.checkRestrictedLanguages(false);
-        if (Build.VERSION.SDK_INT >= 34 && CherrygramCoreConfig.INSTANCE.getPredictiveBack()) {
+        if (Build.VERSION.SDK_INT >= 34 && YuurigramCoreConfig.INSTANCE.getPredictiveBack()) {
             if (onBackAnimationCallback == null) {
                 onBackAnimationCallback =  new OnBackAnimationCallback() {
                     private boolean started = false;
@@ -6984,7 +6984,7 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
             showUpdateActivity(UserConfig.selectedAccount, SharedConfig.pendingAppUpdate, true);
         }
         checkAppUpdate(false, null);*/
-//        if (CherrygramCoreConfig.INSTANCE.getAutoOTA()) { // triggers GitHub a lot
+//        if (YuurigramCoreConfig.INSTANCE.getAutoOTA()) { // triggers GitHub a lot
 //            checkCgUpdates(getSafeLastFragment(), null, false);
 //        }
 
@@ -8355,7 +8355,7 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
                         showVoiceChatTooltip(mute ? UndoView.ACTION_VOIP_SOUND_MUTED : UndoView.ACTION_VOIP_SOUND_UNMUTED);
                     }
                 }
-            } else if (CherrygramChatsConfig.INSTANCE.getPlayVideoOnVolume() && (!mainFragmentsStack.isEmpty() && (!PhotoViewer.hasInstance() || !PhotoViewer.getInstance().isVisible()) && event.getRepeatCount() == 0)) {
+            } else if (YuurigramChatsConfig.INSTANCE.getPlayVideoOnVolume() && (!mainFragmentsStack.isEmpty() && (!PhotoViewer.hasInstance() || !PhotoViewer.getInstance().isVisible()) && event.getRepeatCount() == 0)) {
                 BaseFragment fragment = mainFragmentsStack.get(mainFragmentsStack.size() - 1);
                 if (fragment instanceof ChatActivity && !BaseFragment.hasSheets(fragment)) {
                     if (((ChatActivity) fragment).maybePlayVisibleVideo()) {
@@ -9050,7 +9050,7 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
         return pipActivityController;
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private CGUIResources res = null;
     private AssetManager assetManager = null;
 
@@ -9092,15 +9092,15 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
     }
 
     private void processFeats() {
-        CherrygramCoreConfig.INSTANCE.setUpdateAvailable(false);
-        if (CherrygramCoreConfig.INSTANCE.getAutoOTA()) {
+        YuurigramCoreConfig.INSTANCE.setUpdateAvailable(false);
+        if (YuurigramCoreConfig.INSTANCE.getAutoOTA()) {
             checkCgUpdates(getSafeLastFragment(), null, false);
         }
-        if (!CherrygramCoreConfig.isPlayStoreBuild()) CherrygramExtras.INSTANCE.checkChannelFollow(this, currentAccount);
-        CherrygramChatsConfig.INSTANCE.init();
-        CherrygramCoreConfig.INSTANCE.init();
-        CherrygramPrivacyConfig.INSTANCE.init();
+        if (!YuurigramCoreConfig.isPlayStoreBuild()) YuurigramExtras.INSTANCE.checkChannelFollow(this, currentAccount);
+        YuurigramChatsConfig.INSTANCE.init();
+        YuurigramCoreConfig.INSTANCE.init();
+        YuurigramPrivacyConfig.INSTANCE.init();
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

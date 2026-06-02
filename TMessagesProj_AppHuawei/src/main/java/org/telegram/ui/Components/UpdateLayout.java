@@ -31,8 +31,8 @@ import org.telegram.ui.IUpdateLayout;
 import java.io.File;
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.updater.UpdaterUtils;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.updater.UpdaterUtils;
 
 public class UpdateLayout extends IUpdateLayout {
 
@@ -68,7 +68,7 @@ public class UpdateLayout extends IUpdateLayout {
 
     public void updateFileProgress(float progress) {
         if (updateTextViews == null || progress == 0) return;
-        if (updateTextViews[0] != null && CherrygramCoreConfig.INSTANCE.getUpdateAvailable()) {
+        if (updateTextViews[0] != null && YuurigramCoreConfig.INSTANCE.getUpdateAvailable()) {
             updateLayoutIcon.setProgress(progress, true);
             updateTextViews[0].setText(LocaleController.formatString(R.string.AppUpdateDownloading, (int) (progress)));
         }
@@ -86,11 +86,11 @@ public class UpdateLayout extends IUpdateLayout {
         updateLayout.setBackground(Theme.getSelectorDrawable(0x40ffffff, false));
         sideMenuContainer.addView(updateLayout, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 44, Gravity.LEFT | Gravity.BOTTOM));
         updateLayout.setOnClickListener(v -> {
-            if (!CherrygramCoreConfig.INSTANCE.getUpdateAvailable()) {
+            if (!YuurigramCoreConfig.INSTANCE.getUpdateAvailable()) {
                 return;
             }
             if (updateLayoutIcon.getIcon() == MediaActionDrawable.ICON_DOWNLOAD) {
-                UpdaterUtils.downloadApk(updateLayout.getContext(), UpdaterUtils.downloadURL, "Cherrygram " + UpdaterUtils.version, null);
+                UpdaterUtils.downloadApk(updateLayout.getContext(), UpdaterUtils.downloadURL, "Yuurigram " + UpdaterUtils.version, null);
                 updateAppUpdateViews(currentAccount,  true);
             } else if (updateLayoutIcon.getIcon() == MediaActionDrawable.ICON_CANCEL) {
                 UpdaterUtils.cancelDownload(updateLayout.getContext(), UpdaterUtils.id);
@@ -142,16 +142,16 @@ public class UpdateLayout extends IUpdateLayout {
         if (sideMenuContainer == null) {
             return;
         }
-        if (CherrygramCoreConfig.INSTANCE.getUpdateAvailable() && UpdaterUtils.downloadURL != null && UpdaterUtils.version != null || UpdaterUtils.updateFileExists()) {
+        if (YuurigramCoreConfig.INSTANCE.getUpdateAvailable() && UpdaterUtils.downloadURL != null && UpdaterUtils.version != null || UpdaterUtils.updateFileExists()) {
             createUpdateUI(currentAccount);
-            updateSizeTextView.setText(CherrygramCoreConfig.INSTANCE.getUpdateSize());
+            updateSizeTextView.setText(YuurigramCoreConfig.INSTANCE.getUpdateSize());
             boolean showSize;
             if (UpdaterUtils.updateFileExists()) {
                 updateLayoutIcon.setIcon(MediaActionDrawable.ICON_UPDATE, true, animated);
                 setUpdateText(LocaleController.getString(R.string.AppUpdateNow), animated);
                 showSize = false;
             } else {
-                if (CherrygramCoreConfig.INSTANCE.getUpdateIsDownloading()) {
+                if (YuurigramCoreConfig.INSTANCE.getUpdateIsDownloading()) {
                     updateLayoutIcon.setIcon(MediaActionDrawable.ICON_CANCEL, true, animated);
                     updateLayoutIcon.setProgress(0, false);
                     UpdaterUtils.trackDownloadProgress(sideMenuContainer.getContext(), null, updateTextViews[0], updateLayoutIcon);

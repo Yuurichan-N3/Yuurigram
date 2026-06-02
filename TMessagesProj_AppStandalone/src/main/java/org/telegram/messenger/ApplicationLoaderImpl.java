@@ -34,9 +34,9 @@ import org.telegram.ui.SMSSubscribeSheet;
 
 import java.io.File;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.updater.UpdaterBottomSheet;
-import uz.unnarsx.cherrygram.core.updater.UpdaterUtils;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.updater.UpdaterBottomSheet;
+import id.idn.yuurigram.core.updater.UpdaterUtils;
 
 public class ApplicationLoaderImpl extends ApplicationLoader {
     @Override
@@ -116,7 +116,7 @@ public class ApplicationLoaderImpl extends ApplicationLoader {
 
     @Override
     public IUpdateLayout takeUpdateLayout(Activity activity, ViewGroup sideMenuContainer) {
-        if (CherrygramCoreConfig.INSTANCE.getUpdatesNewUI()) {
+        if (YuurigramCoreConfig.INSTANCE.getUpdatesNewUI()) {
             return new UpdateLayout(activity, sideMenuContainer);
         } else {
             return null;

@@ -165,8 +165,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramPrivacyConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
 
 @SuppressWarnings("unchecked")
 public class SharedMediaLayout extends FrameLayout implements NotificationCenter.NotificationCenterDelegate, DialogCell.DialogCellDelegate {
@@ -3804,7 +3804,7 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
     }
 
     private MediaPage getMediaPage(int type) {
-        if (type == TAB_ARCHIVED_STORIES && CherrygramPrivacyConfig.INSTANCE.getHideArchivedStories()) {
+        if (type == TAB_ARCHIVED_STORIES && YuurigramPrivacyConfig.INSTANCE.getHideArchivedStories()) {
             return null;
         }
         for (int i = 0; i < mediaPages.length; i++) {
@@ -9764,7 +9764,7 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
     }
 
     public int getStoriesCount(int tab) {
-        if (tab == TAB_ARCHIVED_STORIES && CherrygramPrivacyConfig.INSTANCE.getHideArchivedStories()) {
+        if (tab == TAB_ARCHIVED_STORIES && YuurigramPrivacyConfig.INSTANCE.getHideArchivedStories()) {
             return 0;
         }
         if (isAnyStoryPageType(tab)) {
@@ -11914,9 +11914,9 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private boolean showStoriesCG() {
-        return isSelf() || !CherrygramCoreConfig.INSTANCE.getHideStories();
+        return isSelf() || !YuurigramCoreConfig.INSTANCE.getHideStories();
     }
 
     private void showDirectShare(TLRPC.Chat chat) {
@@ -11962,5 +11962,5 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
         }
         closeActionMode();
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 }

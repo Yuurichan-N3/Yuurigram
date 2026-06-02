@@ -704,7 +704,7 @@ public class ActionBarPopupWindow extends PopupWindow {
             invalidate();
         }
 
-        /** Cherrygram start */
+        /** Yuurigram start */
         private final boolean rounded_corners;
         private final int cornerRadius;
         private final Paint roundedBackgroundPaint = new Paint();
@@ -712,7 +712,7 @@ public class ActionBarPopupWindow extends PopupWindow {
         public LinearLayout getLinearLayout() {
             return linearLayout;
         }
-        /** Cherrygram finish */
+        /** Yuurigram finish */
     }
 
     public ActionBarPopupWindow() {

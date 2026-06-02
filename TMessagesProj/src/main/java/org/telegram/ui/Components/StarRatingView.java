@@ -16,7 +16,7 @@ import org.telegram.messenger.MessagesController;
 import org.telegram.tgnet.tl.TL_stars;
 import org.telegram.ui.ActionBar.Theme;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 
 public class StarRatingView extends View {
     private final BadgeLevelDrawable drawable;
@@ -178,7 +178,7 @@ public class StarRatingView extends View {
     }
 
     public static int getTabsViewBackgroundColor(Theme.ResourcesProvider resourcesProvider, int color1, int color2) {
-        if (CherrygramAppearanceConfig.INSTANCE.getProfileBackgroundColor()) {
+        if (YuurigramAppearanceConfig.INSTANCE.getProfileBackgroundColor()) {
             return (ColorUtils.blendARGB(0x24000000,
                     AndroidUtilities.computePerceivedBrightness(ColorUtils.blendARGB(color1, color2, .75f)) > .721f ?
                             Theme.getColor(Theme.key_windowBackgroundWhiteBlueIcon, resourcesProvider) :

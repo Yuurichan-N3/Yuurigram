@@ -1017,7 +1017,7 @@ public class TextCell extends FrameLayout {
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public void setCheckBoxIcon(int icon) {
         if (checkBox != null) checkBox.setIcon(icon);
     }
@@ -1042,6 +1042,6 @@ public class TextCell extends FrameLayout {
             if (valueImageView != null) valueImageView.setAlpha(value ? 1.0f : 0.5f);
         }
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

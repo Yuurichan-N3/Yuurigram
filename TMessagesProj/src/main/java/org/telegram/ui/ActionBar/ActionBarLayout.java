@@ -92,9 +92,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 import uz.unnarsx.cherrygram.core.VibrateUtil;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 
 public class ActionBarLayout extends FrameLayout implements INavigationLayout, FloatingDebugProvider {
 
@@ -431,7 +431,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
                                     if (shouldBeEnabled != enabled) {
                                         ripple.setState(shouldBeEnabled ? new int[]{android.R.attr.state_pressed, android.R.attr.state_enabled} : new int[]{});
                                         if (shouldBeEnabled) {
-                                            if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                                            if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                                                 AndroidUtilities.vibrateCursor(button);
                                             }
                                         }
@@ -1323,7 +1323,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
         if (fragmentView == null) {
             fragmentView = lastFragment.createView(parentActivity);
             if (fragmentView != null && lastFragment.isSupportEdgeToEdge() && lastFragment.drawEdgeNavigationBar()) {
-                if (CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     VibrateUtil.INSTANCE.disableHapticFeedback(fragmentView);
                 }
                 ViewCompat.setOnApplyWindowInsetsListener(fragmentView, lastFragment::onInsetsInternal);
@@ -2160,7 +2160,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
         if (fragmentView == null) {
             fragmentView = fragment.createView(parentActivity);
             if (fragmentView != null && fragment.isSupportEdgeToEdge() && fragment.drawEdgeNavigationBar()) {
-                if (CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     VibrateUtil.INSTANCE.disableHapticFeedback(fragmentView);
                 }
                 ViewCompat.setOnApplyWindowInsetsListener(fragmentView, fragment::onInsetsInternal);
@@ -2534,7 +2534,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
         if (fragmentView == null) {
             fragmentView = fragment.createView(parentActivity);
             if (fragmentView != null && fragment.isSupportEdgeToEdge() && fragment.drawEdgeNavigationBar()) {
-                if (CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     VibrateUtil.INSTANCE.disableHapticFeedback(fragmentView);
                 }
                 ViewCompat.setOnApplyWindowInsetsListener(fragmentView, fragment::onInsetsInternal);
@@ -2572,7 +2572,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
         if (fragmentView == null) {
             fragmentView = fragment.createView(parentActivity);
             if (fragmentView != null && fragment.isSupportEdgeToEdge() && fragment.drawEdgeNavigationBar()) {
-                if (CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     VibrateUtil.INSTANCE.disableHapticFeedback(fragmentView);
                 }
                 ViewCompat.setOnApplyWindowInsetsListener(fragmentView, fragment::onInsetsInternal);
@@ -2687,7 +2687,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
                 fragment.onPreviewOpenAnimationEnd();
             });
             currentSpringAnimation.start();
-            if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+            if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
 
             fragment.setInPreviewMode(false);
             fragment.setInMenuMode(false);
@@ -2710,7 +2710,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
             }
         });
         animatorSet.start();
-        if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+        if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
             try {
                 performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
             } catch (Exception ignore) {}
@@ -2772,7 +2772,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
             if (fragmentView == null) {
                 fragmentView = previousFragment.createView(parentActivity);
                 if (fragmentView != null && previousFragment.isSupportEdgeToEdge() && previousFragment.drawEdgeNavigationBar()) {
-                    if (CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                    if (YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                         VibrateUtil.INSTANCE.disableHapticFeedback(fragmentView);
                     }
                     ViewCompat.setOnApplyWindowInsetsListener(fragmentView, previousFragment::onInsetsInternal);
@@ -2963,7 +2963,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
         if (fragmentView == null) {
             fragmentView = previousFragment.createView(parentActivity);
             if (fragmentView != null && previousFragment.isSupportEdgeToEdge() && previousFragment.drawEdgeNavigationBar()) {
-                if (CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     VibrateUtil.INSTANCE.disableHapticFeedback(fragmentView);
                 }
                 ViewCompat.setOnApplyWindowInsetsListener(fragmentView, previousFragment::onInsetsInternal);
@@ -3782,22 +3782,22 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
         return WindowInsetsCompat.CONSUMED;
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private SpringAnimation currentSpringAnimation;
 
-    private final boolean USE_SPRING_ANIMATION = CherrygramCoreConfig.INSTANCE.getSpringAnimation() == CherrygramCoreConfig.ANIMATION_SPRING;
+    private final boolean USE_SPRING_ANIMATION = YuurigramCoreConfig.INSTANCE.getSpringAnimation() == YuurigramCoreConfig.ANIMATION_SPRING;
     private final float SPRING_STIFFNESS = 700f;
     private final float SPRING_STIFFNESS_PREVIEW = 650f;
     private final float SPRING_STIFFNESS_PREVIEW_OUT = 800f;
     private final float SPRING_STIFFNESS_PREVIEW_EXPAND = 750f;
     private final float SPRING_MULTIPLIER = 1000f;
-    private final boolean USE_ACTIONBAR_CROSSFADE = USE_SPRING_ANIMATION && CherrygramCoreConfig.INSTANCE.getActionbarCrossfade();
+    private final boolean USE_ACTIONBAR_CROSSFADE = USE_SPRING_ANIMATION && YuurigramCoreConfig.INSTANCE.getActionbarCrossfade();
 
     private float swipeProgress;
     private MenuDrawable menuDrawable;
 
     private int getOpenDelay() {
-        return CherrygramCoreConfig.INSTANCE.getSpringAnimation() == CherrygramCoreConfig.ANIMATION_SPRING || CherrygramChatsConfig.INSTANCE.getCenterChatTitle() ? 100 : 250;
+        return YuurigramCoreConfig.INSTANCE.getSpringAnimation() == YuurigramCoreConfig.ANIMATION_SPRING || YuurigramChatsConfig.INSTANCE.getCenterChatTitle() ? 100 : 250;
     }
 
     private void invalidateActionBars() {
@@ -3932,6 +3932,6 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
         }
         return backgroundFragment;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

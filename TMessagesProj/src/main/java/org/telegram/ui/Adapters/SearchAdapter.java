@@ -541,12 +541,12 @@ public class SearchAdapter extends RecyclerListView.SelectionAdapter {
     }
 
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private boolean addMutualIcon;
 
     public void setAddMutualIcon(boolean value) {
         addMutualIcon = value;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

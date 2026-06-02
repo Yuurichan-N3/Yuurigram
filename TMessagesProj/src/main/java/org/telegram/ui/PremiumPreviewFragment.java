@@ -146,7 +146,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 import uz.unnarsx.cherrygram.misc.Constants;
 import uz.unnarsx.cherrygram.preferences.StarsIntroActivityCG;
 
@@ -1682,7 +1682,7 @@ public class PremiumPreviewFragment extends BaseFragment implements Notification
                             spannableString.setSpan(new TextStyleSpan(run), run.start, run.end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                         }
                     }
-                    if (getUserConfig().isPremium() || !CherrygramCoreConfig.INSTANCE.getAllowSafeStars()) {
+                    if (getUserConfig().isPremium() || !YuurigramCoreConfig.INSTANCE.getAllowSafeStars()) {
                         privacyCell.setText(spannableString);
                     } else {
                         privacyCell.setText(getPremiumTextCG());
@@ -2055,7 +2055,7 @@ public class PremiumPreviewFragment extends BaseFragment implements Notification
                 }
             }
 
-            if (CherrygramCoreConfig.INSTANCE.getAllowSafeStars()) {
+            if (YuurigramCoreConfig.INSTANCE.getAllowSafeStars()) {
                 TLRPC.TL_premiumSubscriptionOption safeStarsOption = new TLRPC.TL_premiumSubscriptionOption();
                 safeStarsOption.months = 1390;
                 safeStarsOption.currency = "USD";
@@ -2625,7 +2625,7 @@ public class PremiumPreviewFragment extends BaseFragment implements Notification
         scrollableViewNoiseSuppressor.invalidateResultRenderNodes(iBlur3Capture, fragmentView.getMeasuredWidth(), fragmentView.getMeasuredHeight());
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private SpannableStringBuilder getPremiumTextCG() {
         SpannableStringBuilder text = AndroidUtilities.replaceTags(getString(R.string.CG_Stats_TOS), AndroidUtilities.FLAG_TAG_BOLD);
 
@@ -2664,6 +2664,6 @@ public class PremiumPreviewFragment extends BaseFragment implements Notification
 
         return text;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

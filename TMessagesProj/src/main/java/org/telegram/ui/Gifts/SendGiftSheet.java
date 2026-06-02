@@ -98,8 +98,8 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramDebugConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
 
 public class SendGiftSheet extends BottomSheetWithRecyclerListView implements NotificationCenter.NotificationCenterDelegate, GiftAuctionController.OnAuctionUpdateListener {
 
@@ -369,7 +369,7 @@ public class SendGiftSheet extends BottomSheetWithRecyclerListView implements No
 
             }
         };
-        if (CherrygramDebugConfig.INSTANCE.getEditTextSuggestionsFix()) messageEdit.editTextEmoji.getEditText().addTextChangedListener(new EditTextSuggestionsFix());
+        if (YuurigramDebugConfig.INSTANCE.getEditTextSuggestionsFix()) messageEdit.editTextEmoji.getEditText().addTextChangedListener(new EditTextSuggestionsFix());
         messageEdit.editTextEmoji.allowEmojisForNonPremium(true);
         messageEdit.setShowLimitWhenNear(50);
         setEditTextEmoji(messageEdit.editTextEmoji);
@@ -511,7 +511,7 @@ public class SendGiftSheet extends BottomSheetWithRecyclerListView implements No
             }
             if (starGift != null) {
 
-                if (CherrygramCoreConfig.INSTANCE.getAllowSafeStars()) {
+                if (YuurigramCoreConfig.INSTANCE.getAllowSafeStars()) {
                     if (closeParentSheet != null) {
                         closeParentSheet.run();
                     }

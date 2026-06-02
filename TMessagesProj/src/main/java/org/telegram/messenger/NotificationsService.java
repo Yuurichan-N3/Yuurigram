@@ -21,7 +21,7 @@ import androidx.core.app.NotificationManagerCompat;
 
 import org.telegram.ui.LaunchActivity;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
 
 public class NotificationsService extends Service {
@@ -38,7 +38,7 @@ public class NotificationsService extends Service {
                     .setVibrationEnabled(false)
                     .setSound(null, null)
                     .build();
-            if (CherrygramCoreConfig.isDevBuild()) FileLog.d("cgPush: " + "Starting resident notification...");
+            if (YuurigramCoreConfig.isDevBuild()) FileLog.d("cgPush: " + "Starting resident notification...");
             NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
             notificationManager.createNotificationChannel(channel);
         }
@@ -91,11 +91,11 @@ public class NotificationsService extends Service {
                         .setCategory(NotificationCompat.CATEGORY_STATUS)
                         .setContentIntent(pendingIntent)
                         .build());
-        if (CherrygramCoreConfig.isDevBuild()) FileLog.d("cgPush: " + "Started foreground");
+        if (YuurigramCoreConfig.isDevBuild()) FileLog.d("cgPush: " + "Started foreground");
     }
 
     private boolean allowResidentNotification() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && Build.VERSION.SDK_INT < Build.VERSION_CODES.VANILLA_ICE_CREAM && CherrygramCoreConfig.INSTANCE.getResidentNotification();
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && Build.VERSION.SDK_INT < Build.VERSION_CODES.VANILLA_ICE_CREAM && YuurigramCoreConfig.INSTANCE.getResidentNotification();
     }
 
 }

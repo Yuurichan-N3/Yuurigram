@@ -1377,13 +1377,13 @@ public class SimpleTextView extends View implements Drawable.Callback {
         public boolean isPressed();
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private OnClickListener rightDrawable2OnClickListener;
     private boolean maybeClick2;
 
     public void setRightDrawable2OnClick(OnClickListener onClickListener) {
         rightDrawable2OnClickListener = onClickListener;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

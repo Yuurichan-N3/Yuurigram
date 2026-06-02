@@ -135,19 +135,19 @@
 -keepclassmembernames,allowshrinking class org.telegram.ui.Cells.* { <fields>; }
 -keepclassmembernames,allowshrinking class org.telegram.ui.Components.* { <fields>; }
 
-# Keep Cherrygram fields name
+# Keep Yuurigram fields name
 -keep class com.fasterxml.jackson.**{ *; }
 
 -keepclassmembers class org.telegram.tgnet.** {
     <fields>;
 }
 
--keepnames class uz.unnarsx.cherrygram.chats.gemini.GeminiErrorDTO.* { <fields>; }
--keep class uz.unnarsx.cherrygram.chats.gemini.GeminiErrorDTO.** {*;}
--keep class uz.unnarsx.cherrygram.chats.gemini.GeminiErrorDTO$ErrorResponse {*;}
--keep class uz.unnarsx.cherrygram.chats.gemini.GeminiErrorDTO$ErrorDetail {*;}
--keep class uz.unnarsx.cherrygram.chats.gemini.GeminiErrorDTO$ErrorDetails{*;}
--keep class uz.unnarsx.cherrygram.chats.gemini.GeminiErrorDTO$Metadata {*;}
+-keepnames class id.idn.yuurigram.chats.gemini.GeminiErrorDTO.* { <fields>; }
+-keep class id.idn.yuurigram.chats.gemini.GeminiErrorDTO.** {*;}
+-keep class id.idn.yuurigram.chats.gemini.GeminiErrorDTO$ErrorResponse {*;}
+-keep class id.idn.yuurigram.chats.gemini.GeminiErrorDTO$ErrorDetail {*;}
+-keep class id.idn.yuurigram.chats.gemini.GeminiErrorDTO$ErrorDetails{*;}
+-keep class id.idn.yuurigram.chats.gemini.GeminiErrorDTO$Metadata {*;}
 
 # Keep all class member names of CameraX
 -keep class androidx.camera.extensions.** { *; }

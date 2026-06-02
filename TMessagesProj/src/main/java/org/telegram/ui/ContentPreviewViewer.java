@@ -98,8 +98,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramMessagesConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
 
 public class ContentPreviewViewer {
 
@@ -697,7 +697,7 @@ public class ContentPreviewViewer {
                 }
                 popupWindow.showAtLocation(containerView, 0, (int) ((containerView.getMeasuredWidth() - previewMenu.getMeasuredWidth()) / 2f), y);
 
-                if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     try {
                         containerView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
                     } catch (Exception ignored) {}
@@ -934,7 +934,7 @@ public class ContentPreviewViewer {
                     } else if (actions.get(which) == 11) {
                         delegate.addCaptionToGif(currentDocument != null ? currentDocument : inlineResult, parentObject, true, 0, 0);
                     } else if (actions.get(which) == 1391) {
-                        CherrygramMessagesConfig.INSTANCE.setGifSpoilers(true);
+                        YuurigramMessagesConfig.INSTANCE.setGifSpoilers(true);
                         delegate.sendGif(currentDocument != null ? currentDocument : inlineResult, parentObject, true, 0, 0);
                     }
                     dismissPopupWindow();
@@ -986,7 +986,7 @@ public class ContentPreviewViewer {
                 y += AndroidUtilities.dp(24) - moveY;
                 popupWindow.showAtLocation(containerView, 0, (int) ((containerView.getMeasuredWidth() - previewMenu.getMeasuredWidth()) / 2f), y);
 
-                if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     try {
                         containerView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
                     } catch (Exception ignored) {}

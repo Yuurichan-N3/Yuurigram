@@ -32,7 +32,7 @@ import org.telegram.ui.Components.chat.buttons.ChatActivityBlurredRoundButton;
 import me.vkryl.android.AnimatorUtils;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
-import uz.unnarsx.cherrygram.core.configs.CherrygramMessagesConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
 import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
 
 @SuppressLint("ViewConstructor")
@@ -64,8 +64,8 @@ public class ChatActivityActionsButtonsLayout extends LinearLayout {
         int replyButtonIcon = CGResourcesHelper.INSTANCE.getLeftButtonDrawable(noForwards);
         String replyButtonText = CGResourcesHelper.INSTANCE.getLeftButtonText(noForwards);
 
-        addTextView(replyButton, replyButtonText, replyButtonIcon, CherrygramMessagesConfig.INSTANCE.getLeftBottomButton() != CherrygramMessagesConfig.LEFT_BUTTON_REPLY);
-        addTextView(forwardButton, LocaleController.getString(R.string.Forward), R.drawable.input_forward, CherrygramMessagesConfig.INSTANCE.getLeftBottomButton() == CherrygramMessagesConfig.LEFT_BUTTON_REPLY);
+        addTextView(replyButton, replyButtonText, replyButtonIcon, YuurigramMessagesConfig.INSTANCE.getLeftBottomButton() != YuurigramMessagesConfig.LEFT_BUTTON_REPLY);
+        addTextView(forwardButton, LocaleController.getString(R.string.Forward), R.drawable.input_forward, YuurigramMessagesConfig.INSTANCE.getLeftBottomButton() == YuurigramMessagesConfig.LEFT_BUTTON_REPLY);
 
         setOrientation(HORIZONTAL);
         setClipChildren(false);
@@ -96,7 +96,7 @@ public class ChatActivityActionsButtonsLayout extends LinearLayout {
         forwardButton.setTextColor(Theme.getColor(Theme.key_glass_defaultText, resourcesProvider));
         forwardButton.setTypeface(AndroidUtilities.bold());
 
-        if (button == replyButton && CherrygramMessagesConfig.INSTANCE.getLeftBottomButton() != CherrygramMessagesConfig.LEFT_BUTTON_REPLY) {
+        if (button == replyButton && YuurigramMessagesConfig.INSTANCE.getLeftBottomButton() != YuurigramMessagesConfig.LEFT_BUTTON_REPLY) {
             forwardButton.setSingleLine(true);
             forwardButton.setEllipsize(TextUtils.TruncateAt.MARQUEE);
             forwardButton.setMarqueeRepeatLimit(-1);
@@ -193,7 +193,7 @@ public class ChatActivityActionsButtonsLayout extends LinearLayout {
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private boolean noForwards;
 
     public void setNoForwards(boolean b) {
@@ -228,6 +228,6 @@ public class ChatActivityActionsButtonsLayout extends LinearLayout {
         holder.textView.invalidate();
         holder.button.invalidate();
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

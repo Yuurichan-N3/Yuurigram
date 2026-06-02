@@ -141,9 +141,9 @@ import java.util.Objects;
 import java.util.Stack;
 
 import uz.unnarsx.cherrygram.chats.filters.MessagesFilterHelper;
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramPrivacyConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
 import uz.unnarsx.cherrygram.misc.Constants;
 
 public class DialogCell extends BaseCell implements StoriesListPlaceProvider.AvatarOverlaysView {
@@ -1379,7 +1379,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                         } else if (chat.fake) {
                             drawScam = 2;
                             Theme.dialogs_fakeDrawable.checkText();
-                        } else if (DialogObject.getEmojiStatusDocumentId(chat.emoji_status) != 0 && !CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) {
+                        } else if (DialogObject.getEmojiStatusDocumentId(chat.emoji_status) != 0 && !YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) {
                             drawPremium = true;
                             nameLayoutEllipsizeByGradient = true;
                             emojiStatus.center = LocaleController.isRTL;
@@ -1401,7 +1401,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                             drawVerified = !forbidVerified && user.verified;
                             drawBotVerified = !forbidVerified && !UserObject.isUserSelf(user) && user.bot_verification_icon != 0;
                         }
-                        drawPremium = MessagesController.getInstance(currentAccount).isPremiumUser(user) && UserConfig.getInstance(currentAccount).clientUserId != user.id && user.id != 0 && !CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses();
+                        drawPremium = MessagesController.getInstance(currentAccount).isPremiumUser(user) && UserConfig.getInstance(currentAccount).clientUserId != user.id && user.id != 0 && !YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses();
                         if (drawPremium) {
                             Long emojiStatusId = UserObject.getEmojiStatusDocumentId(user);
                             emojiStatus.center = LocaleController.isRTL;
@@ -1550,7 +1550,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                         messageString = getString(R.string.HistoryCleared);
                     } else if (message == null) {
                         if (currentDialogFolderId != 0) {
-                            if (CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
+                            if (YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
                                 messageString = getString(R.string.CG_FollowChannelInfo);
                             } else {
                                 messageString = formatArchivedDialogNames();
@@ -1650,7 +1650,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                             drawTime = false;
                         } else if (!useForceThreeLines && !SharedConfig.useThreeLinesLayout && currentDialogFolderId != 0) {
                             checkMessage = false;
-                            if (CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
+                            if (YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
                                 messageString = getString(R.string.CG_FollowChannelInfo);
                             } else {
                                 messageString = formatArchivedDialogNames();
@@ -2085,7 +2085,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
             if (titleOverride != null) {
                 nameString = titleOverride;
             } else if (currentDialogFolderId != 0) {
-                if (CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
+                if (YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
                     nameString = getString(R.string.CG_AppName) + " \uD83C\uDF52";
                 } else {
                     nameString = getString(R.string.ArchivedChats);
@@ -2595,7 +2595,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                 }
             }
             if ((useForceThreeLines || SharedConfig.useThreeLinesLayout) && !hasTags() && currentDialogFolderId != 0 && currentDialogFolderDialogsCount > 1) {
-                if (CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
+                if (YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
                     messageStringFinal = getString(R.string.CG_AppName) + " \uD83C\uDF52";
                 } else {
                     messageStringFinal = messageNameString;
@@ -3071,11 +3071,11 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
             }
 
             if (customDialog.id == 1390) {
-                chat = MessagesController.getInstance(currentAccount).getChat(Constants.Cherrygram_Channel);
+                chat = MessagesController.getInstance(currentAccount).getChat(Constants.Yuurigram_Channel);
                 avatarImage.setForUserOrChat(chat, avatarDrawable);
             }
             if (customDialog.id == 2003) {
-                user = MessagesController.getInstance(currentAccount).getUser(Constants.Cherrygram_Owner);
+                user = MessagesController.getInstance(currentAccount).getUser(Constants.Yuurigram_Owner);
                 if (user != null && user.photo != null) avatarImage.setForUserOrChat(user, avatarDrawable, null, true, VectorAvatarThumbDrawable.TYPE_SMALL, false);
             }
             for (int i = 0; i < thumbImage.length; ++i) {
@@ -3319,10 +3319,10 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
 
             long dialogId;
             if (currentDialogFolderId != 0) {
-                if (CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
+                if (YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
                     dialogMuted = true;
                     drawUnmute = false;
-                    dialogId = Constants.Cherrygram_Channel;
+                    dialogId = Constants.Yuurigram_Channel;
                 } else {
                     dialogMuted = false;
                     drawUnmute = false;
@@ -3375,7 +3375,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
             }
 
             if (currentDialogFolderId != 0) {
-                if (CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
+                if (YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
                     Theme.dialogs_archiveAvatarDrawable.setCallback(this);
                     avatarDrawable.setAvatarType(AvatarDrawable.AVATAR_TYPE_EBLAN);
                     avatarImage.setImage(null, null, avatarDrawable, null, user, 0);
@@ -3573,7 +3573,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
         if (isSliding && !swipeCanceled) {
             boolean prevValue = drawRevealBackground;
             drawRevealBackground = Math.abs(translationX) >= getMeasuredWidth() * 0.45f;
-            if (prevValue != drawRevealBackground && archiveHidden == SharedConfig.archiveHidden && !CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+            if (prevValue != drawRevealBackground && archiveHidden == SharedConfig.archiveHidden && !YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                 try {
                     performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                 } catch (Exception ignore) {}
@@ -4493,8 +4493,8 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                 canvas.restore();
             } else {
                 storyParams.drawHiddenStoriesAsSegments = (isShareToStoryCell || currentDialogFolderId != 0) &&
-                        !CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenArchive() &&
-                        !CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList();
+                        !YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenArchive() &&
+                        !YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList();
                 int s = storyParams.forceState;
                 if (isShareToStoryCell) {
                     storyParams.forceState = StoriesUtilities.STATE_HAS_UNREAD;
@@ -6256,8 +6256,8 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
         return rightFragmentOpenedProgress <= 0;
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private boolean isSearchView = false;
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

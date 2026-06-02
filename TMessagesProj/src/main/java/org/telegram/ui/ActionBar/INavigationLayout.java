@@ -23,9 +23,9 @@ import org.telegram.ui.DialogsActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
-import uz.unnarsx.cherrygram.core.configs.CherrygramPrivacyConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
 
 public interface INavigationLayout {
     int REBUILD_FLAG_REBUILD_LAST = 1, REBUILD_FLAG_REBUILD_ONLY_LAST = 2;
@@ -252,8 +252,8 @@ public interface INavigationLayout {
     }
 
     default boolean presentFragment(BaseFragment fragment) {
-        if (fragment instanceof ChatActivity && (CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenChat() || CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenEncrypted())) {
-            if (CherrygramCoreConfig.isDevBuild()) FileLog.d("fragment is chat activity");
+        if (fragment instanceof ChatActivity && (YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenChat() || YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenEncrypted())) {
+            if (YuurigramCoreConfig.isDevBuild()) FileLog.d("fragment is chat activity");
 
             Bundle args = fragment.getArguments();
             if (args == null) {
@@ -275,8 +275,8 @@ public interface INavigationLayout {
             return presentFragment(new NavigationParams(fragment));
         }
 
-        if (fragment instanceof DialogsActivity && CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenArchive()) {
-            if (CherrygramCoreConfig.isDevBuild()) FileLog.d("fragment is dialogs activity");
+        if (fragment instanceof DialogsActivity && YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenArchive()) {
+            if (YuurigramCoreConfig.isDevBuild()) FileLog.d("fragment is dialogs activity");
 
             Bundle args = fragment.getArguments();
             if (args == null) {
@@ -318,7 +318,7 @@ public interface INavigationLayout {
             return presentFragment(new NavigationParams(fragment).setRemoveLast(removeLast).setNoAnimation(forceWithoutAnimation).setCheckPresentFromDelegate(check).setPreview(preview));
         }
 
-        if (!(CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenChat() || CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenEncrypted())) {
+        if (!(YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenChat() || YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenEncrypted())) {
             return presentFragment(
                     new NavigationParams(fragment)
                             .setRemoveLast(removeLast)
@@ -328,7 +328,7 @@ public interface INavigationLayout {
             );
         }
 
-        if (CherrygramCoreConfig.isDevBuild()) FileLog.d("fragment is ChatActivity");
+        if (YuurigramCoreConfig.isDevBuild()) FileLog.d("fragment is ChatActivity");
 
         Bundle args = fragment.getArguments();
         if (args == null) {
@@ -365,7 +365,7 @@ public interface INavigationLayout {
             return presentFragment(new NavigationParams(fragment).setRemoveLast(removeLast).setNoAnimation(forceWithoutAnimation).setCheckPresentFromDelegate(check).setPreview(preview).setMenuView(menuView));
         }
 
-        if (!(CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenChat() || CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenEncrypted())) {
+        if (!(YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenChat() || YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenEncrypted())) {
             return presentFragment(
                     new NavigationParams(fragment)
                             .setRemoveLast(removeLast)
@@ -376,8 +376,8 @@ public interface INavigationLayout {
             );
         }
 
-        if (CherrygramCoreConfig.isDevBuild()) {
-            if (CherrygramCoreConfig.isDevBuild()) FileLog.d("fragment is chat activity");
+        if (YuurigramCoreConfig.isDevBuild()) {
+            if (YuurigramCoreConfig.isDevBuild()) FileLog.d("fragment is chat activity");
         }
 
         Bundle args = fragment.getArguments();

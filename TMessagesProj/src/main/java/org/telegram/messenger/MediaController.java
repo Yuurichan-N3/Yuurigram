@@ -123,10 +123,10 @@ import java.util.TimerTask;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 import uz.unnarsx.cherrygram.chats.AudioEnhance;
 import uz.unnarsx.cherrygram.core.PermissionsUtils;
-import uz.unnarsx.cherrygram.core.configs.CherrygramMessagesConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
 
 public class MediaController implements AudioManager.OnAudioFocusChangeListener, NotificationCenter.NotificationCenterDelegate, SensorEventListener {
 
@@ -496,7 +496,7 @@ public class MediaController implements AudioManager.OnAudioFocusChangeListener,
         public boolean isCropped;
         public int ttl;
         public long effectId;
-        public boolean highQuality = CherrygramChatsConfig.INSTANCE.getLargePhotos() && !CherrygramMessagesConfig.INSTANCE.getPhotoAsSticker();
+        public boolean highQuality = YuurigramChatsConfig.INSTANCE.getLargePhotos() && !YuurigramMessagesConfig.INSTANCE.getPhotoAsSticker();
 
         public CropState cropState;
 
@@ -4620,7 +4620,7 @@ public class MediaController implements AudioManager.OnAudioFocusChangeListener,
         manualRecording = manual;
         requestRecordAudioFocus(true);
 
-        if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+        if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
             try {
                 feedbackView.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
             } catch (Exception ignore) {}
@@ -4908,7 +4908,7 @@ public class MediaController implements AudioManager.OnAudioFocusChangeListener,
             if (send == 0) {
                 stopRecordingInternal(0, false, 0, false, 0);
             }
-            if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+            if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                 try {
                     feedbackView.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                 } catch (Exception ignore) {}

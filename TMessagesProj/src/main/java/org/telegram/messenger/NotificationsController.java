@@ -100,9 +100,9 @@ import java.util.function.Consumer;
 
 import uz.unnarsx.cherrygram.chats.helpers.ChatsPasswordHelper;
 import uz.unnarsx.cherrygram.chats.filters.MessagesFilterHelper;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 import uz.unnarsx.cherrygram.core.VibrateUtil;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
 
 public class NotificationsController extends BaseController {
@@ -1181,17 +1181,17 @@ public class NotificationsController extends BaseController {
                 long topicId = MessageObject.getTopicId(currentAccount, messageObject.messageOwner, getMessagesController().isForum(messageObject));
                 if (dialogId == openedDialogId && ApplicationLoader.isScreenOn && !messageObject.isStoryReactionPush && !messageObject.isOauthPush) {
                     if (!isFcm) {
-                        if (CherrygramChatsConfig.INSTANCE.getNotificationSound() != CherrygramChatsConfig.NOTIF_SOUND_DISABLE) {
+                        if (YuurigramChatsConfig.INSTANCE.getNotificationSound() != YuurigramChatsConfig.NOTIF_SOUND_DISABLE) {
                             playInChatSound();
                         }
-                        if (!CherrygramChatsConfig.INSTANCE.getDisableVibration() && CherrygramChatsConfig.INSTANCE.getVibrateInChats() != CherrygramChatsConfig.VIBRATION_DISABLE) {
-                            if (CherrygramChatsConfig.INSTANCE.getVibrateInChats() == CherrygramChatsConfig.VIBRATION_CLICK) {
+                        if (!YuurigramChatsConfig.INSTANCE.getDisableVibration() && YuurigramChatsConfig.INSTANCE.getVibrateInChats() != YuurigramChatsConfig.VIBRATION_DISABLE) {
+                            if (YuurigramChatsConfig.INSTANCE.getVibrateInChats() == YuurigramChatsConfig.VIBRATION_CLICK) {
                                 VibrateUtil.INSTANCE.makeClickVibration();
-                            } else if (CherrygramChatsConfig.INSTANCE.getVibrateInChats() == CherrygramChatsConfig.VIBRATION_WAVE_FORM) {
+                            } else if (YuurigramChatsConfig.INSTANCE.getVibrateInChats() == YuurigramChatsConfig.VIBRATION_WAVE_FORM) {
                                 VibrateUtil.INSTANCE.makeWaveVibration();
-                            } else if (CherrygramChatsConfig.INSTANCE.getVibrateInChats() == CherrygramChatsConfig.VIBRATION_KEYBOARD_TAP) {
+                            } else if (YuurigramChatsConfig.INSTANCE.getVibrateInChats() == YuurigramChatsConfig.VIBRATION_KEYBOARD_TAP) {
                                 VibrateUtil.INSTANCE.vibrate(HapticFeedbackConstants.KEYBOARD_TAP);
-                            } else if (CherrygramChatsConfig.INSTANCE.getVibrateInChats() == CherrygramChatsConfig.VIBRATION_LONG) {
+                            } else if (YuurigramChatsConfig.INSTANCE.getVibrateInChats() == YuurigramChatsConfig.VIBRATION_LONG) {
                                 VibrateUtil.INSTANCE.vibrate();
                             }
                         }
@@ -3343,7 +3343,7 @@ public class NotificationsController extends BaseController {
                     }
                     if (soundIn == 0 && !soundInLoaded) {
                         soundInLoaded = true;
-                        int sound = CherrygramChatsConfig.INSTANCE.getNotificationSound() == CherrygramChatsConfig.NOTIF_SOUND_IOS ? R.raw.sound_in_ios : R.raw.sound_in;
+                        int sound = YuurigramChatsConfig.INSTANCE.getNotificationSound() == YuurigramChatsConfig.NOTIF_SOUND_IOS ? R.raw.sound_in_ios : R.raw.sound_in;
                         soundIn = soundPool.load(ApplicationLoader.applicationContext, sound, 1);
                     }
                     if (soundIn != 0) {
@@ -4341,7 +4341,7 @@ public class NotificationsController extends BaseController {
                 notifyDisabled = true;
             }
 
-            if (CherrygramCoreConfig.INSTANCE.getSilenceNonContacts() && getContactsController().contactsDict.get(userId) == null) {
+            if (YuurigramCoreConfig.INSTANCE.getSilenceNonContacts() && getContactsController().contactsDict.get(userId) == null) {
                 notifyDisabled = true;
             }
 

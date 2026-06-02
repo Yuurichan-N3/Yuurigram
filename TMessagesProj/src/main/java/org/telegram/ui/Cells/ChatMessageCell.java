@@ -239,10 +239,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
 import uz.unnarsx.cherrygram.chats.filters.MessagesFilterHelper;
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramMessagesConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramDebugConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
 import uz.unnarsx.cherrygram.core.helpers.CGResourcesHelper;
 import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper;
 import uz.unnarsx.cherrygram.donates.BadgeHelper;
@@ -8655,7 +8655,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                 }
 
                 int maxVote = 0;
-                if (!animatePollAnswer && pollVoteInProgress && vibrateOnPollVote && !CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (!animatePollAnswer && pollVoteInProgress && vibrateOnPollVote && !YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     try {
                         performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                     } catch (Exception ignored) {}
@@ -9508,7 +9508,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                         }
                     }
 
-                    float modifier = CherrygramMessagesConfig.INSTANCE.getSlider_stickerAmplifier() / 100f;
+                    float modifier = YuurigramMessagesConfig.INSTANCE.getSlider_stickerAmplifier() / 100f;
                     photoWidth = (int) (photoWidth * modifier);
                     photoHeight = (int) (photoHeight * modifier);
                     maxWidth = (int) (maxWidth * modifier);
@@ -9675,9 +9675,9 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
 
                     float modifier;
                     if (messageObject.type == MessageObject.TYPE_GIF) {
-                        modifier = CherrygramMessagesConfig.INSTANCE.getSlider_gifsAmplifier() / 100f;
+                        modifier = YuurigramMessagesConfig.INSTANCE.getSlider_gifsAmplifier() / 100f;
                     } else {
-                        modifier = CherrygramMessagesConfig.INSTANCE.getSlider_mediaAmplifier() / 100f;
+                        modifier = YuurigramMessagesConfig.INSTANCE.getSlider_mediaAmplifier() / 100f;
                     }
                     photoWidth = (int) (photoWidth * modifier);
                     photoHeight = (int) (photoHeight * modifier);
@@ -11918,7 +11918,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
             if (!hasLinkPreview) {
                 String timeString = AndroidUtilities.formatLongDuration((int) duration);
                 int w = (int) Math.ceil(Theme.chat_audioTimePaint.measureText(timeString));
-                if (CherrygramMessagesConfig.INSTANCE.getLargerVoiceMessagesLayout()) {
+                if (YuurigramMessagesConfig.INSTANCE.getLargerVoiceMessagesLayout()) {
                     int extra = 0;
                     if (duration >= 180) {
                         extra = dp(120);
@@ -17637,7 +17637,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
             timeString = LocaleController.formatSmallDateChat(messageObject.messageOwner.date) + ", " + LocaleController.getInstance().getFormatterDay().format((long) (messageObject.messageOwner.date) * 1000);
         } else if (edited) {
             timeString = ChatsHelper.createEditedString(currentMessageObject);
-        } else if (CherrygramMessagesConfig.INSTANCE.getMsgForwardDate() && (currentMessageObject.isSaved && currentMessageObject.messageOwner.fwd_from != null && (currentMessageObject.messageOwner.fwd_from.date != 0 || currentMessageObject.messageOwner.fwd_from.saved_date != 0))) {
+        } else if (YuurigramMessagesConfig.INSTANCE.getMsgForwardDate() && (currentMessageObject.isSaved && currentMessageObject.messageOwner.fwd_from != null && (currentMessageObject.messageOwner.fwd_from.date != 0 || currentMessageObject.messageOwner.fwd_from.saved_date != 0))) {
             int date = currentMessageObject.messageOwner.fwd_from.saved_date;
             if (date == 0) {
                 date = currentMessageObject.messageOwner.fwd_from.date;
@@ -17699,7 +17699,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
             if (!messageObject.isMusic() && messageObject.messageOwner.forwards > 0 && ChatsHelper.forwardsDrawable != null) {
                 timeTextWidth = timeWidth += ChatsHelper.forwardsDrawable.getIntrinsicWidth();
             }
-            if (edited && CherrygramMessagesConfig.INSTANCE.getShowPencilIcon() && ChatsHelper.editedDrawable != null) {
+            if (edited && YuurigramMessagesConfig.INSTANCE.getShowPencilIcon() && ChatsHelper.editedDrawable != null) {
                 timeTextWidth = timeWidth += ChatsHelper.editedDrawable.getIntrinsicWidth();
             }
         }
@@ -18140,7 +18140,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
 
                 if (currentUser != null && currentNameStatus instanceof Long) {
                     boolean isPremium = false; // cgPremium
-                    boolean forceBra = currentUser.id == Constants.Cherrygram_Owner;
+                    boolean forceBra = currentUser.id == Constants.Yuurigram_Owner;
                     boolean showParticles = isPremium || forceBra || DonatesManager.INSTANCE.didUserDonateForMarketplace(currentUser.id);
                     boolean isCherryEmojiApplied = currentNameStatus != null && ((long) currentNameStatus == Constants.CHERRY_EMOJI_ID_VERIFIED || (long) currentNameStatus == Constants.CHERRY_EMOJI_ID_VERIFIED_BRA);
 
@@ -18242,7 +18242,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                     }
 
                     forwardedNameWidth = getMaxNameWidth();
-                    if (CherrygramMessagesConfig.INSTANCE.getMsgForwardDate() && !currentMessageObject.isSaved) {
+                    if (YuurigramMessagesConfig.INSTANCE.getMsgForwardDate() && !currentMessageObject.isSaved) {
                         forwardedString = String.format("➥ %s", CGResourcesHelper.INSTANCE.createDateAndTime(messageObject.messageOwner.fwd_from.date));
                     } else {
                         forwardedString = getForwardedMessageText(messageObject);
@@ -18817,13 +18817,13 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
     }
 
     private Object getAuthorStatus() {
-        if (CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) return null;
+        if (YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) return null;
         if (currentUser != null) {
             Long emojiStatusId = UserObject.getEmojiStatusDocumentId(currentUser);
 
             boolean isPremium = false; // cgPremium
             boolean isDonated = DonatesManager.INSTANCE.didUserDonate(currentUser.id);
-            boolean forceBra = currentUser.id == Constants.Cherrygram_Owner;
+            boolean forceBra = currentUser.id == Constants.Yuurigram_Owner;
 
             if (emojiStatusId == null && isPremium && isDonated) {
                 emojiStatusId = Constants.CHERRY_EMOJI_ID_VERIFIED_BRA;
@@ -19355,7 +19355,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
         if ((!autoPlayingMedia || !MediaController.getInstance().isPlayingMessageAndReadyToDraw(currentMessageObject) || isRoundVideo) && !transitionParams.animateBackgroundBoundsInner && !(currentMessageObject != null && currentMessageObject.preview)) {
             drawOverlays(canvas);
         }
-        if ((drawTime || !mediaBackground) && !forceNotDrawTime && !transitionParams.animateBackgroundBoundsInner && !(enterTransitionInProgress && !currentMessageObject.isVoice()) && (!currentMessageObject.isQuickReply() || currentMessageObject.isSendError()) && (!currentMessageObject.isAnyKindOfSticker() || !CherrygramMessagesConfig.INSTANCE.getHideStickerTime())) {
+        if ((drawTime || !mediaBackground) && !forceNotDrawTime && !transitionParams.animateBackgroundBoundsInner && !(enterTransitionInProgress && !currentMessageObject.isVoice()) && (!currentMessageObject.isQuickReply() || currentMessageObject.isSendError()) && (!currentMessageObject.isAnyKindOfSticker() || !YuurigramMessagesConfig.INSTANCE.getHideStickerTime())) {
             drawTime(canvas, 1f, false);
         }
 
@@ -21665,7 +21665,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
                 // draw reply background
                 leftRad = bottomRad; // line redesign
                 replyLine.setLoading(loading);
-                replyLine.drawBackground(canvas, replySelectorRect, leftRad, rightRad, bottomRad, alpha, isReplyQuote, currentMessageObject.shouldDrawWithoutBackground() || !CherrygramAppearanceConfig.INSTANCE.getReplyBackground());
+                replyLine.drawBackground(canvas, replySelectorRect, leftRad, rightRad, bottomRad, alpha, isReplyQuote, currentMessageObject.shouldDrawWithoutBackground() || !YuurigramAppearanceConfig.INSTANCE.getReplyBackground());
 
                 if (replySelector == null) {
                     replySelector = Theme.createRadSelectorDrawable(replySelectorColor = rippleColor, 0, 0);
@@ -27688,7 +27688,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
 
     public void drawVideoTimestamps(Canvas canvas, int color) {
         if (currentMessageObject == null || controlsAlpha <= 0 || !photoImage.getVisible()) return;
-        if (CherrygramDebugConfig.INSTANCE.getHideVideoTimestamp()) return;
+        if (YuurigramDebugConfig.INSTANCE.getHideVideoTimestamp()) return;
         float progress;
         if (!currentMessageObject.openedInViewer && currentMessageObject.getVideoStartsTimestamp() != -1) {
             progress = currentMessageObject.getVideoStartsTimestamp() / (float) currentMessageObject.getDuration();
@@ -27780,9 +27780,9 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
 
     private TL_stars.StarGift instantViewTypeIsGiftAuction;
 
-        /** Cherrygram start */
+        /** Yuurigram start */
     private boolean shouldMakeMessageTransparent() {
-        return CherrygramMessagesConfig.INSTANCE.getMsgFilterTransparentMsg() && getMessageObject().shouldBlockMessage();
+        return YuurigramMessagesConfig.INSTANCE.getMsgFilterTransparentMsg() && getMessageObject().shouldBlockMessage();
     }
 
     public void setCurrentMessagesGroup(MessageObject.GroupedMessages group) {
@@ -27811,6 +27811,6 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
     public void stopProgressUpdater() {
         AndroidUtilities.cancelRunOnUIThread(progressUpdater);
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

@@ -3180,7 +3180,7 @@ public class LocationActivity extends BaseFragment implements NotificationCenter
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private void createStopSharingAlert() {
         TLRPC.User user = getMessagesController().getUser(dialogId);
         TLRPC.Chat chat2 = getMessagesController().getChat(-dialogId);
@@ -3211,6 +3211,6 @@ public class LocationActivity extends BaseFragment implements NotificationCenter
             button.setTextColor(getThemedColor(Theme.key_text_RedBold));
         }
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

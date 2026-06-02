@@ -1587,7 +1587,7 @@ public final class BulletinFactory {
         public Runnable onAction;
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public Bulletin createEmojiBulletin2(TLRPC.Document document, CharSequence text, CharSequence button, MessageObject selectedObject, Runnable onButtonClick) {
         final Bulletin.LottieLayout layout = new Bulletin.LottieLayout(getContext(), resourcesProvider);
         if (MessageObject.isTextColorEmoji(document)) {
@@ -1689,6 +1689,6 @@ public final class BulletinFactory {
         );
         return create(layout, duration);
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

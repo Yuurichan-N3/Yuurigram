@@ -70,7 +70,7 @@ import org.telegram.ui.Components.TranslateAlert2;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 
 public abstract class TextSelectionHelper<Cell extends TextSelectionHelper.SelectableView> {
 
@@ -281,7 +281,7 @@ public abstract class TextSelectionHelper<Cell extends TextSelectionHelper.Selec
                 textY = maybeTextY;
 
                 selectedView = newView;
-                if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     try {
                         textSelectionOverlay.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING);
                     } catch (Exception ignored) {}

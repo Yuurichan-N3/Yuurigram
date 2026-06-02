@@ -91,8 +91,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramPrivacyConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
 
 public class StoriesController {
 
@@ -253,7 +253,7 @@ public class StoriesController {
     }
 
     public boolean hasStories(long dialogId) {
-        if (CherrygramCoreConfig.INSTANCE.getHideStories()) return false;
+        if (YuurigramCoreConfig.INSTANCE.getHideStories()) return false;
         if (dialogId == 0) {
             return false;
         }
@@ -287,7 +287,7 @@ public class StoriesController {
     }
 
     public boolean hasStories() {
-        if (CherrygramCoreConfig.INSTANCE.getHideStories()) return false;
+        if (YuurigramCoreConfig.INSTANCE.getHideStories()) return false;
         return (dialogListStories != null && dialogListStories.size() > 0) || hasSelfStories();
     }
 
@@ -500,7 +500,7 @@ public class StoriesController {
                     if (user == null) {
                         continue;
                     }
-                    if (CherrygramCoreConfig.INSTANCE.getArchiveStoriesFromUsers() && !user.stories_hidden) {
+                    if (YuurigramCoreConfig.INSTANCE.getArchiveStoriesFromUsers() && !user.stories_hidden) {
                         toggleHidden(dialogId, true, true, true);
                     }
                     if (user.stories_hidden) {
@@ -514,7 +514,7 @@ public class StoriesController {
                     if (chat == null) {
                         continue;
                     }
-                    if (CherrygramCoreConfig.INSTANCE.getArchiveStoriesFromChannels() && !chat.stories_hidden) {
+                    if (YuurigramCoreConfig.INSTANCE.getArchiveStoriesFromChannels() && !chat.stories_hidden) {
                         toggleHidden(dialogId, true, true, true);
                     }
                     if (chat.stories_hidden) {
@@ -1083,7 +1083,7 @@ public class StoriesController {
     }
 
     public boolean hasSelfStories() {
-        if (CherrygramCoreConfig.INSTANCE.getHideStories()) return false;
+        if (YuurigramCoreConfig.INSTANCE.getHideStories()) return false;
         long clientUserId = UserConfig.getInstance(currentAccount).clientUserId;
         TL_stories.PeerStories storyItem = allStoriesMap.get(clientUserId);
         if (storyItem != null && !storyItem.stories.isEmpty()) {
@@ -2590,7 +2590,7 @@ public class StoriesController {
 
     @Nullable
     private StoriesList getStoriesList(long dialogId, int type, int albumId, boolean createIfNotExist) {
-        if (type == StoriesList.TYPE_ARCHIVE && CherrygramPrivacyConfig.INSTANCE.getHideArchivedStories()) {
+        if (type == StoriesList.TYPE_ARCHIVE && YuurigramPrivacyConfig.INSTANCE.getHideArchivedStories()) {
             return null;
         }
         if (type == StoriesList.TYPE_ALBUMS && albumId > 0) {

@@ -1074,7 +1074,7 @@ public class DeleteMessagesBottomSheet extends BottomSheetWithRecyclerListView {
         performDelete();
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private static final int RESTRICT_DURATION = 1390;
 
     private void selectDate() { // Thanks to Octogram
@@ -1142,5 +1142,5 @@ public class DeleteMessagesBottomSheet extends BottomSheetWithRecyclerListView {
         builder.setCustomView(linearLayout);
         builder.show();
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 }

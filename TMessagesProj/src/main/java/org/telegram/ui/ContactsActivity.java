@@ -1746,10 +1746,10 @@ public class ContactsActivity extends BaseFragment implements FactorAnimator.Tar
         animatorSearchFieldVisible.setValue(true, true);
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public FragmentSearchField getFragmentSearchField() {
         return searchField;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

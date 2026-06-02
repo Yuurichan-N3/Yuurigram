@@ -152,7 +152,7 @@ import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
 
 import uz.unnarsx.cherrygram.chats.ui.MessageMenuHelper;
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 import uz.unnarsx.cherrygram.helpers.ui.MonetHelper;
 
 public class Theme {
@@ -3412,7 +3412,7 @@ public class Theme {
 
     public static int colorsCount;
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public static final int key_alwaysBlack = colorsCount++;
     public static final int key_alwaysWhite = colorsCount++;
     public static final int key_alwaysGray = colorsCount++;
@@ -3420,7 +3420,7 @@ public class Theme {
     public static final int key_cgGradient1 = colorsCount++;
     public static final int key_cgGradient2 = colorsCount++;
     public static Drawable chat_attachCameraButton;
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
     public static final int key_wallpaperFileOffset = colorsCount++;
     public static final int key_dialogBackground = colorsCount++;
@@ -5321,7 +5321,7 @@ public class Theme {
                 canStartHolidayAnimation = false;
             }
             if (dialogs_holidayDrawable == null) {
-                if ((monthOfYear == 11 && dayOfMonth >= (BuildVars.DEBUG_PRIVATE_VERSION ? 29 : 31) && dayOfMonth <= 31 || monthOfYear == 0 && dayOfMonth == 1) || CherrygramAppearanceConfig.INSTANCE.getDrawSnowInActionBar()) {
+                if ((monthOfYear == 11 && dayOfMonth >= (BuildVars.DEBUG_PRIVATE_VERSION ? 29 : 31) && dayOfMonth <= 31 || monthOfYear == 0 && dayOfMonth == 1) || YuurigramAppearanceConfig.INSTANCE.getDrawSnowInActionBar()) {
                     dialogs_holidayDrawable = ApplicationLoader.applicationContext.getResources().getDrawable(R.drawable.newyear);
                     dialogs_holidayDrawableOffsetX = -dp(3);
                     dialogs_holidayDrawableOffsetY = -dp(-7);
@@ -9670,7 +9670,7 @@ public class Theme {
                 return animatingColors.valueAt(index);
             }
         }
-        if (CherrygramAppearanceConfig.INSTANCE.getDisableDividers() && key_divider == key) {
+        if (YuurigramAppearanceConfig.INSTANCE.getDisableDividers() && key_divider == key) {
             return 0x00ffffff;
         }
         if (serviceBitmapShader != null && (key_chat_serviceText == key || key_chat_serviceLink == key || key_chat_serviceIcon == key
@@ -10752,7 +10752,7 @@ public class Theme {
         DEBUG_GREEN_STROKE.setStyle(Paint.Style.STROKE);
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public static TextPaint dialogs_countTextPaintCherry;
 
     public static void createCommonDialogResourcesCherry(Context context) {
@@ -10763,6 +10763,6 @@ public class Theme {
 
         dialogs_countTextPaintCherry.setTextSize(dp(13));
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

@@ -18,9 +18,9 @@ This repo contains the official source code for [Telegram App for Android](https
 
 ## Discussion
 
-Join the [Cherrygram official channel](https://t.me/cherrygram)
+Join the [Cherrygram official channel](https://t.me/Y3YuYuYo)
 
-Join the [Cherrygram official group](https://t.me/CherrygramSupport)
+Join the [Cherrygram official group](https://t.me/sentinelquant)
 
 
 ## API, Protocol documentation

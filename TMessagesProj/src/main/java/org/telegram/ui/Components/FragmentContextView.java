@@ -100,7 +100,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 
 import me.vkryl.android.animator.ListAnimator;
 import me.vkryl.android.animator.ReplaceAnimator;
@@ -598,7 +598,7 @@ public class FragmentContextView extends FrameLayout implements NotificationCent
                 isMuted = false;
 
                 AndroidUtilities.runOnUIThread(toggleMicRunnable, 90);
-                if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     try {
                         muteButton.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                     } catch (Exception ignore) {}
@@ -694,7 +694,7 @@ public class FragmentContextView extends FrameLayout implements NotificationCent
             }
             muteButton.playAnimation();
             Theme.getFragmentContextViewWavesDrawable().updateState(true);
-            if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+            if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                 try {
                     muteButton.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                 } catch (Exception ignore) {}

@@ -68,7 +68,7 @@ import org.telegram.ui.FilterCreateActivity;
 import org.telegram.ui.NotificationsSettingsActivity;
 import org.telegram.ui.Stories.StoriesUtilities;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 
 import java.util.Locale;
 
@@ -206,9 +206,9 @@ public class ProfileSearchCell extends BaseCell implements NotificationCenter.No
         ad = sponsoredPeer;
     }
 
-    private boolean allowEmojiStatus = !CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses();
+    private boolean allowEmojiStatus = !YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses();
     public void setAllowEmojiStatus(boolean allowEmojiStatus) {
-        if (CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) {
+        if (YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) {
             this.allowEmojiStatus = false;
         } else {
             this.allowEmojiStatus = allowEmojiStatus;
@@ -462,7 +462,7 @@ public class ProfileSearchCell extends BaseCell implements NotificationCenter.No
             }
             nameLockTop = dp(21);
             drawCheck = user.verified;
-            drawPremium = !savedMessages && MessagesController.getInstance(currentAccount).isPremiumUser(user) && !CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses();
+            drawPremium = !savedMessages && MessagesController.getInstance(currentAccount).isPremiumUser(user) && !YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses();
             updateStatus(drawCheck, user, null, false);
         } else if (contact != null) {
             dialog_id = 0;

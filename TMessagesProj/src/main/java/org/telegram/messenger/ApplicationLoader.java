@@ -55,7 +55,7 @@ import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
 import uz.unnarsx.cherrygram.camera.CameraXUtils;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
 
 public class ApplicationLoader extends Application {
 
@@ -221,7 +221,7 @@ public class ApplicationLoader extends Application {
 
                     }
 
-                    boolean isSlow = CherrygramCoreConfig.INSTANCE.getSlowNetworkMode();
+                    boolean isSlow = YuurigramCoreConfig.INSTANCE.getSlowNetworkMode();
                     for (int a = 0; a < UserConfig.MAX_ACCOUNT_COUNT; a++) {
                         ConnectionsManager.getInstance(a).checkConnection();
                         FileLoader.getInstance(a).onNetworkChanged(isSlow);
@@ -256,7 +256,7 @@ public class ApplicationLoader extends Application {
         SharedConfig.loadConfig();
         hasPlayServices = checkPlayServices();
         CameraXUtils.loadCameraXSizes();
-        /*if (!CherrygramCoreConfig.isPlayStoreBuild()) {
+        /*if (!YuurigramCoreConfig.isPlayStoreBuild()) {
             Continuation<Object> suspendResult = new Continuation<>() {
                 @NonNull
                 @Override
@@ -384,7 +384,7 @@ public class ApplicationLoader extends Application {
         }
         if (enabled) {
             try {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && Build.VERSION.SDK_INT < Build.VERSION_CODES.VANILLA_ICE_CREAM && CherrygramCoreConfig.INSTANCE.getResidentNotification()) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && Build.VERSION.SDK_INT < Build.VERSION_CODES.VANILLA_ICE_CREAM && YuurigramCoreConfig.INSTANCE.getResidentNotification()) {
                     applicationContext.startForegroundService(new Intent(applicationContext, NotificationsService.class));
                 } else {
                     applicationContext.startService(new Intent(applicationContext, NotificationsService.class));

@@ -73,12 +73,12 @@ import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
 import uz.unnarsx.cherrygram.chats.CGChatMenuInjector;
 import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramPrivacyConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
 import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator;
 import uz.unnarsx.cherrygram.core.ui.mainTabs.MainTabsManager;
-import uz.unnarsx.cherrygram.preferences.CherrygramPreferencesNavigator;
+import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator;
 
 public class MainTabsActivity extends ViewPagerActivity implements NotificationCenter.NotificationCenterDelegate, FactorAnimator.Target {
     public static final int TABS_COUNT = 4;
@@ -337,7 +337,7 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
 
         contentView.addView(fadeView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 0, Gravity.BOTTOM));
 
-        if (CherrygramAppearanceConfig.INSTANCE.getShowSearchInTabs()) {
+        if (YuurigramAppearanceConfig.INSTANCE.getShowSearchInTabs()) {
             tabsContainer = new LinearLayout(context);
             tabsContainer.setOrientation(LinearLayout.HORIZONTAL);
             tabsContainer.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
@@ -391,7 +391,7 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
             return;
         }
 
-        if (CherrygramAppearanceConfig.INSTANCE.getTabsNoUnread()) return;
+        if (YuurigramAppearanceConfig.INSTANCE.getTabsNoUnread()) return;
 
         final int unreadCount = MessagesStorage.getInstance(currentAccount).getMainUnreadCount();
         /*if (unreadCount > 0) {
@@ -474,7 +474,7 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
         }
 
         o.addGap();
-        o.add(R.drawable.tabs_reorder, getString(R.string.CP_MainTabs_Header), () -> CherrygramPreferencesNavigator.INSTANCE.createTabs(this));
+        o.add(R.drawable.tabs_reorder, getString(R.string.CP_MainTabs_Header), () -> YuurigramPreferencesNavigator.INSTANCE.createTabs(this));
 
         // o.addGap();
         // o.add(R.drawable.msg_leave, getString(R.string.LogOut), true, () -> presentFragment(new LogoutActivity()));
@@ -714,13 +714,13 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
     private boolean canScrollInternal(MotionEvent ev, boolean forward) {
         final BaseFragment fragment = getCurrentVisibleFragment();
 
-        if (CherrygramAppearanceConfig.INSTANCE.getShowMainTabs()) {
+        if (YuurigramAppearanceConfig.INSTANCE.getShowMainTabs()) {
             if (fragment instanceof TabFragmentDelegate) {
                 final TabFragmentDelegate delegate = (TabFragmentDelegate) fragment;
                 return delegate.canParentTabsSlide(ev, forward);
             }
         } else {
-            if (CherrygramAppearanceConfig.INSTANCE.getOpenSettingsBySwipe()) {
+            if (YuurigramAppearanceConfig.INSTANCE.getOpenSettingsBySwipe()) {
 
                 if (fragment instanceof SettingsActivity) {
                     return forward;
@@ -808,7 +808,7 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
             }
         } else if (id == NotificationCenter.fileLoadProgressChanged) {
             if (updateLayout != null) {
-                updateLayout.updateFileProgress(CherrygramCoreConfig.INSTANCE.getUpdateDownloadingProgress());
+                updateLayout.updateFileProgress(YuurigramCoreConfig.INSTANCE.getUpdateDownloadingProgress());
             }
         } else if (id == NotificationCenter.appUpdateAvailable) {
             if (updateLayout != null) {
@@ -1103,7 +1103,7 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private LinearLayout tabsContainer;
     private GlassTabView searchButton;
     private BlurredBackgroundDrawable searchButtonBackground;
@@ -1269,7 +1269,7 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
                 }
 
                 Bundle args = new Bundle();
-                args.putBoolean("hasMainTabs", CherrygramAppearanceConfig.INSTANCE.getShowMainTabs());
+                args.putBoolean("hasMainTabs", YuurigramAppearanceConfig.INSTANCE.getShowMainTabs());
                 dialogsActivity = new DialogsActivity(args);
                 dialogsActivity.setMainTabsActivityController(new MainTabsActivityControllerImpl());
                 return dialogsActivity;
@@ -1326,7 +1326,7 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
     }
 
     private void onSearchButtonClick() {
-        if (CherrygramAppearanceConfig.INSTANCE.getMainTabsForceOpenChats()) {
+        if (YuurigramAppearanceConfig.INSTANCE.getMainTabsForceOpenChats()) {
             openSearchChats();
             return;
         }
@@ -1361,7 +1361,7 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
     public void processLongClick(View button) {
         ItemOptions o = ItemOptions.makeOptions(this, button);
         o.addIf(
-                !CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList(),
+                !YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList(),
                 R.drawable.msg_archive,
                 getString(R.string.ArchivedChats),
                 () -> CGChatMenuInjector.INSTANCE.openArchivedChats(this)
@@ -1370,7 +1370,7 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
         o.add(R.drawable.msg_saved, getString(R.string.SavedMessages), () -> presentFragment(ChatActivity.of(ChatsHelper2.INSTANCE.getCustomChatID())));
 
         o.addGap();
-        o.add(R.drawable.tabs_reorder, getString(R.string.CP_MainTabs_Header), () -> CherrygramPreferencesNavigator.INSTANCE.createTabs(this));
+        o.add(R.drawable.tabs_reorder, getString(R.string.CP_MainTabs_Header), () -> YuurigramPreferencesNavigator.INSTANCE.createTabs(this));
 
         o.setBlur(true);
         o.translate(0, -dp(4));
@@ -1380,6 +1380,6 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
 
         o.show();
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

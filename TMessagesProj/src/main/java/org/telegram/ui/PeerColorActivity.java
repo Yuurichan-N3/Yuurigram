@@ -3622,7 +3622,7 @@ public class PeerColorActivity extends BaseFragment implements NotificationCente
         return a.collectible_id == b.collectible_id;
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     @Override
     public boolean isActionBarCrossfadeEnabled() {
         return false;
@@ -3632,6 +3632,6 @@ public class PeerColorActivity extends BaseFragment implements NotificationCente
     public boolean isSupportEdgeToEdge() {
         return false; // Breaks status bar
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

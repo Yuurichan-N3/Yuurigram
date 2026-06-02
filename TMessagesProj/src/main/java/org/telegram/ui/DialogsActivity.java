@@ -269,12 +269,12 @@ import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
 import uz.unnarsx.cherrygram.chats.CGChatMenuInjector;
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 import uz.unnarsx.cherrygram.core.CGBiometricPrompt;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramMessagesConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramPrivacyConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
 import uz.unnarsx.cherrygram.core.ui.folders.FoldersHelper;
 import uz.unnarsx.cherrygram.misc.Constants;
 import uz.unnarsx.cherrygram.core.crashlytics.CrashReportBottomSheet;
@@ -1341,7 +1341,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                             ) && (
                             initialDialogsType == DIALOGS_TYPE_FORWARD ||
                                     SharedConfig.getChatSwipeAction(currentAccount) == SwipeGestureSettingsView.SWIPE_GESTURE_FOLDERS ||
-                                    SharedConfig.getChatSwipeAction(currentAccount) == SwipeGestureSettingsView.SWIPE_GESTURE_ARCHIVE && CherrygramChatsConfig.INSTANCE.getUnarchiveOnSwipe() &&
+                                    SharedConfig.getChatSwipeAction(currentAccount) == SwipeGestureSettingsView.SWIPE_GESTURE_ARCHIVE && YuurigramChatsConfig.INSTANCE.getUnarchiveOnSwipe() &&
                                             viewPages[0] != null && (viewPages[0].dialogsAdapter.getDialogsType() == 7 || viewPages[0].dialogsAdapter.getDialogsType() == 8))
             ) {
                 if (ev != null) {
@@ -2207,7 +2207,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                                 }
                                 if (!canShowHiddenArchive) {
                                     canShowHiddenArchive = true;
-                                    if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                                    if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                                         try {
                                             performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                                         } catch (Exception ignored) {}
@@ -2406,7 +2406,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                     }
                     swipeFolderBack = false;
                     swipingFolder = (canSwipeBack && !DialogObject.isFolderDialogId(dialogCell.getDialogId())) || (SharedConfig.archiveHidden && DialogObject.isFolderDialogId(dialogCell.getDialogId()));
-                    if (folderId == 1 && !CherrygramChatsConfig.INSTANCE.getUnarchiveOnSwipe()) {
+                    if (folderId == 1 && !YuurigramChatsConfig.INSTANCE.getUnarchiveOnSwipe()) {
                         dialogCell.setSliding(false);
                     } else {
                         dialogCell.setSliding(true);
@@ -2773,7 +2773,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     public boolean onFragmentCreate() {
         super.onFragmentCreate();
 
-        if (CherrygramMessagesConfig.INSTANCE.getEnableMsgFilters() && CherrygramMessagesConfig.INSTANCE.getMsgFiltersHideFromBlocked()) {
+        if (YuurigramMessagesConfig.INSTANCE.getEnableMsgFilters() && YuurigramMessagesConfig.INSTANCE.getMsgFiltersHideFromBlocked()) {
             getMessagesController().getBlockedPeers(false);
         }
 
@@ -2808,7 +2808,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
             allowBots = arguments.getBoolean("allowBots", true);
             closeFragment = arguments.getBoolean("closeFragment", true);
             allowGlobalSearch = arguments.getBoolean("allowGlobalSearch", true);
-            if (CherrygramAppearanceConfig.INSTANCE.getShowMainTabs()) {
+            if (YuurigramAppearanceConfig.INSTANCE.getShowMainTabs()) {
                 hasMainTabs = arguments.getBoolean("hasMainTabs", false);
             } else {
                 hasMainTabs = false;
@@ -2913,8 +2913,8 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
         }
 
         BirthdayController.getInstance(currentAccount).check();
-        additionNavigationBarHeight = hasMainTabs || foldersAtBottom && !CherrygramAppearanceConfig.INSTANCE.getShowMainTabs() ? dp(MAIN_TABS_HEIGHT_WITH_MARGINS) : 0;
-        additionFloatingButtonOffset = hasMainTabs || foldersAtBottom && !CherrygramAppearanceConfig.INSTANCE.getShowMainTabs() ? dp(DialogsActivity.MAIN_TABS_HEIGHT + DialogsActivity.MAIN_TABS_MARGIN) : 0;
+        additionNavigationBarHeight = hasMainTabs || foldersAtBottom && !YuurigramAppearanceConfig.INSTANCE.getShowMainTabs() ? dp(MAIN_TABS_HEIGHT_WITH_MARGINS) : 0;
+        additionFloatingButtonOffset = hasMainTabs || foldersAtBottom && !YuurigramAppearanceConfig.INSTANCE.getShowMainTabs() ? dp(DialogsActivity.MAIN_TABS_HEIGHT + DialogsActivity.MAIN_TABS_MARGIN) : 0;
 
         return true;
     }
@@ -3494,7 +3494,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
             }
         }
         if (
-                CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()
+                YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()
                 && (searchItem != null || fragmentSearchField != null && fragmentSearchField.editText != null)
                 && !isArchive() && initialDialogsType != DIALOGS_TYPE_FORWARD
         ) {
@@ -3650,7 +3650,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
 
                 @Override
                 public int getTabCounter(int tabId) {
-                    if (initialDialogsType == DIALOGS_TYPE_FORWARD || CherrygramAppearanceConfig.INSTANCE.getTabsNoUnread()) {
+                    if (initialDialogsType == DIALOGS_TYPE_FORWARD || YuurigramAppearanceConfig.INSTANCE.getTabsNoUnread()) {
                         return 0;
                     }
                     if (tabId == filterTabsView.getDefaultTabId()) {
@@ -3807,8 +3807,8 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                                 showDeleteAlert(dialogFilter);
                             })
                             .addGap()
-                            .add(CherrygramChatsConfig.INSTANCE.getSortByUnread() ? R.drawable.dialogs_sort_by_time_solar : R.drawable.dialogs_sort_by_unread_solar, CherrygramChatsConfig.INSTANCE.getSortByUnread() ? getString(R.string.CG_SortByDate) : getString(R.string.CG_SortByUnread), () -> {
-                                CherrygramChatsConfig.INSTANCE.setSortByUnread(!CherrygramChatsConfig.INSTANCE.getSortByUnread());
+                            .add(YuurigramChatsConfig.INSTANCE.getSortByUnread() ? R.drawable.dialogs_sort_by_time_solar : R.drawable.dialogs_sort_by_unread_solar, YuurigramChatsConfig.INSTANCE.getSortByUnread() ? getString(R.string.CG_SortByDate) : getString(R.string.CG_SortByUnread), () -> {
+                                YuurigramChatsConfig.INSTANCE.setSortByUnread(!YuurigramChatsConfig.INSTANCE.getSortByUnread());
                                 dialogsLoaded[currentAccount] = false;
                                 loadDialogs(getAccountInstance());
                                 getMessagesController().loadPinnedDialogs(folderId, 0, null);
@@ -3835,7 +3835,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 @Override
                 public void onTabSelected(FilterTabsView.Tab tab, boolean forward, boolean animated) {
                     if (actionBar != null) {
-                        if (CherrygramAppearanceConfig.INSTANCE.getFolderNameInHeader()) {
+                        if (YuurigramAppearanceConfig.INSTANCE.getFolderNameInHeader()) {
                             if (dialogStoriesCell != null) {
                                 dialogStoriesCell.setTitleOverlayText(tab.isDefault ? actionBarDefaultTitle : tab.realTitle, tab.isDefault && statusDrawable != null);
                             }
@@ -4315,7 +4315,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                             if (canShowHiddenArchive != canShowInternal) {
                                 canShowHiddenArchive = canShowInternal;
                                 if (viewPage.archivePullViewState == ARCHIVE_ITEM_STATE_HIDDEN) {
-                                    if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                                    if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                                         try {
                                             viewPage.listView.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                                         } catch (Exception ignored) {}
@@ -4780,7 +4780,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 }
                 delegate.didSelectDialogs(DialogsActivity.this, topicKeys, null, false, notify, scheduleDate, scheduleRepeatPeriod, null);
             } else {
-                if (CherrygramCoreConfig.isDevBuild() && FoldersHelper.INSTANCE.moveFoldersToBottom() && !CherrygramAppearanceConfig.INSTANCE.getShowMainTabs()) {
+                if (YuurigramCoreConfig.isDevBuild() && FoldersHelper.INSTANCE.moveFoldersToBottom() && !YuurigramAppearanceConfig.INSTANCE.getShowMainTabs()) {
                     search("", true);
                     if (getFragmentSearchField() != null) {
                         getFragmentSearchField().editText.requestFocus();
@@ -5641,7 +5641,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
 
         ViewCompat.setOnApplyWindowInsetsListener(fragmentView, this::onApplyWindowInsets);
 
-        if (Build.VERSION.SDK_INT >= 24 && CherrygramPrivacyConfig.INSTANCE.getReTgCheck()) {
+        if (Build.VERSION.SDK_INT >= 24 && YuurigramPrivacyConfig.INSTANCE.getReTgCheck()) {
             Continuation<Object> suspendResult = new Continuation<>() {
                 @NonNull
                 @Override
@@ -6873,13 +6873,13 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 filterTabsView.removeTabs();
                 for (int a = 0, N = filters.size(); a < N; a++) {
                     if (filters.get(a).isDefault()) {
-                        if (!CherrygramAppearanceConfig.INSTANCE.getTabsHideAllChats()) filterTabsView.addTab(a, 0, LocaleController.getString(R.string.FilterAllChats), null, false, true, filters.get(a).locked, filters.get(a).emoticon);
+                        if (!YuurigramAppearanceConfig.INSTANCE.getTabsHideAllChats()) filterTabsView.addTab(a, 0, LocaleController.getString(R.string.FilterAllChats), null, false, true, filters.get(a).locked, filters.get(a).emoticon);
                     } else {
                         final MessagesController.DialogFilter filter = filters.get(a);
                         filterTabsView.addTab(a, filter.localId, filter.name, filter.entities, filter.title_noanimate, false, filters.get(a).locked, filter.emoticon);
                     }
                 }
-                if (CherrygramAppearanceConfig.INSTANCE.getTabsHideAllChats() && stableId <= 0) {
+                if (YuurigramAppearanceConfig.INSTANCE.getTabsHideAllChats() && stableId <= 0) {
                     id = filterTabsView.getFirstTabId();
                     updateCurrentTab = true;
                     viewPages[0].selectedType = id;
@@ -6953,7 +6953,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 filterTabsView.resetTabId();
 
                 if (actionBar != null && !actionBarDefaultTitle.equals(actionBar.getTitle())) {
-                    if (CherrygramAppearanceConfig.INSTANCE.getFolderNameInHeader()) {
+                    if (YuurigramAppearanceConfig.INSTANCE.getFolderNameInHeader()) {
                         actionBar.setTitleAnimatedX(actionBarDefaultTitle, statusDrawable, false, 250, true);
                     } else {
                         actionBar.setTitle(actionBarDefaultTitle, statusDrawable, true);
@@ -7888,7 +7888,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 TLRPC.Dialog dialog = (TLRPC.Dialog) object;
                 folderId = dialog.folder_id;
                 if (dialog instanceof TLRPC.TL_dialogFolder) {
-                    if (CherrygramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
+                    if (YuurigramPrivacyConfig.INSTANCE.getHideArchiveFromChatsList()) {
                         getMessagesController().openByUserName(Constants.CG_CHANNEL_USERNAME, this, 1);
                     } else {
                         if (actionBar.isActionModeShowed(null)) {
@@ -8767,7 +8767,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
             previewMenu[0].addView(muteItem);
         }
 
-        if (dialogId != Constants.Cherrygram_Owner && dialogId != Constants.Alina) {
+        if (dialogId != Constants.Yuurigram_Owner && dialogId != Constants.Alina) {
             ActionBarMenuSubItem deleteItem = new ActionBarMenuSubItem(getParentActivity(), false, true);
             deleteItem.setIconColor(getThemedColor(Theme.key_text_RedRegular));
             deleteItem.setTextColor(getThemedColor(Theme.key_text_RedBold));
@@ -8831,7 +8831,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
         }
     }
 
-    public boolean storiesEnabled = !CherrygramCoreConfig.INSTANCE.getHideStories();
+    public boolean storiesEnabled = !YuurigramCoreConfig.INSTANCE.getHideStories();
     private void updateStoriesPosting() {
         final boolean storiesEnabled = getMessagesController().storiesEnabled();
         if (this.storiesEnabled != storiesEnabled) {
@@ -8850,7 +8850,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
             floatingButton3.setImageResource(R.drawable.floating_check);
             floatingButton3.setContentDescription(LocaleController.getString(R.string.Done));
         } else {
-            if (CherrygramCoreConfig.isDevBuild() && FoldersHelper.INSTANCE.moveFoldersToBottom() && !CherrygramAppearanceConfig.INSTANCE.getShowMainTabs()) {
+            if (YuurigramCoreConfig.isDevBuild() && FoldersHelper.INSTANCE.moveFoldersToBottom() && !YuurigramAppearanceConfig.INSTANCE.getShowMainTabs()) {
                 floatingButton3.setImageResource(R.drawable.msg_search_filled_solar);
                 floatingButton3.setContentDescription(LocaleController.getString(R.string.Search));
             } else {
@@ -9204,7 +9204,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 return;
             }
         } else if ((action == delete || action == clear) && count > 1 && alert) {
-            if (selectedDialogs.contains(Constants.Cherrygram_Owner) || selectedDialogs.contains(Constants.Alina)) {
+            if (selectedDialogs.contains(Constants.Yuurigram_Owner) || selectedDialogs.contains(Constants.Alina)) {
                 return;
             }
             boolean hasDialogsToRevoke = false;
@@ -9355,7 +9355,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                     markAsUnread(selectedDialog);
                 }
             } else if (action == delete || action == clear) {
-                if (dialog.id == Constants.Cherrygram_Owner || dialog.id == Constants.Alina) {
+                if (dialog.id == Constants.Yuurigram_Owner || dialog.id == Constants.Alina) {
                     return;
                 }
                 if (count == 1) {
@@ -12345,7 +12345,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
         if (SharedConfig.getDevicePerformanceClass() <= SharedConfig.PERFORMANCE_CLASS_LOW && !BuildVars.DEBUG_PRIVATE_VERSION) {
             return;
         }
-        if (isSlideBackTransition && slideBackTransitionAnimator == null && CherrygramCoreConfig.INSTANCE.getSpringAnimation() == CherrygramCoreConfig.ANIMATION_CLASSIC) {
+        if (isSlideBackTransition && slideBackTransitionAnimator == null && YuurigramCoreConfig.INSTANCE.getSpringAnimation() == YuurigramCoreConfig.ANIMATION_CLASSIC) {
             setSlideTransitionProgress(progress);
         }
     }
@@ -12474,7 +12474,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     }
 
     public void updateStoriesVisibility(boolean animated) {
-        if (CherrygramCoreConfig.INSTANCE.getHideStories()) return;
+        if (YuurigramCoreConfig.INSTANCE.getHideStories()) return;
         if (dialogStoriesCell == null || storiesVisibilityAnimator != null || rightSlidingDialogContainer != null && rightSlidingDialogContainer.hasFragment() || searchIsShowed || actionBar == null || actionBar.isActionModeShowed() || onlySelect) {
             return;
         }
@@ -13706,7 +13706,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     }
 
     private void checkUi_mainTabsVisible() {
-        final boolean mainTabsVisible = CherrygramAppearanceConfig.INSTANCE.getShowMainTabs() && !searching && (blurredView == null || blurredView.getBackground() == null || blurredView.getAlpha() < 0.01f || blurredView.getVisibility() == View.GONE);
+        final boolean mainTabsVisible = YuurigramAppearanceConfig.INSTANCE.getShowMainTabs() && !searching && (blurredView == null || blurredView.getBackground() == null || blurredView.getAlpha() < 0.01f || blurredView.getVisibility() == View.GONE);
         if (mainTabsActivityController != null) {
             mainTabsActivityController.setTabsVisible(mainTabsVisible);
         }
@@ -14031,7 +14031,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private CharSequence actionBarDefaultTitle;
 
     private final boolean foldersAtBottom = FoldersHelper.INSTANCE.moveFoldersToBottom();
@@ -14071,7 +14071,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     }
 
     private boolean shouldHideHomeSearchField() {
-        return CherrygramAppearanceConfig.INSTANCE.getHideSearchFiled()
+        return YuurigramAppearanceConfig.INSTANCE.getHideSearchFiled()
                 /*&& initialDialogsType == DIALOGS_TYPE_DEFAULT
                 && !onlySelect
                 && folderId == 0*/
@@ -14079,7 +14079,7 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     }
 
     private boolean shouldShowSearchIcon() {
-        return !CherrygramAppearanceConfig.INSTANCE.getShowSearchInTabs() || !CherrygramAppearanceConfig.INSTANCE.getShowMainTabs() || (initialDialogsType == DIALOGS_TYPE_FORWARD || folderId == 1);
+        return !YuurigramAppearanceConfig.INSTANCE.getShowSearchInTabs() || !YuurigramAppearanceConfig.INSTANCE.getShowMainTabs() || (initialDialogsType == DIALOGS_TYPE_FORWARD || folderId == 1);
     }
 
     private int getSearchFieldReservedHeight() {
@@ -14090,6 +14090,6 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
     public boolean isActionBarCrossfadeEnabled() {
         return super.isActionBarCrossfadeEnabled() && actionBar.getTranslationY() == 0 && !rightSlidingDialogContainer.isOpenned;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

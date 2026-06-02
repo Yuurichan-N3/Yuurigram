@@ -59,7 +59,7 @@ import java.util.ArrayList;
 
 import me.vkryl.core.BitwiseUtils;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 
 public class UniversalAdapter extends AdapterWithDiffUtils {
 
@@ -764,7 +764,7 @@ public class UniversalAdapter extends AdapterWithDiffUtils {
                     }
                     cell3 = btn;
                 }
-                if (!CherrygramAppearanceConfig.INSTANCE.getDisableDividers()) {
+                if (!YuurigramAppearanceConfig.INSTANCE.getDisableDividers()) {
                     final boolean prev = prevItem != null && !isShadow(prevItem.viewType);
                     final boolean next = nextItem != null && !isShadow(nextItem.viewType);
                     if (listView.hasSections()) {
@@ -1224,9 +1224,9 @@ public class UniversalAdapter extends AdapterWithDiffUtils {
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public static final int VIEW_TYPE_TEXT_DETAIL_SETTINGS = 100;
     public static final int VIEW_TYPE_SPACE_CG = 101;
     public static final int VIEW_TYPE_CUSTOM_WITH_BACKGROUND = 102;
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 }

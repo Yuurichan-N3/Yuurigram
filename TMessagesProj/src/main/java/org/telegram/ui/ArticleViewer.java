@@ -223,7 +223,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 import uz.unnarsx.cherrygram.chats.helpers.ChatsHelper2;
 
 public class ArticleViewer implements NotificationCenter.NotificationCenterDelegate {
@@ -1253,7 +1253,7 @@ public class ArticleViewer implements NotificationCenter.NotificationCenterDeleg
             if (checkingForLongPress && windowView != null) {
                 checkingForLongPress = false;
                 if (pressedLink != null) {
-                    if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                    if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                         try {
                             windowView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                         } catch (Exception ignored) {}
@@ -1270,13 +1270,13 @@ public class ArticleViewer implements NotificationCenter.NotificationCenterDeleg
                     } else {
                         textSelectionHelper.trySelect(pressedLinkOwnerView);
                     }
-                    if (textSelectionHelper.isInSelectionMode() && !CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                    if (textSelectionHelper.isInSelectionMode() && !YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                         try {
                             windowView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                         } catch (Exception ignored) {}
                     }
                 } else if (pressedLinkOwnerLayout != null && pressedLinkOwnerView != null) {
-                    if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                    if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                         try {
                             windowView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                         } catch (Exception ignored) {}

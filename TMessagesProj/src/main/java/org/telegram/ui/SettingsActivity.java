@@ -141,14 +141,14 @@ import java.util.Set;
 
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 import uz.unnarsx.cherrygram.core.ui.CGBulletinCreator;
 import uz.unnarsx.cherrygram.donates.BadgeHelper;
 import uz.unnarsx.cherrygram.donates.DonatesManager;
 import uz.unnarsx.cherrygram.donates.StarsBadgeDrawable;
 import uz.unnarsx.cherrygram.helpers.ui.MonetHelper;
 import uz.unnarsx.cherrygram.misc.Constants;
-import uz.unnarsx.cherrygram.preferences.CherrygramPreferencesNavigator;
+import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator;
 import uz.unnarsx.cherrygram.preferences.helpers.TelegramSettingsHelper;
 
 public class SettingsActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate, ImageUpdater.ImageUpdaterDelegate, MainTabsActivity.TabFragmentDelegate, FactorAnimator.Target {
@@ -485,7 +485,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
         versionView.setGravity(Gravity.CENTER);
         versionView.setBackground(Theme.createSelectorDrawable(getThemedColor(Theme.key_listSelector), Theme.RIPPLE_MASK_ALL));
         versionView.setOnClickListener(v -> {
-            CherrygramPreferencesNavigator.INSTANCE.createDebug(SettingsActivity.this);
+            YuurigramPreferencesNavigator.INSTANCE.createDebug(SettingsActivity.this);
             /*versionViewPressCount++;
             if (versionViewPressCount < 2 && !BuildVars.DEBUG_PRIVATE_VERSION) {
                 try {
@@ -1107,7 +1107,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
             textView.setLeftDrawable(!botDrawable.isEmpty() ? botDrawable : null);
             textView.setRightDrawable(!emojiStatusDrawable.isEmpty() ? emojiStatusDrawable : null);
 
-            checkCherrygramBadge(user);
+            checkYuurigramBadge(user);
 
             int counter = MessagesStorage.getInstance(account).getMainUnreadCount();
             counterView.setVisibility(counter > 0 ? View.VISIBLE : View.GONE);
@@ -1153,13 +1153,13 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
             }
         }
 
-        private void checkCherrygramBadge(TLRPC.User user) {
+        private void checkYuurigramBadge(TLRPC.User user) {
             if (user == null) return;
 
             long emojiDocumentId;
             boolean isPremium = false; // cgPremium
             boolean isDonated = DonatesManager.INSTANCE.didUserDonate(user.id);
-            boolean forceBra = user.id == Constants.Cherrygram_Owner;
+            boolean forceBra = user.id == Constants.Yuurigram_Owner;
             boolean showParticles = isPremium || forceBra || DonatesManager.INSTANCE.didUserDonateForMarketplace(user.id);
 
             if (isPremium && isDonated) {
@@ -1435,7 +1435,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
             }
         }
 
-        /** Cherrygram start */
+        /** Yuurigram start */
         private Runnable onArrowClick;
         private final ImageView arrowView;
         private final ImageView starsBadgeView;
@@ -1524,11 +1524,11 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
         }
 
         private void checkArrowState() {
-            final float rotation = CherrygramAppearanceConfig.INSTANCE.getShowAccounts() ? 180.0f : 0.0f;
+            final float rotation = YuurigramAppearanceConfig.INSTANCE.getShowAccounts() ? 180.0f : 0.0f;
             arrowView.animate().rotation(rotation).setDuration(220).setInterpolator(CubicBezierInterpolator.EASE_OUT).start();
-            arrowView.setContentDescription(CherrygramAppearanceConfig.INSTANCE.getShowAccounts() ? getString(R.string.AccDescrHideAccounts) : getString(R.string.AccDescrShowAccounts));
+            arrowView.setContentDescription(YuurigramAppearanceConfig.INSTANCE.getShowAccounts() ? getString(R.string.AccDescrHideAccounts) : getString(R.string.AccDescrShowAccounts));
         }
-        /** Cherrygram finish */
+        /** Yuurigram finish */
 
     }
 
@@ -2292,10 +2292,10 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
         return isSwipeBackEnabled(ev);
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public TelegramSettingsHelper telegramSettingsHelper;
 
     private boolean hidePhoneNumber = true;
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

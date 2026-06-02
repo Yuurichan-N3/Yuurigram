@@ -119,9 +119,9 @@ import java.util.regex.Pattern;
 
 import uz.unnarsx.cherrygram.chats.helpers.ChatsPasswordHelper;
 import uz.unnarsx.cherrygram.chats.filters.MessagesFilterHelper;
-import uz.unnarsx.cherrygram.core.configs.CherrygramMessagesConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramPrivacyConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
 
 import me.vkryl.core.BitwiseUtils;
 
@@ -7343,7 +7343,7 @@ public class MessageObject {
     }
 
     public void replaceEmojiToLottieFrame(CharSequence text, int[] emojiOnly) {
-        if (!(text instanceof Spannable) || CherrygramCoreConfig.INSTANCE.getSystemEmoji()) {
+        if (!(text instanceof Spannable) || YuurigramCoreConfig.INSTANCE.getSystemEmoji()) {
             return;
         }
         Spannable spannable = (Spannable) text;
@@ -7795,35 +7795,35 @@ public class MessageObject {
             return true;
         }
         if (((type == TYPE_STICKER || type == TYPE_ANIMATED_STICKER || type == TYPE_EMOJIS)) && !isOutOwner()) {
-            return CherrygramMessagesConfig.INSTANCE.getStickersDrawShareButton();
+            return YuurigramMessagesConfig.INSTANCE.getStickersDrawShareButton();
         }
         if (messageOwner.fwd_from != null && messageOwner.fwd_from.saved_from_peer != null && !isOutOwner()) {
-            return CherrygramMessagesConfig.INSTANCE.getChannelsDrawShareButton();
+            return YuurigramMessagesConfig.INSTANCE.getChannelsDrawShareButton();
         }
         if (isFromUser()) {
             TLRPC.User user = MessagesController.getInstance(currentAccount).getUser(messageOwner.from_id.user_id);
-            if ((user != null && user.bot && ("reviews_bot".equals(UserObject.getPublicUsername(user)) || "ReviewInsightsBot".equals(UserObject.getPublicUsername(user)))) && CherrygramMessagesConfig.INSTANCE.getBotsDrawShareButton()) {
+            if ((user != null && user.bot && ("reviews_bot".equals(UserObject.getPublicUsername(user)) || "ReviewInsightsBot".equals(UserObject.getPublicUsername(user)))) && YuurigramMessagesConfig.INSTANCE.getBotsDrawShareButton()) {
                 return true;
             }
-            if (user != null && !isOut() && !isMegagroup() && ((!user.bot && CherrygramMessagesConfig.INSTANCE.getUsersDrawShareButton())/* || (messageOwner.from_id.chat_id != 0 && CherrygramMessagesConfig.INSTANCE.getGroupsDrawShareButton())*/)) {
+            if (user != null && !isOut() && !isMegagroup() && ((!user.bot && YuurigramMessagesConfig.INSTANCE.getUsersDrawShareButton())/* || (messageOwner.from_id.chat_id != 0 && YuurigramMessagesConfig.INSTANCE.getGroupsDrawShareButton())*/)) {
                 return true;
             }
             if (user != null && user.bot && !hasExtendedMedia()) {
-                return CherrygramMessagesConfig.INSTANCE.getBotsDrawShareButton();
+                return YuurigramMessagesConfig.INSTANCE.getBotsDrawShareButton();
             }
             if (!isOut()) {
                 if (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaGame || getMedia(messageOwner) instanceof TLRPC.TL_messageMediaInvoice && !hasExtendedMedia() || getMedia(messageOwner) instanceof TLRPC.TL_messageMediaWebPage) {
                     if (isMegagroup() || isSupergroup()) {
-                        return CherrygramMessagesConfig.INSTANCE.getSupergroupsDrawShareButton();
+                        return YuurigramMessagesConfig.INSTANCE.getSupergroupsDrawShareButton();
                     } else {
-                        return CherrygramMessagesConfig.INSTANCE.getUsersDrawShareButton();
+                        return YuurigramMessagesConfig.INSTANCE.getUsersDrawShareButton();
                     }
                 }
                 if (isMegagroup()) {
-                    if (CherrygramMessagesConfig.INSTANCE.getSupergroupsDrawShareButton()) {
+                    if (YuurigramMessagesConfig.INSTANCE.getSupergroupsDrawShareButton()) {
                         return true;
                     }
-                    if (!ChatObject.isPublic(MessagesController.getInstance(currentAccount).getChat(messageOwner.peer_id.channel_id)) || (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaContact) || (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaGeo) || !CherrygramMessagesConfig.INSTANCE.getSupergroupsDrawShareButton()) {
+                    if (!ChatObject.isPublic(MessagesController.getInstance(currentAccount).getChat(messageOwner.peer_id.channel_id)) || (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaContact) || (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaGeo) || !YuurigramMessagesConfig.INSTANCE.getSupergroupsDrawShareButton()) {
                         return false;
                     }
                     return true;
@@ -7832,13 +7832,13 @@ public class MessageObject {
         } else {
             if (messageOwner.from_id instanceof TLRPC.TL_peerChannel || messageOwner.post) {
                 if (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaWebPage && !isOutOwner()) {
-                    return CherrygramMessagesConfig.INSTANCE.getChannelsDrawShareButton();
+                    return YuurigramMessagesConfig.INSTANCE.getChannelsDrawShareButton();
                 }
                 if (isMegagroup()) {
                     return false;
                 }
                 if (messageOwner.peer_id.channel_id != 0 && (messageOwner.via_bot_id == 0 && messageOwner.reply_to == null) || !((type) == TYPE_STICKER || type == TYPE_ANIMATED_STICKER || type == TYPE_EMOJIS)) {
-                    return CherrygramMessagesConfig.INSTANCE.getChannelsDrawShareButton();
+                    return YuurigramMessagesConfig.INSTANCE.getChannelsDrawShareButton();
                 }
             }
         }
@@ -12712,7 +12712,7 @@ public class MessageObject {
         return total;
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public Boolean messageBlocked;
 
     public boolean shouldBlockMessage() {
@@ -12748,14 +12748,14 @@ public class MessageObject {
         BaseFragment currentFragment = LaunchActivity.getSafeLastFragment();
         boolean isProperActivity = currentFragment instanceof DialogsActivity || notifications;
 
-        if (isProperActivity && (CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenChat() || CherrygramPrivacyConfig.INSTANCE.getAskBiometricsToOpenEncrypted())) {
+        if (isProperActivity && (YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenChat() || YuurigramPrivacyConfig.INSTANCE.getAskBiometricsToOpenEncrypted())) {
             chatID = messageOwner.dialog_id;
             require = ChatsPasswordHelper.getInstance(currentAccount).isChatLocked(chatID) || ChatsPasswordHelper.getInstance(currentAccount).isEncryptedChat(chatID);
             addSpoiler = require;
         }
 
-        return shouldBlockMessage() && (CherrygramMessagesConfig.INSTANCE.getMsgFiltersHideAll() || CherrygramMessagesConfig.INSTANCE.getMsgFiltersHideFromBlocked()) || addSpoiler;
+        return shouldBlockMessage() && (YuurigramMessagesConfig.INSTANCE.getMsgFiltersHideAll() || YuurigramMessagesConfig.INSTANCE.getMsgFiltersHideFromBlocked()) || addSpoiler;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

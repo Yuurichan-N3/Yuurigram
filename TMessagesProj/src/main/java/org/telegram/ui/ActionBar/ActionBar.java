@@ -71,8 +71,8 @@ import org.telegram.ui.Stars.StarsIntroActivity;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 
 import me.vkryl.android.animator.ReplaceAnimator;
 import uz.unnarsx.cherrygram.helpers.ui.FontHelper;
@@ -332,7 +332,7 @@ public class ActionBar extends FrameLayout implements Theme.Colorable {
                     }
                 }
 
-                if (/*Theme.canStartHolidayAnimation() ||*/ CherrygramAppearanceConfig.INSTANCE.getDrawSnowInActionBar()) {
+                if (/*Theme.canStartHolidayAnimation() ||*/ YuurigramAppearanceConfig.INSTANCE.getDrawSnowInActionBar()) {
                     if (snowflakesEffect == null) {
                         snowflakesEffect = new SnowflakesEffect(0);
                     }
@@ -451,7 +451,7 @@ public class ActionBar extends FrameLayout implements Theme.Colorable {
         }
     }
 
-    private boolean isCenterTitle = CherrygramAppearanceConfig.INSTANCE.getCenterTitle();
+    private boolean isCenterTitle = YuurigramAppearanceConfig.INSTANCE.getCenterTitle();
 
     public void centerTitle() {
         isCenterTitle = true;
@@ -2202,7 +2202,7 @@ public class ActionBar extends FrameLayout implements Theme.Colorable {
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private CounterView countLayout;
 
     public class UnreadImageView extends ImageView {
@@ -2232,7 +2232,7 @@ public class ActionBar extends FrameLayout implements Theme.Colorable {
         }
 
         public void checkUnreadView(int count) {
-            if (!CherrygramChatsConfig.INSTANCE.getUnreadBadgeOnBackButton()) return;
+            if (!YuurigramChatsConfig.INSTANCE.getUnreadBadgeOnBackButton()) return;
             if (countLayout == null) {
                 createUnreadView(count);
             } else {
@@ -2268,6 +2268,6 @@ public class ActionBar extends FrameLayout implements Theme.Colorable {
     public int getItemsColor() {
         return itemsColor;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

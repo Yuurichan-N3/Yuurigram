@@ -1,5 +1,5 @@
 /**
- * This is the source code of Cherrygram for Android.
+ * This is the source code of Yuurigram for Android.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  * Please, be respectful and credit the original author if you use this code.
@@ -17,10 +17,10 @@ import com.aheaditec.talsec_security.security.api.TalsecConfig
 import com.aheaditec.talsec_security.security.api.ThreatListener
 import org.telegram.messenger.ApplicationLoader
 import org.telegram.messenger.HuaweiApplicationLoader
-import uz.unnarsx.cherrygram.Extra
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig
-import uz.unnarsx.cherrygram.core.helpers.AppRestartHelper
-import uz.unnarsx.cherrygram.donates.DonatesManager
+import id.idn.yuurigram.Extra
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.helpers.AppRestartHelper
+import id.idn.yuurigram.donates.DonatesManager
 
 class HuaweiApplicationLoaderlmpl : HuaweiApplicationLoader(), ThreatListener.ThreatDetected {
 
@@ -95,63 +95,63 @@ class HuaweiApplicationLoaderlmpl : HuaweiApplicationLoader(), ThreatListener.Th
     }
 
     override fun onRootDetected() {
-        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onDebuggerDetected() {
-        /*if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications)*/ uh()
+        /*if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications)*/ uh()
     }
 
     override fun onEmulatorDetected() {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onTamperDetected() {
-        /*if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications)*/ uh()
+        /*if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications)*/ uh()
     }
 
     override fun onUntrustedInstallationSourceDetected() {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onHookDetected() {
-        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onDeviceBindingDetected() {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onObfuscationIssuesDetected() {
-        /*if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications)*/ uh()
+        /*if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications)*/ uh()
     }
 
     override fun onMalwareDetected(suspiciousApps: List<SuspiciousAppInfo>) {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onScreenshotDetected() {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onScreenRecordingDetected() {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onMultiInstanceDetected() {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onUnsecureWifiDetected() {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onTimeSpoofingDetected() {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
 
     override fun onLocationSpoofingDetected() {
-//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !CherrygramCoreConfig.showNotifications) uh()
+//        if (!DonatesManager.checkAllDonatedAccountsForMarketplace() && !YuurigramCoreConfig.showNotifications) uh()
     }
     /** SDK Integration finish */
 

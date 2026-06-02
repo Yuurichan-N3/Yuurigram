@@ -2654,7 +2654,7 @@ public class ChatEditActivity extends BaseFragment implements ImageUpdater.Image
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private int getChannelAdminCount() {
         if (info == null || info.participants == null || info.participants.participants == null) {
             return 1;
@@ -2685,5 +2685,5 @@ public class ChatEditActivity extends BaseFragment implements ImageUpdater.Image
         }));
         getConnectionsManager().bindRequestToGuid(reqId, classGuid);
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 }

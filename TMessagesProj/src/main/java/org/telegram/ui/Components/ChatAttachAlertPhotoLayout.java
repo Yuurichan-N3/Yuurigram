@@ -134,8 +134,8 @@ import uz.unnarsx.cherrygram.camera.EffectSelectorView;
 import uz.unnarsx.cherrygram.camera.LockAnimationView;
 import uz.unnarsx.cherrygram.camera.SlideControlView;
 import uz.unnarsx.cherrygram.core.PermissionsUtils;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCameraConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramMessagesConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCameraConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramMessagesConfig;
 
 @SuppressLint("ViewConstructor")
 public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayout implements NotificationCenter.NotificationCenterDelegate {
@@ -144,7 +144,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
     private static final int VIEW_TYPE_AVATAR_CONSTRUCTOR = 4;
     private static final int SHOW_FAST_SCROLL_MIN_COUNT = 30;
     private final boolean needCamera;
-    private final boolean disableAttachCamera = CherrygramCameraConfig.INSTANCE.getDisableAttachCamera();
+    private final boolean disableAttachCamera = YuurigramCameraConfig.INSTANCE.getDisableAttachCamera();
 
     private RecyclerListView cameraPhotoRecyclerView;
     private LinearLayoutManager cameraPhotoLayoutManager;
@@ -1242,7 +1242,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
             showZoomControls(true, true);
         });
 
-        /** Cherrygram start */
+        /** Yuurigram start */
         lockAnimationView = new LockAnimationView(context);
         lockAnimationView.setVisibility(GONE);
         lockAnimationView.setAlpha(0.0f);
@@ -1277,7 +1277,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
                 ((CameraXView) cameraView).setExposureCompensation(ev);
             }
         });
-        /** Cherrygram finish */
+        /** Yuurigram finish */
 
         shutterButton = new ShutterButton(context);
         cameraPanel.addView(shutterButton, LayoutHelper.createFrame(84, 84, Gravity.CENTER));
@@ -2609,7 +2609,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
         if (fragment == null || fragment.getParentActivity() == null) {
             return;
         }
-        if (!SharedConfig.inappCamera || CherrygramCameraConfig.INSTANCE.getCameraType() == CherrygramCameraConfig.SYSTEM_CAMERA) {
+        if (!SharedConfig.inappCamera || YuurigramCameraConfig.INSTANCE.getCameraType() == YuurigramCameraConfig.SYSTEM_CAMERA) {
             deviceHasGoodCamera = false;
         } else {
             if (Build.VERSION.SDK_INT >= 23) {
@@ -2881,7 +2881,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
                         }
                         if (cameraOpened) {
                             if (cameraView != null && !cameraView.isFrontface()) {
-                                zoomControlView.setSliderValue(CherrygramCameraConfig.INSTANCE.getStartFromUltraWideCam() ? 0F : 0.5F, true);
+                                zoomControlView.setSliderValue(YuurigramCameraConfig.INSTANCE.getStartFromUltraWideCam() ? 0F : 0.5F, true);
                             }
                             lockAnimationView.setVisibility(VISIBLE);
                             lockAnimationView.setAlpha(0.0f);
@@ -3569,7 +3569,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
             return;
         }
         if (id == sticker) {
-            CherrygramMessagesConfig.INSTANCE.setPhotoAsSticker(true);
+            YuurigramMessagesConfig.INSTANCE.setPhotoAsSticker(true);
             if (parentAlert.editingMessageObject == null && parentAlert.baseFragment instanceof ChatActivity && ((ChatActivity) parentAlert.baseFragment).isInScheduleMode()) {
                 AlertsCreator.createScheduleDatePickerDialog(getContext(), ((ChatActivity) parentAlert.baseFragment).getDialogId(), (notify, scheduleDate, scheduleRepeatPeriod) -> {
                     parentAlert.delegate.didPressedButton(9, true, notify, scheduleDate, scheduleRepeatPeriod, 0, parentAlert.isCaptionAbove(), false, 0);
@@ -5325,7 +5325,7 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     private final SlideControlView evControlView;
     private final SlideControlView zoomControlView;
 
@@ -5346,6 +5346,6 @@ public class ChatAttachAlertPhotoLayout extends ChatAttachAlert.AttachAlertLayou
             parentAlert.selectedMenuItem.hideSubItem(sticker);
         }
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

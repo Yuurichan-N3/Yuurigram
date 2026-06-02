@@ -2183,7 +2183,7 @@ public class DialogStoriesCell extends FrameLayout implements NotificationCenter
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public void setTitleOverlayText(CharSequence titleOverlayText, boolean showEmojiStatus) {
         if (titleOverlayText != null) {
             hasOverlayText = true;
@@ -2206,6 +2206,6 @@ public class DialogStoriesCell extends FrameLayout implements NotificationCenter
 
         animatorHasTitleText.setValue(hasOverlayText, true);
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

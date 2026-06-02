@@ -39,7 +39,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 
 public class ProfileGiftsView extends View implements NotificationCenter.NotificationCenterDelegate {
 
@@ -259,7 +259,7 @@ public class ProfileGiftsView extends View implements NotificationCenter.Notific
     public int maxCount;
 
     public void update() {
-        if (CherrygramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) return;
+        if (YuurigramAppearanceConfig.INSTANCE.getDisablePremiumStatuses()) return;
 
         if (!MessagesController.getInstance(currentAccount).enableGiftsInProfile) {
             return;

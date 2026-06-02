@@ -212,10 +212,10 @@ import java.util.List;
 import java.util.Locale;
 
 import uz.unnarsx.cherrygram.chats.gemini.GeminiSDKImplementation;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 import uz.unnarsx.cherrygram.chats.translator.BaseTranslator;
 import uz.unnarsx.cherrygram.chats.translator.Translator;
-import uz.unnarsx.cherrygram.core.configs.CherrygramDebugConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramDebugConfig;
 
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
@@ -2698,7 +2698,7 @@ public class ChatActivityEnterView extends FrameLayout implements
                 }
             }
         });
-        if (CherrygramChatsConfig.INSTANCE.getHideSendAsChannel()) {
+        if (YuurigramChatsConfig.INSTANCE.getHideSendAsChannel()) {
             emojiButton.setOnLongClickListener(v -> {
                 createSenderView();
                 return false;
@@ -2945,7 +2945,7 @@ public class ChatActivityEnterView extends FrameLayout implements
                             } else {
                                 delegate.needShowMediaBanHint();
                             }
-                            if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                            if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                                 performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
                             }
                             sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_CLICKED);
@@ -4476,7 +4476,7 @@ public class ChatActivityEnterView extends FrameLayout implements
 
     private void startLockTransition() {
         AnimatorSet animatorSet = new AnimatorSet();
-        if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+        if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
             try {
                 performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
             } catch (Exception ignored) {}
@@ -4695,7 +4695,7 @@ public class ChatActivityEnterView extends FrameLayout implements
                         if (sendPopupWindow != null && sendPopupWindow.isShowing()) {
                             sendPopupWindow.dismiss();
                         }
-                        if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                        if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                             performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                         }
                         Translator.showTranslationTargetSelector(getContext(), true, () -> {
@@ -4767,7 +4767,7 @@ public class ChatActivityEnterView extends FrameLayout implements
             sendPopupWindow.showAtLocation(view, Gravity.LEFT | Gravity.TOP, location[0] + view.getMeasuredWidth() - sendPopupLayout.getMeasuredWidth() + dp(8), y);
             sendPopupWindow.dimBehind();
             sendButton.invalidate();
-            if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+            if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                 try {
                     view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                 } catch (Exception ignore) {}
@@ -4997,7 +4997,7 @@ public class ChatActivityEnterView extends FrameLayout implements
                             messageSendPreview.dismiss(false);
                             messageSendPreview = null;
                         }
-                        if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                        if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                             performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
                         }
                         Translator.showTranslationTargetSelector(getContext(), true, this::translatePreSend, resourcesProvider);
@@ -5792,7 +5792,7 @@ public class ChatActivityEnterView extends FrameLayout implements
                     return;
                 }
 
-                if (CherrygramDebugConfig.INSTANCE.getReplacePunctuationMarks()) {
+                if (YuurigramDebugConfig.INSTANCE.getReplacePunctuationMarks()) {
                     if (isReplacing) return;
 
                     long now = System.currentTimeMillis();
@@ -5897,7 +5897,7 @@ public class ChatActivityEnterView extends FrameLayout implements
                 }
             }
         });
-        if (CherrygramDebugConfig.INSTANCE.getEditTextSuggestionsFix()) messageEditText.addTextChangedListener(new EditTextSuggestionsFix());
+        if (YuurigramDebugConfig.INSTANCE.getEditTextSuggestionsFix()) messageEditText.addTextChangedListener(new EditTextSuggestionsFix());
         messageEditText.setEnabled(messageEditTextEnabled);
         if (messageEditTextWatchers != null) {
             for (TextWatcher textWatcher : messageEditTextWatchers) {
@@ -10487,7 +10487,7 @@ public class ChatActivityEnterView extends FrameLayout implements
         if (delegate == null) {
             return;
         }
-        if (CherrygramChatsConfig.INSTANCE.getHideSendAsChannel())
+        if (YuurigramChatsConfig.INSTANCE.getHideSendAsChannel())
             return;
         createMessageEditText();
         TLRPC.Chat chat;
@@ -14711,7 +14711,7 @@ public class ChatActivityEnterView extends FrameLayout implements
     }
 
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public void translatePreSend() {
         final AlertDialog progressDialog = new AlertDialog(getContext(), AlertDialog.ALERT_TYPE_SPINNER);
         AndroidUtilities.runOnUIThread(() -> {
@@ -14934,6 +14934,6 @@ public class ChatActivityEnterView extends FrameLayout implements
             senderSelectPopupWindow.showAtLocation(parentFragment.fragmentView, Gravity.LEFT | Gravity.TOP, this.popupX = popupX, this.popupY = popupY);
         }
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

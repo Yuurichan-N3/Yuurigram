@@ -157,7 +157,7 @@ import java.util.HashSet;
 import uz.unnarsx.cherrygram.chats.CGMessageMenuInjector;
 import uz.unnarsx.cherrygram.chats.JsonBottomSheet;
 import uz.unnarsx.cherrygram.chats.helpers.ChatActivityHelper;
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 
 public class ChannelAdminLogActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

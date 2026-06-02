@@ -20,7 +20,7 @@ import org.telegram.messenger.UserConfig;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.ChatActivity;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 
 public class PlayingGameDrawable extends StatusDrawable {
 
@@ -191,9 +191,9 @@ public class PlayingGameDrawable extends StatusDrawable {
         return AndroidUtilities.dp(18);
     }
 
-    /** Cherrygram start */
-    private boolean centerChatTitle = CherrygramChatsConfig.INSTANCE.getCenterChatTitle();
+    /** Yuurigram start */
+    private boolean centerChatTitle = YuurigramChatsConfig.INSTANCE.getCenterChatTitle();
     private ChatActivity chatActivity;
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

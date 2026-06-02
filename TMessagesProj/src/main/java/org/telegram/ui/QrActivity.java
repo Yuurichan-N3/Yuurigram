@@ -1859,11 +1859,11 @@ public class QrActivity extends BaseFragment {
         void onItemSelected(EmojiThemes theme, int position);
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     @Override
     public boolean isActionBarCrossfadeEnabled() {
         return false;
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

@@ -166,7 +166,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
-import uz.unnarsx.cherrygram.preferences.CherrygramPreferencesNavigator;
+import uz.unnarsx.cherrygram.preferences.YuurigramPreferencesNavigator;
 
 public class StarsIntroActivity extends GradientHeaderActivity implements NotificationCenter.NotificationCenterDelegate {
 
@@ -5778,12 +5778,12 @@ public class StarsIntroActivity extends GradientHeaderActivity implements Notifi
         return ssb;
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public static void createSafeStars(String customTitle, String userName, int type) {
         final BaseFragment lastFragment = LaunchActivity.getLastFragment();
         if (lastFragment != null) {
-            CherrygramPreferencesNavigator.INSTANCE.createStars(lastFragment, customTitle, userName, type);
+            YuurigramPreferencesNavigator.INSTANCE.createStars(lastFragment, customTitle, userName, type);
         }
     }
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 }

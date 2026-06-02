@@ -10,7 +10,7 @@ import org.telegram.ui.Components.AnimatedLinearLayout;
 import org.telegram.ui.Components.glass.GlassTabView;
 
 import me.vkryl.android.animator.ListAnimator;
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 
 public class MainTabsLayout extends AnimatedLinearLayout {
 
@@ -23,7 +23,7 @@ public class MainTabsLayout extends AnimatedLinearLayout {
         final int width = MeasureSpec.getSize(widthMeasureSpec);
         final int height = MeasureSpec.getSize(heightMeasureSpec);
         final int tabHeight = height - getPaddingTop() - getPaddingBottom();
-        final int tabWidth = dp(CherrygramAppearanceConfig.INSTANCE.getShowMainTabsTitle() ? 24 : 12);
+        final int tabWidth = dp(YuurigramAppearanceConfig.INSTANCE.getShowMainTabsTitle() ? 24 : 12);
 
         measureTabTexts();
 

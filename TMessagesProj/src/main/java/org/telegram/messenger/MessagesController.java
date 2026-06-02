@@ -131,10 +131,10 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCoreConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramCameraConfig;
-import uz.unnarsx.cherrygram.core.configs.CherrygramPrivacyConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCoreConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramCameraConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramPrivacyConfig;
 
 public class MessagesController extends BaseController implements NotificationCenter.NotificationCenterDelegate {
 
@@ -1356,7 +1356,7 @@ public class MessagesController extends BaseController implements NotificationCe
             return Integer.compare(pinnedNum1, pinnedNum2);
         }
 
-        if (CherrygramChatsConfig.INSTANCE.getSortByUnread()) {
+        if (YuurigramChatsConfig.INSTANCE.getSortByUnread()) {
             boolean unread1 = dialog1.unread_count > 0;
             boolean unread2 = dialog2.unread_count > 0;
             if (unread1 != unread2) {
@@ -1390,7 +1390,7 @@ public class MessagesController extends BaseController implements NotificationCe
             return Integer.compare(dialog1.pinnedNum, dialog2.pinnedNum) * -1;
         }
 
-        if (CherrygramChatsConfig.INSTANCE.getSortByUnread()) {
+        if (YuurigramChatsConfig.INSTANCE.getSortByUnread()) {
             boolean unread1 = dialog1.unread_count > 0;
             boolean unread2 = dialog2.unread_count > 0;
             if (unread1 != unread2) {
@@ -1558,7 +1558,7 @@ public class MessagesController extends BaseController implements NotificationCe
         ringtoneSizeMax = mainPreferences.getInt("ringtoneSizeMax", 1024_00);
         pmReadDateExpirePeriod = mainPreferences.getInt("pmReadDateExpirePeriod", 7 * 86400);
         suggestStickersApiOnly = mainPreferences.getBoolean("suggestStickersApiOnly", false);
-        roundVideoSize = mainPreferences.getInt("roundVideoSize", CherrygramCameraConfig.INSTANCE.getVideoMessagesResolution()); //was 384
+        roundVideoSize = mainPreferences.getInt("roundVideoSize", YuurigramCameraConfig.INSTANCE.getVideoMessagesResolution()); //was 384
         roundVideoBitrate = mainPreferences.getInt("roundVideoBitrate", 1000);
         roundAudioBitrate = mainPreferences.getInt("roundAudioBitrate", 64);
         pendingSuggestions = mainPreferences.getStringSet("pendingSuggestions", null);
@@ -10497,7 +10497,7 @@ public class MessagesController extends BaseController implements NotificationCe
                 promoDialogId = did;
                 if (res.proxy) {
                     promoDialogType = PROMO_TYPE_PROXY;
-                    if (CherrygramPrivacyConfig.INSTANCE.getHideProxySponsor()) {
+                    if (YuurigramPrivacyConfig.INSTANCE.getHideProxySponsor()) {
                         noDialog = true;
                     }
                 } else if (!TextUtils.isEmpty(res.psa_type)) {
@@ -10784,7 +10784,7 @@ public class MessagesController extends BaseController implements NotificationCe
                     if (pu.action instanceof TLRPC.TL_sendMessageRecordAudioAction) {
                         if (isGroup) {
                             text = LocaleController.formatString("IsRecordingAudio", R.string.IsRecordingAudio, getUserNameForTyping(user));
-                            if (CherrygramChatsConfig.INSTANCE.getCenterChatTitle()) text = getUserNameForTyping(user);
+                            if (YuurigramChatsConfig.INSTANCE.getCenterChatTitle()) text = getUserNameForTyping(user);
                         } else {
                             text = LocaleController.getString(R.string.RecordingAudio);
                         }
@@ -10792,7 +10792,7 @@ public class MessagesController extends BaseController implements NotificationCe
                     } else if (pu.action instanceof TLRPC.TL_sendMessageRecordRoundAction) {
                         if (isGroup) {
                             text = LocaleController.formatString("IsRecordingRound", R.string.IsRecordingRound, getUserNameForTyping(user));
-                            if (CherrygramChatsConfig.INSTANCE.getCenterChatTitle()) text = getUserNameForTyping(user);
+                            if (YuurigramChatsConfig.INSTANCE.getCenterChatTitle()) text = getUserNameForTyping(user);
                         } else {
                             text = LocaleController.getString(R.string.RecordingRound);
                         }
@@ -10821,7 +10821,7 @@ public class MessagesController extends BaseController implements NotificationCe
                     } else if (pu.action instanceof TLRPC.TL_sendMessageRecordVideoAction) {
                         if (isGroup) {
                             text = LocaleController.formatString("IsRecordingVideo", R.string.IsRecordingVideo, getUserNameForTyping(user));
-                            if (CherrygramChatsConfig.INSTANCE.getCenterChatTitle()) text = getUserNameForTyping(user);
+                            if (YuurigramChatsConfig.INSTANCE.getCenterChatTitle()) text = getUserNameForTyping(user);
                         } else {
                             text = LocaleController.getString(R.string.RecordingVideoStatus);
                         }
@@ -10879,7 +10879,7 @@ public class MessagesController extends BaseController implements NotificationCe
                     } else {
                         if (isGroup) {
                             text = LocaleController.formatString("IsTypingGroup", R.string.IsTypingGroup, getUserNameForTyping(user));
-                            if (CherrygramChatsConfig.INSTANCE.getCenterChatTitle()) text = getUserNameForTyping(user);
+                            if (YuurigramChatsConfig.INSTANCE.getCenterChatTitle()) text = getUserNameForTyping(user);
                         } else {
                             text = LocaleController.getString(R.string.Typing);
                         }
@@ -10902,7 +10902,7 @@ public class MessagesController extends BaseController implements NotificationCe
                         }
                     }
                     if (label.length() != 0) {
-                        if (CherrygramChatsConfig.INSTANCE.getCenterChatTitle()) {
+                        if (YuurigramChatsConfig.INSTANCE.getCenterChatTitle()) {
                             String input = label.toString();
                             int commaIndex = input.indexOf(',');
                             String output = (commaIndex != -1) ? input.substring(0, commaIndex).trim() : input.trim();
@@ -21084,7 +21084,7 @@ public class MessagesController extends BaseController implements NotificationCe
                 try {
                     Collections.sort(allDialogs, dialogDateComparator);
                 } catch (Exception e) {
-                    CherrygramChatsConfig.INSTANCE.setSortByUnread(false);
+                    YuurigramChatsConfig.INSTANCE.setSortByUnread(false);
                     try {
                         Collections.sort(allDialogs, dialogDateComparator);
                     } catch (Exception ex) {
@@ -21115,7 +21115,7 @@ public class MessagesController extends BaseController implements NotificationCe
         try {
             Collections.sort(allDialogs, dialogComparator);
         } catch (Exception e) {
-            CherrygramChatsConfig.INSTANCE.setSortByUnread(false);
+            YuurigramChatsConfig.INSTANCE.setSortByUnread(false);
             try {
                 Collections.sort(allDialogs, dialogComparator);
             } catch (Exception ex) {
@@ -22366,7 +22366,7 @@ public class MessagesController extends BaseController implements NotificationCe
     }
 
     public boolean storiesEnabled() {
-        if (CherrygramCoreConfig.INSTANCE.getHideStories()) return false;
+        if (YuurigramCoreConfig.INSTANCE.getHideStories()) return false;
         switch (storiesPosting) {
             case "premium":
                 return getUserConfig().isPremium();

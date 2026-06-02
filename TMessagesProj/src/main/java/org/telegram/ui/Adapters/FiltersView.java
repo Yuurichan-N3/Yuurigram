@@ -52,7 +52,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 
 public class FiltersView extends RecyclerListView {
 
@@ -592,7 +592,7 @@ public class FiltersView extends RecyclerListView {
         return false;
     }
 
-    public boolean drawDivider = !CherrygramAppearanceConfig.INSTANCE.getDisableDividers();
+    public boolean drawDivider = !YuurigramAppearanceConfig.INSTANCE.getDisableDividers();
 
     @Override
     public void onDraw(Canvas c) {

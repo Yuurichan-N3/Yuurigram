@@ -55,7 +55,7 @@ import org.telegram.ui.Components.ReplyMessageLine;
 import org.telegram.ui.Components.chat.ViewPositionWatcher;
 import org.telegram.ui.Components.spoilers.SpoilerEffect;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramAppearanceConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramAppearanceConfig;
 
 public class TextMessageEnterTransition implements MessageEnterTransitionContainer.Transition {
     float fromRadius;
@@ -650,7 +650,7 @@ public class TextMessageEnterTransition implements MessageEnterTransitionContain
                 replySelectorRect
             );
 
-            messageView.replyLine.drawBackground(canvas, replySelectorRect, alphaProgress, messageView.isReplyQuote, messageView.getMessageObject().shouldDrawWithoutBackground() || !CherrygramAppearanceConfig.INSTANCE.getReplyBackground());
+            messageView.replyLine.drawBackground(canvas, replySelectorRect, alphaProgress, messageView.isReplyQuote, messageView.getMessageObject().shouldDrawWithoutBackground() || !YuurigramAppearanceConfig.INSTANCE.getReplyBackground());
             messageView.replyLine.drawLine(canvas, replySelectorRect, alphaProgress);
 
             float replyImageSz = 0;

@@ -61,7 +61,7 @@ import java.util.Locale;
 import java.util.Stack;
 import java.util.concurrent.atomic.AtomicReference;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 
 public class SharedLinkCell extends FrameLayout {
     private final static int SPOILER_TYPE_LINK = 0,
@@ -95,7 +95,7 @@ public class SharedLinkCell extends FrameLayout {
         public void run() {
             if (checkingForLongPress && getParent() != null && currentPressCount == pressCount) {
                 checkingForLongPress = false;
-                if (!CherrygramChatsConfig.INSTANCE.getDisableVibration()) {
+                if (!YuurigramChatsConfig.INSTANCE.getDisableVibration()) {
                     try {
                         performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
                     } catch (Exception ignored) {}

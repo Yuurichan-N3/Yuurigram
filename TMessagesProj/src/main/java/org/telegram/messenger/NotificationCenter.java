@@ -990,12 +990,12 @@ public class NotificationCenter {
         }
     }
 
-    /** Cherrygram start */
+    /** Yuurigram start */
     public static final int onUpdateLoginToken = totalEvents++;
     public static final int cgDonatesLoaded = totalEvents++;
     public static final int cgTabsUpdated = totalEvents++;
     public static final int cgDestroyCameraX = totalEvents++;
     public static final int cgUpdateSearchFiledVisibility = totalEvents++;
-    /** Cherrygram finish */
+    /** Yuurigram finish */
 
 }

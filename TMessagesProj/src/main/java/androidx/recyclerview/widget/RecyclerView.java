@@ -97,7 +97,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import uz.unnarsx.cherrygram.core.configs.CherrygramChatsConfig;
+import uz.unnarsx.cherrygram.core.configs.YuurigramChatsConfig;
 import uz.unnarsx.cherrygram.core.VibrateUtil;
 
 /**
