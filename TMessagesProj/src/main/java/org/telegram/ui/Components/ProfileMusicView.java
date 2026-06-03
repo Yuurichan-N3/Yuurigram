@@ -38,8 +38,8 @@ import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.ProfileActivity;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.yuurigram.core.ui.MD3ListAdapter;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.ui.MD3ListAdapter;
 
 public class ProfileMusicView extends View {
 

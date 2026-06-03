@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.helpers.network
+package id.idn.yuurigram.helpers.network
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -23,9 +23,9 @@ import org.telegram.messenger.ApplicationLoader
 import org.telegram.messenger.FileLog
 import org.telegram.messenger.MessageObject
 import org.telegram.tgnet.TLRPC
-import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.yuurigram.core.configs.YuurigramDebugConfig
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -36,7 +36,7 @@ import java.net.URL
 import kotlin.math.roundToInt
 import androidx.core.graphics.scale
 import org.telegram.messenger.UserConfig
-import uz.unnarsx.yuurigram.chats.helpers.ChatsHelper
+import id.idn.yuurigram.chats.helpers.ChatsHelper
 
 object StickersManager {
 

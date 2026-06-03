@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.chats.helpers
+package id.idn.yuurigram.chats.helpers
 
 import android.os.Build
 import androidx.core.content.edit
@@ -21,9 +21,9 @@ import org.telegram.messenger.MessageObject
 import org.telegram.messenger.UserConfig
 import org.telegram.tgnet.TLRPC.MessageEntity
 import org.telegram.tgnet.TLRPC.TL_messageEntitySpoiler
-import uz.unnarsx.yuurigram.core.CGBiometricPrompt
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.yuurigram.core.configs.YuurigramPrivacyConfig
+import id.idn.yuurigram.core.CGBiometricPrompt
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.configs.YuurigramPrivacyConfig
 
 class ChatsPasswordHelper private constructor(num: Int) : BaseController(num) {
 

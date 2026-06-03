@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core;
+package id.idn.yuurigram.core;
 
 import android.Manifest;
 import android.app.Activity;

@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences;
+package id.idn.yuurigram.preferences;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -28,7 +28,7 @@ import org.telegram.ui.ActionBar.Theme;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import id.idn.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
 
 public class DeleteAccountDialog extends BaseFragment {
 

@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.helpers.ui;
+package id.idn.yuurigram.helpers.ui;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -27,9 +27,9 @@ import org.telegram.ui.Components.Bulletin;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
-import uz.unnarsx.yuurigram.donates.DonatesManager;
-import uz.unnarsx.yuurigram.preferences.ChatsPreferencesEntry;
+import id.idn.yuurigram.core.ui.CGBulletinCreator;
+import id.idn.yuurigram.donates.DonatesManager;
+import id.idn.yuurigram.preferences.ChatsPreferencesEntry;
 
 public class PopupHelper {
 

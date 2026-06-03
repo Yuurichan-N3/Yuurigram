@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences
+package id.idn.yuurigram.preferences
 
 import android.content.SharedPreferences
 import kotlin.properties.ReadWriteProperty

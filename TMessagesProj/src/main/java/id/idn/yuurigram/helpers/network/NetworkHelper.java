@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.helpers.network;
+package id.idn.yuurigram.helpers.network;
 
 import org.telegram.messenger.Utilities;
 

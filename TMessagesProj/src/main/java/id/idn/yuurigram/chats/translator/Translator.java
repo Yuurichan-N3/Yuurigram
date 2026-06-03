@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.chats.translator;
+package id.idn.yuurigram.chats.translator;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -25,9 +25,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Locale;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper;
-import uz.unnarsx.yuurigram.helpers.ui.PopupHelper;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.helpers.CGResourcesHelper;
+import id.idn.yuurigram.helpers.ui.PopupHelper;
 
 public class Translator {
 

@@ -21,8 +21,8 @@ import androidx.core.app.NotificationManagerCompat;
 
 import org.telegram.ui.LaunchActivity;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.helpers.CGResourcesHelper;
 
 public class NotificationsService extends Service {
 

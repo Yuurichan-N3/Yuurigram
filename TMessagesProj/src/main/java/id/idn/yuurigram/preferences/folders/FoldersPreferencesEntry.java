@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences.folders;
+package id.idn.yuurigram.preferences.folders;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -26,13 +26,13 @@ import org.telegram.ui.Components.UniversalFragment;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
-import uz.unnarsx.yuurigram.donates.DonatesManager;
-import uz.unnarsx.yuurigram.helpers.ui.PopupHelper;
-import uz.unnarsx.yuurigram.preferences.folders.cells.FoldersPreviewCell;
-import uz.unnarsx.yuurigram.preferences.helpers.SettingsHelper;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import id.idn.yuurigram.core.ui.CGBulletinCreator;
+import id.idn.yuurigram.donates.DonatesManager;
+import id.idn.yuurigram.helpers.ui.PopupHelper;
+import id.idn.yuurigram.preferences.folders.cells.FoldersPreviewCell;
+import id.idn.yuurigram.preferences.helpers.SettingsHelper;
 
 public class FoldersPreferencesEntry extends UniversalFragment {
 

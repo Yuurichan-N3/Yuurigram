@@ -7,15 +7,15 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.icons
+package id.idn.yuurigram.core.icons
 
 import android.annotation.SuppressLint
 import android.content.res.*
 import android.graphics.drawable.Drawable
 import android.util.Log
-import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.yuurigram.core.icons.icon_replaces.BaseIconReplace
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.icons.icon_replaces.BaseIconReplace
 
 @Suppress("DEPRECATION")
 @SuppressLint("UseCompatLoadingForDrawables")

@@ -7,9 +7,9 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core
+package id.idn.yuurigram.core
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig
 
 // I've created this so CG features can be injected in a source file with 1 line only (maybe)
 // Because manual editing of drklo's sources harms your mental health.

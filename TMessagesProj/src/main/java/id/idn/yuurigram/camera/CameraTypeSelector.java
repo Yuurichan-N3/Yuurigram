@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.camera;
+package id.idn.yuurigram.camera;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -45,7 +45,7 @@ import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.NumberPicker;
 import org.telegram.ui.LaunchActivity;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramCameraConfig;
+import id.idn.yuurigram.core.configs.YuurigramCameraConfig;
 
 public class CameraTypeSelector extends LinearLayout {
 

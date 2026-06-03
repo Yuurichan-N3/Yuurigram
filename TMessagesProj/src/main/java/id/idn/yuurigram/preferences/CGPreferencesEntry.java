@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences;
+package id.idn.yuurigram.preferences;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -22,10 +22,10 @@ import org.telegram.ui.Components.UniversalFragment;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.yuurigram.core.helpers.AppRestartHelper;
-import uz.unnarsx.yuurigram.core.helpers.DeeplinkHelper;
-import uz.unnarsx.yuurigram.core.helpers.backup.BackupHelper;
+import id.idn.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import id.idn.yuurigram.core.helpers.AppRestartHelper;
+import id.idn.yuurigram.core.helpers.DeeplinkHelper;
+import id.idn.yuurigram.core.helpers.backup.BackupHelper;
 
 public class CGPreferencesEntry extends UniversalFragment {
 

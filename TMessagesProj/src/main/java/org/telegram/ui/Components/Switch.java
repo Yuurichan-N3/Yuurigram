@@ -39,8 +39,8 @@ import org.telegram.messenger.AndroidUtilities;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Cells.BaseCell;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class Switch extends View {
 

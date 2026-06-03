@@ -31,7 +31,7 @@ import org.telegram.ui.ActionBar.Theme;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.yuurigram.chats.ui.MessageMenuHelper;
+import id.idn.yuurigram.chats.ui.MessageMenuHelper;
 
 public class PopupSwipeBackLayout extends FrameLayout {
     private final static int DURATION = MessageMenuHelper.getInstance(UserConfig.selectedAccount).allowNewMessageMenu() ? 400 : 300;

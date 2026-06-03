@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.misc;
+package id.idn.yuurigram.misc;
 
 import android.content.Context;
 import android.os.Build;

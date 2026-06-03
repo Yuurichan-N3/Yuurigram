@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences.tabs;
+package id.idn.yuurigram.preferences.tabs;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.LocaleController.getString;
@@ -34,11 +34,11 @@ import org.telegram.ui.Components.UniversalFragment;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
-import uz.unnarsx.yuurigram.core.ui.mainTabs.MainTabsManager;
-import uz.unnarsx.yuurigram.preferences.helpers.SettingsHelper;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import id.idn.yuurigram.core.ui.CGBulletinCreator;
+import id.idn.yuurigram.core.ui.mainTabs.MainTabsManager;
+import id.idn.yuurigram.preferences.helpers.SettingsHelper;
 
 public class MainTabsPreferencesEntry extends UniversalFragment {
 

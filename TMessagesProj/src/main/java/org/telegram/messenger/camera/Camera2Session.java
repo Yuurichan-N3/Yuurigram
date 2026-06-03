@@ -47,7 +47,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import uz.unnarsx.yuurigram.camera.VideoMessagesHelper;
+import id.idn.yuurigram.camera.VideoMessagesHelper;
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 public class Camera2Session {

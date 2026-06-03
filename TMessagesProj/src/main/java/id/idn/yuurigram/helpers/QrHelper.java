@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.helpers;
+package id.idn.yuurigram.helpers;
 
 import android.graphics.Bitmap;
 

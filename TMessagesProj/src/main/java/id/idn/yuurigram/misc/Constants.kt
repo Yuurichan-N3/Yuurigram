@@ -7,9 +7,9 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.misc
+package id.idn.yuurigram.misc
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
 
 object Constants {
 
@@ -33,7 +33,7 @@ object Constants {
     var CG_CHAT_URL = "https://t.me/YuurigramSupport"
 
     @JvmField
-    var UPDATE_APP_URL = if (YuurigramCoreConfig.isPlayStoreBuild()) "https://play.google.com/store/apps/details?id=uz.unnarsx.yuurigram" else CG_CHANNEL_URL
+    var UPDATE_APP_URL = if (YuurigramCoreConfig.isPlayStoreBuild()) "https://play.google.com/store/apps/details?id=id.idn.yuurigram" else CG_CHANNEL_URL
 
     @JvmField
     var CG_PRIVACY_URL = "https://arslan4k1390.github.io/yuurigram/privacy"
@@ -51,7 +51,7 @@ object Constants {
     var CG_SAFESTARS_RU = "https://safestars.pro/ru/?partner=yuurigram"
     /** CG Links finish**/
 
-    const val PACKAGE_NAME = "uz.unnarsx.yuurigram"
+    const val PACKAGE_NAME = "id.idn.yuurigram"
 
     /** CG Chats IDs start**/
     const val Yuurigram_Owner = 282287840L // Yuurigram Owner (Arslan)

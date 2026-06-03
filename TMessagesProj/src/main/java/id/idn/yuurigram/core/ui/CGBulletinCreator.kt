@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.ui
+package id.idn.yuurigram.core.ui
 
 import org.telegram.messenger.AndroidUtilities
 import org.telegram.messenger.ContactsController
@@ -20,8 +20,8 @@ import org.telegram.tgnet.TLRPC
 import org.telegram.ui.ActionBar.BaseFragment
 import org.telegram.ui.Components.Bulletin
 import org.telegram.ui.Components.BulletinFactory
-import uz.unnarsx.yuurigram.core.helpers.AppRestartHelper
-import uz.unnarsx.yuurigram.preferences.YuurigramPreferencesNavigator
+import id.idn.yuurigram.core.helpers.AppRestartHelper
+import id.idn.yuurigram.preferences.YuurigramPreferencesNavigator
 
 object CGBulletinCreator {
 

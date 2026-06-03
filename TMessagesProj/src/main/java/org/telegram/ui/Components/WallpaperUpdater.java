@@ -35,7 +35,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-import uz.unnarsx.yuurigram.core.PermissionsUtils;
+import id.idn.yuurigram.core.PermissionsUtils;
 
 public class WallpaperUpdater {
 

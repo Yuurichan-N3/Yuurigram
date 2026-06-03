@@ -7,11 +7,11 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.chats.gemini;
+package id.idn.yuurigram.chats.gemini;
 
 import static org.telegram.messenger.LocaleController.getString;
-import static uz.unnarsx.yuurigram.chats.gemini.GeminiResultsBottomSheet.capitalFirst;
-import static uz.unnarsx.yuurigram.chats.gemini.GeminiResultsBottomSheet.languageName;
+import static id.idn.yuurigram.chats.gemini.GeminiResultsBottomSheet.capitalFirst;
+import static id.idn.yuurigram.chats.gemini.GeminiResultsBottomSheet.languageName;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -54,8 +54,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.Executor;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
 
 public class GeminiSDKImplementation {
 

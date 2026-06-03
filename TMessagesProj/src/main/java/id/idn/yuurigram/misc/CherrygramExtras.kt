@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.misc
+package id.idn.yuurigram.misc
 
 import android.app.Activity
 import android.content.Context
@@ -42,8 +42,8 @@ import org.telegram.tgnet.TLRPC
 import org.telegram.ui.ActionBar.AlertDialog
 import org.telegram.ui.ActionBar.BaseFragment
 import org.telegram.ui.LaunchActivity
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.ui.CGBulletinCreator
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId

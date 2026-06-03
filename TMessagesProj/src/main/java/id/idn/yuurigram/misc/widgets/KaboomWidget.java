@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.misc.widgets;
+package id.idn.yuurigram.misc.widgets;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;

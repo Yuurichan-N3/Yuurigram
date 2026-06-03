@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences.helpers;
+package id.idn.yuurigram.preferences.helpers;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -26,9 +26,9 @@ import org.telegram.ui.Cells.TextCheckCell;
 import org.telegram.ui.Cells.TextInfoPrivacyCell;
 import org.telegram.ui.Components.LayoutHelper;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.yuurigram.preferences.cells.StickerSliderCell;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.preferences.cells.StickerSliderCell;
 
 public class AlertDialogSwitchers {
 

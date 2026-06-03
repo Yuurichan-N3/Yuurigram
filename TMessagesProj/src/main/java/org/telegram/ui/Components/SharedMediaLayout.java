@@ -165,8 +165,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.yuurigram.core.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.configs.YuurigramPrivacyConfig;
 
 @SuppressWarnings("unchecked")
 public class SharedMediaLayout extends FrameLayout implements NotificationCenter.NotificationCenterDelegate, DialogCell.DialogCellDelegate {

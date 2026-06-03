@@ -134,7 +134,7 @@ import java.util.stream.Collectors;
 import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
 import id.idn.yuurigram.core.configs.YuurigramCameraConfig;
-import uz.unnarsx.yuurigram.core.configs.YuurigramPrivacyConfig;
+import id.idn.yuurigram.core.configs.YuurigramPrivacyConfig;
 
 public class MessagesController extends BaseController implements NotificationCenter.NotificationCenterDelegate {
 

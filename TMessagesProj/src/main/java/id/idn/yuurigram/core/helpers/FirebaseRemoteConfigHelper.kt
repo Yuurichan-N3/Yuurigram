@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.helpers
+package id.idn.yuurigram.core.helpers
 
 import android.widget.Toast
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
@@ -18,11 +18,11 @@ import org.telegram.messenger.AndroidUtilities
 import org.telegram.messenger.ApplicationLoader
 import org.telegram.messenger.BuildVars
 import org.telegram.messenger.FileLog
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.yuurigram.core.configs.YuurigramCameraConfig
-import uz.unnarsx.yuurigram.core.configs.YuurigramDebugConfig
-import uz.unnarsx.yuurigram.core.configs.YuurigramPrivacyConfig
-import uz.unnarsx.yuurigram.misc.Constants
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.configs.YuurigramCameraConfig
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig
+import id.idn.yuurigram.core.configs.YuurigramPrivacyConfig
+import id.idn.yuurigram.misc.Constants
 import kotlin.coroutines.resume
 
 object FirebaseRemoteConfigHelper {

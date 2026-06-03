@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences;
+package id.idn.yuurigram.preferences;
 
 import static org.telegram.messenger.AndroidUtilities.distance;
 import static org.telegram.messenger.AndroidUtilities.dp;
@@ -84,11 +84,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
-import uz.unnarsx.yuurigram.Extra;
-import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.yuurigram.misc.Constants;
-import uz.unnarsx.yuurigram.core.helpers.CGResourcesHelper;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.Extra;
+import id.idn.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import id.idn.yuurigram.misc.Constants;
+import id.idn.yuurigram.core.helpers.CGResourcesHelper;
 
 public class MessagesAndProfilesPreferencesEntry extends BaseFragment {
 

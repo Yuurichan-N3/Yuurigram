@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences;
+package id.idn.yuurigram.preferences;
 
 import static org.telegram.messenger.LocaleController.getString;
 
@@ -36,11 +36,11 @@ import org.telegram.ui.Cells.TextCheckCell;
 import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.RecyclerListView;
 
-import uz.unnarsx.yuurigram.chats.CGMessageMenuInjector;
-import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
-import uz.unnarsx.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
-import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
-import uz.unnarsx.yuurigram.donates.DonatesManager;
+import id.idn.yuurigram.chats.CGMessageMenuInjector;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.core.crashlytics.FirebaseAnalyticsHelper;
+import id.idn.yuurigram.core.ui.CGBulletinCreator;
+import id.idn.yuurigram.donates.DonatesManager;
 
 public class MessageMenuPreferencesEntry extends BaseFragment {
 

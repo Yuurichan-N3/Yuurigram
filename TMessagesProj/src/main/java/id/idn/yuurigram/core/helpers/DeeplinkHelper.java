@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.helpers;
+package id.idn.yuurigram.core.helpers;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,10 +21,10 @@ import org.telegram.ui.Stars.StarsIntroActivity;
 
 import java.util.Locale;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig;
-import uz.unnarsx.yuurigram.core.ui.CGBulletinCreator;
-import uz.unnarsx.yuurigram.misc.Constants;
-import uz.unnarsx.yuurigram.preferences.YuurigramPreferencesNavigator;
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig;
+import id.idn.yuurigram.core.ui.CGBulletinCreator;
+import id.idn.yuurigram.misc.Constants;
+import id.idn.yuurigram.preferences.YuurigramPreferencesNavigator;
 
 public class DeeplinkHelper {
 

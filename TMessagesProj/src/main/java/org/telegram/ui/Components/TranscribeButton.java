@@ -54,10 +54,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
-import uz.unnarsx.yuurigram.chats.gemini.GeminiButtonsLayout;
-import uz.unnarsx.yuurigram.chats.gemini.GeminiResultsBottomSheet;
-import uz.unnarsx.yuurigram.chats.gemini.GeminiSDKImplementation;
-import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.chats.gemini.GeminiButtonsLayout;
+import id.idn.yuurigram.chats.gemini.GeminiResultsBottomSheet;
+import id.idn.yuurigram.chats.gemini.GeminiSDKImplementation;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
 
 public class TranscribeButton {
 

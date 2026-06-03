@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.chats.gemini
+package id.idn.yuurigram.chats.gemini
 
 import com.google.gson.annotations.SerializedName
 

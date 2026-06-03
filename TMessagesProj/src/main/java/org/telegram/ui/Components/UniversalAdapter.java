@@ -59,7 +59,7 @@ import java.util.ArrayList;
 
 import me.vkryl.core.BitwiseUtils;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig;
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig;
 
 public class UniversalAdapter extends AdapterWithDiffUtils {
 

@@ -55,7 +55,7 @@ import org.telegram.ui.ChatBackgroundDrawable;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
 
 public class SizeNotifierFrameLayout extends FrameLayout implements Theme.Colorable {
 

@@ -19,7 +19,7 @@ import androidx.core.math.MathUtils;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.ui.ActionBar.Theme;
 
-import uz.unnarsx.yuurigram.misc.YuurigramExtras;
+import id.idn.yuurigram.misc.YuurigramExtras;
 
 public class SlideChooseView extends View {
 

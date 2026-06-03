@@ -94,8 +94,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
-import uz.unnarsx.yuurigram.core.configs.YuurigramChatsConfig;
-import uz.unnarsx.yuurigram.core.ui.MD3ListAdapter;
+import id.idn.yuurigram.core.configs.YuurigramChatsConfig;
+import id.idn.yuurigram.core.ui.MD3ListAdapter;
 
 @SuppressWarnings("JavaReflectionMemberAccess")
 public class RecyclerListView extends RecyclerView implements IBlur3Capture {

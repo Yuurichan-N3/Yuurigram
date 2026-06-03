@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.chats.helpers;
+package id.idn.yuurigram.chats.helpers;
 
 import static org.telegram.messenger.LocaleController.getString;
 

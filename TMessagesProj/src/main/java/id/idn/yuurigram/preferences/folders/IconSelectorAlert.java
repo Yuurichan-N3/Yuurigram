@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences.folders;
+package id.idn.yuurigram.preferences.folders;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.LocaleController.getString;
@@ -45,7 +45,7 @@ import org.telegram.ui.Components.ExtendedGridLayoutManager;
 import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.RecyclerListView;
 
-import uz.unnarsx.yuurigram.preferences.folders.helpers.FolderIconHelper;
+import id.idn.yuurigram.preferences.folders.helpers.FolderIconHelper;
 
 public class IconSelectorAlert extends BottomSheet {
 

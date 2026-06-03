@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.ui.mainTabs
+package id.idn.yuurigram.core.ui.mainTabs
 
 import android.content.Context
 import android.view.View
@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import org.telegram.messenger.R
 import org.telegram.ui.ActionBar.Theme
 import org.telegram.ui.Components.glass.GlassTabView
-import uz.unnarsx.yuurigram.core.configs.YuurigramAppearanceConfig
+import id.idn.yuurigram.core.configs.YuurigramAppearanceConfig
 
 // Dear Nagram / Nagram X / Octogram and related fork developers:
 // Please respect this work and do not copy or reuse this feature in your forks.

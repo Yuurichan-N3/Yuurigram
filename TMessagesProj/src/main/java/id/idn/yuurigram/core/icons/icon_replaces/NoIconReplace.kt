@@ -7,9 +7,9 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.icons.icon_replaces
+package id.idn.yuurigram.core.icons.icon_replaces
 
-import uz.unnarsx.yuurigram.core.icons.newHashMap
+import id.idn.yuurigram.core.icons.newHashMap
 
 class NoIconReplace : BaseIconReplace() {
     override val replaces: HashMap<Int, Int> = newHashMap()

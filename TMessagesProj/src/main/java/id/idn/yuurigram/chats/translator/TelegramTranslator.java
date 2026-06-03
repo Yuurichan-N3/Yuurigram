@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.chats.translator;
+package id.idn.yuurigram.chats.translator;
 
 import android.text.TextUtils;
 
@@ -28,7 +28,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicReference;
 
 import kotlin.NotImplementedError;
-import uz.unnarsx.yuurigram.chats.helpers.MessageHelper;
+import id.idn.yuurigram.chats.helpers.MessageHelper;
 
 public class TelegramTranslator extends BaseTranslator {
 

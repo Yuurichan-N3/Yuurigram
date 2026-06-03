@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.chats;
+package id.idn.yuurigram.chats;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.AndroidUtilities.dpf2;
@@ -72,8 +72,8 @@ import org.telegram.ui.Components.LoadingDrawable;
 import org.telegram.ui.Components.RecyclerListView;
 import org.telegram.ui.Stories.recorder.ButtonWithCounterView;
 
-import uz.unnarsx.yuurigram.chats.helpers.ChatsHelper2;
-import uz.unnarsx.yuurigram.core.configs.YuurigramMessagesConfig;
+import id.idn.yuurigram.chats.helpers.ChatsHelper2;
+import id.idn.yuurigram.core.configs.YuurigramMessagesConfig;
 
 public class JsonBottomSheet extends BottomSheet implements NotificationCenter.NotificationCenterDelegate {
 

@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.preferences.cells;
+package id.idn.yuurigram.preferences.cells;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-import uz.unnarsx.yuurigram.chats.helpers.ChatsHelper2;
+import id.idn.yuurigram.chats.helpers.ChatsHelper2;
 
 public class QuickShareSelectorOverlayLayout extends View {
     private final HashMap<String, QuickShareSelectorDrawable> drawableHashMap = new HashMap<>();

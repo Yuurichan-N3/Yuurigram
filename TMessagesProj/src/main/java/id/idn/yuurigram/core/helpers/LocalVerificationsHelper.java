@@ -7,11 +7,11 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.helpers;
+package id.idn.yuurigram.core.helpers;
 
 import java.util.ArrayList;
 
-import uz.unnarsx.yuurigram.misc.Constants;
+import id.idn.yuurigram.misc.Constants;
 
 public class LocalVerificationsHelper {
     private static final ArrayList<Long> DEFAULT_VERIFY_LIST = new ArrayList<>();

@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.core.helpers
+package id.idn.yuurigram.core.helpers
 
 import android.widget.Toast
 import org.telegram.messenger.AndroidUtilities
