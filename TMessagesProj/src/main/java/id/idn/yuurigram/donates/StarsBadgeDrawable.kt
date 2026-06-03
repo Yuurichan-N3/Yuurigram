@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.donates
+package id.idn.yuurigram.donates
 
 import android.content.Context
 import android.graphics.Canvas

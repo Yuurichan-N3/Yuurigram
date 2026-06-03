@@ -7,7 +7,7 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.donates
+package id.idn.yuurigram.donates
 
 import android.content.Context
 import android.util.Base64
@@ -25,9 +25,9 @@ import org.telegram.messenger.FileLog
 import org.telegram.messenger.NotificationCenter
 import org.telegram.messenger.UserConfig
 import org.telegram.ui.ActionBar.AlertDialog
-import uz.unnarsx.yuurigram.Extra
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
-import uz.unnarsx.yuurigram.core.configs.YuurigramDebugConfig
+import id.idn.yuurigram.Extra
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.configs.YuurigramDebugConfig
 import java.io.File
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter

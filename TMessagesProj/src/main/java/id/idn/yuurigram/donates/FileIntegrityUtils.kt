@@ -7,14 +7,14 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.donates
+package id.idn.yuurigram.donates
 
 import android.content.Context
 import org.telegram.messenger.FileLog
 import java.io.File
 import java.security.MessageDigest
 import androidx.core.content.edit
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
 
 object FileIntegrityUtils {
 

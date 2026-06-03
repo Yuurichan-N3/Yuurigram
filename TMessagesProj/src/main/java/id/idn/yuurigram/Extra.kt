@@ -24,4 +24,24 @@ object Extra {
     val Name_Arr2 = charArrayOf()
     val Name_Arr3 = charArrayOf()
     val Name_ArrTwo = charArrayOf()
+
+    // Used in DonatesManager - donates list
+    val FILE_NAME_HASH = arrayOf("")
+    val GITLAB_RAW_URL_HASH = arrayOf("")
+
+    // Used in DonatesManager - marketplace list
+    val FILE_NAME_MARKETPLACE_HASH = arrayOf("")
+    val GITLAB_RAW_URL_MARKETPLACE_HASH = arrayOf("")
+
+    // Used in DonatesManager - blocked list
+    val FILE_NAME_BLOCKED_HASH = arrayOf("")
+    val GITLAB_RAW_URL_BLOCKED_HASH = arrayOf("")
+
+    // Used in DonatesManager - badge colors
+    val FILE_NAME_BADGE_COLORS_HASH = arrayOf("")
+    val GITLAB_RAW_URL_BADGE_COLORS_HASH = arrayOf("")
+
+    // Used in DonatesManager - TON rate
+    val FILE_NAME_TON_RATE_HASH = arrayOf("")
+    val TON_RATE_URL_HASH = arrayOf("")
 }

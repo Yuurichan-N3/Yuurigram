@@ -7,12 +7,12 @@
  * Copyright github.com/arsLan4k1390, 2022-2026.
  */
 
-package uz.unnarsx.yuurigram.donates
+package id.idn.yuurigram.donates
 
 import androidx.core.graphics.toColorInt
 import org.telegram.messenger.FileLog
 import org.telegram.ui.ActionBar.Theme
-import uz.unnarsx.yuurigram.core.configs.YuurigramCoreConfig
+import id.idn.yuurigram.core.configs.YuurigramCoreConfig
 
 enum class BadgeHelper {
 
